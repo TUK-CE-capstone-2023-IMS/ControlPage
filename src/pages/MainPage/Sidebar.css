@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top:0;
+    text-align: center;
+    background-color: #002455;
+    padding-top: 80px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.content{
+    margin-top: 100px;
+}
+
+div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-divider {
+    width: 100%;
+    border: 0;
+    border-top: 5px solid #002455;
+    margin-top: 50px;
+}
+
+.content1{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    text-align: right;
+}
+
+.content2{
+    display: inline-block;
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+.content2 a {
+    color: black;
+    text-decoration: none;
+}
+
+

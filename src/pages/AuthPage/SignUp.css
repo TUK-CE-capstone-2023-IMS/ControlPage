@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signup_page{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+p{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.email input,
+.password_input input,
+.name input,
+.gender select,
+.birth input,
+.phone_number input,
+.affiliation input{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+button {
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 30px;
+
+}
+
+.boxes{
+    margin-top: 40px;
+}

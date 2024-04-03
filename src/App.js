@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import LoginPage from './pages/AuthPage/Login'
-import ForgotPasswordPage from './pages/AuthPage/ForgotPassword'
+import LoginPage from './pages/AuthPage/Login';
+import Sidebar from './pages/MainPage/Sidebar';
+import ForgotPasswordPage from './pages/AuthPage/ForgotPassword';
+import SignUpPage from './pages/AuthPage/SignUp';
+import MainPage from './pages/MainPage/main';
+
 function App() {
   return (
-    <LoginPage></LoginPage>
+      <MainPage></MainPage>
   );
-
 }
-
 export default App;
+
+
+

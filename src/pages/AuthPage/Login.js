@@ -16,10 +16,10 @@ const LoginPage = () => {
     return (
         <div class = "login_page">
             <div class = "box">
-                <p class = "title">레이더 관리자 시스템</p>
+                <p class= "title">레이더 관리자 서비스 시스템</p>
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <div class = "id">
+                        <div class= "id">
                             <label htmlFor="email">아이디</label>
                         </div>
                         <div class = "idbox">
@@ -32,7 +32,7 @@ const LoginPage = () => {
                         </div>
                     </div>
                     <div>
-                        <div class = "password">
+                        <div class= "password">
                             <label htmlFor="password">비밀번호</label>
                         </div>
                         <div class = "passwordbox">
@@ -47,11 +47,13 @@ const LoginPage = () => {
                     <div className="forgot">
                         <p>아이디 또는 비밀번호를 잃어버리셨나요?</p>
                     </div>
-                    <div className="login_button">
-                        <button type="submit">로그인</button>
-                    </div>
-                    <div class="signin_button">
-                        <button type="submit">회원가입</button>
+                    <div className = "total_button">
+                        <div className="login_button">
+                            <button type="submit">로그인</button>
+                        </div>
+                        <div className="signin_button">
+                            <button type="submit">회원가입</button>
+                        </div>
                     </div>
                 </form>
             </div>

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hello_box{
+    background-color: #F3F3F3;
+    height: 250px;
+    width: 900px;
+    text-align: center;
+    margin-right: 50px;
+    margin-left: auto;
+    margin-top: 70px;
+}
+
+.text1{
+    padding-top: 60px;
+    font-size: 30px;
+}
+
+.text2{
+    padding-top: 20px;
+    font-size: 20px;
+}
