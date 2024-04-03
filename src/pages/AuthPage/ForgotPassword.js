@@ -7,7 +7,7 @@ const ForgotPasswordPage = () => {
 
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault();gi
 
         const foundUsername = findUsernameByEmail(email);
 
