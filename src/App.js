@@ -5,10 +5,19 @@ import Sidebar from './pages/MainPage/Sidebar';
 import ForgotPasswordPage from './pages/AuthPage/ForgotPassword';
 import SignUpPage from './pages/AuthPage/SignUp';
 import MainPage from './pages/MainPage/main';
+import React from "react";
+import {BrowserRouter,Route,Routes} from "react-router-dom"
 
 function App() {
   return (
-      <MainPage></MainPage>
+      <BrowserRouter>
+        <div className="App">
+          <Routes>
+              <Route path = "/" element={<MainPage/> }/>
+              <Route path = "/login" element={<LoginPage/>}/>
+          </Routes>
+        </div>
+      </BrowserRouter>
   );
 }
 export default App;

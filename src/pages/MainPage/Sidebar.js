@@ -22,15 +22,17 @@ const Sidebar = () => {
                     </div>
                 </ul>
             </div>
-            <div className="sidebar-divider"></div>
-            <div className="content1">
-                <div className="content2">
-                    <a href="#">송채연 님</a>
-                </div>
-                <div className="content2">
-                    <a href="#">로그아웃</a>
+            <div className="sidebar-divider">
+                <div className="content1">
+                    <div className="content2">
+                        <a href="#">송채연 님</a>
+                    </div>
+                    <div className="content2">
+                        <a href="#">로그아웃</a>
+                    </div>
                 </div>
             </div>
+
         </div>
     );
 };

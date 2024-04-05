@@ -18,13 +18,14 @@
     color: white;
     text-decoration: none;
 }
+.sidebar-open{
 
+}
 .content{
     margin-top: 100px;
 }
 
 div{
-    margin-top: 10px;
     margin-bottom: 10px;
 }
 
