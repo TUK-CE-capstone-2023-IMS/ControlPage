@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.log-form {
+    background: #F3F3F3;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 1350px;
+    height: 850px; /* 높이 고정 */
+    margin-left: 452px;
+    margin-top: 92px;
+    overflow: auto; /* 내용이 넘치면 스크롤바 생성 */
+}
+
+.room-info {
+    display: flex;
+    margin-left: 30px;
+    align-items: baseline;
+}
+
+.log-room-num {
+    font-size: 60px;
+}
+
+.patient-name {
+    font-size: 35px;
+    margin-left: 15px;
+}
+
+.log-list {
+    margin-left: 30px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.log-card {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.log-card:hover {
+    transform: scale(1.05);
+}
+
+.log-contents {
+    text-align: left;
+    font-size: 35px;
+}
+
+.log-time {
+    text-align: left;
+    font-size: 35px;
+}
+.log-card.normal {
+    background-color: #ffffff;
+}
+/* 붉은색 강조 애니메이션*/
+@keyframes blink {
+    0%, 100% { background-color: #ffcccc; }
+    50% { background-color: transparent; }
+}
+
+.log-card.emergency {
+    animation: blink 1s infinite;
+}

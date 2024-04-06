@@ -8,6 +8,7 @@ import MainPage from './pages/MainPage/main';
 import React from "react";
 import {BrowserRouter,Route,Routes} from "react-router-dom"
 import RoomForm from "./pages/ManagePage/RoomForm";
+import LogForm from "./pages/LogPage/LogForm";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route path = "/" element={<MainPage/> }/>
               <Route path = "/login" element={<LoginPage/>}/>
               <Route path = "/rooms" element={<RoomForm/>}/>
+              <Route path= "/dashboard" element={<LogForm/>}/>
           </Routes>
         </div>
       </BrowserRouter>

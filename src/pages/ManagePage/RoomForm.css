@@ -62,3 +62,11 @@
 .room-card:hover {
     transform: scale(1.05); /* 호버 시 카드 확대 */
 }
+
+.available {
+    background-color: #FFC0CB;
+}
+
+.occupied {
+    background-color: #90EE90;
+}
