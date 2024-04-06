@@ -2,6 +2,7 @@ import Sidebar from "../MainPage/Sidebar";
 import React from "react";
 import LogCard from "./LogCard";
 import './LogForm.css';
+import EmergencyAlert from "../NoticePage/EmergencyAlert";
 
 const LogForm = () => {
     const logs = [

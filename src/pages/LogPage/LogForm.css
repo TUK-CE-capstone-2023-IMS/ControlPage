@@ -6,15 +6,15 @@
 
 .log-form {
     background: #F3F3F3;
-    padding-top: 10px;
-    padding-left: 10px;
     width: 1350px;
-    height: 850px; /* 높이 고정 */
-    margin-left: 452px;
-    margin-top: 92px;
-    overflow: auto; /* 내용이 넘치면 스크롤바 생성 */
+    height: 850px;
+    margin-left: 477px;
+    margin-top: 72px;
+    overflow: auto;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 .room-info {
     display: flex;
     margin-left: 30px;
@@ -42,7 +42,7 @@
     width: 400px;
     height: 300px;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     background-color: #fff;
