@@ -5,10 +5,13 @@ import Sidebar from './pages/MainPage/Sidebar';
 import ForgotPasswordPage from './pages/AuthPage/ForgotPassword';
 import SignUpPage from './pages/AuthPage/SignUp';
 import MainPage from './pages/MainPage/main';
+import Calendar from './pages/MainPage/Calendar';
+import MyPage from './pages/AuthPage/MyPage';
+import PatientForm from './pages/ManagePage/PatientForm'
 
 function App() {
   return (
-      <MainPage></MainPage>
+      <PatientForm></PatientForm>
   );
 }
 export default App;
