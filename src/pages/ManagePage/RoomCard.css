@@ -1,0 +1,21 @@
+.available {
+    background-color: #FFC0CB;
+}
+
+.occupied {
+    background-color: #90EE90;
+}
+
+.room-num{
+    font-size: 45px;
+}
+.status {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.patient-info {
+    display: flex;
+    justify-content: right;
+    font-size: 10px;
+}

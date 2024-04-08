@@ -16,6 +16,7 @@ function App() {
 =======
 import React from "react";
 import {BrowserRouter,Route,Routes} from "react-router-dom"
+import RoomForm from "./pages/ManagePage/RoomForm";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Routes>
               <Route path = "/" element={<MainPage/> }/>
               <Route path = "/login" element={<LoginPage/>}/>
+              <Route path = "/rooms" element={<RoomForm/>}/>
           </Routes>
         </div>
       </BrowserRouter>
