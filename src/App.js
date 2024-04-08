@@ -5,11 +5,11 @@ import LoginPage from './pages/AuthPage/Login';
 import RoomForm from "./pages/ManagePage/RoomForm";
 import LogForm from "./pages/LogPage/LogForm";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import EmergencyAlert from './pages/NoticePage/EmergencyAlert'; // 가정: EmergencyAlert 컴포넌트가 이 경로에 있음
+import EmergencyAlert from './pages/NoticePage/EmergencyAlert';
 
 function App() {
     const [alertMessage, setAlertMessage] = useState('');
-    const [isVisible, setIsVisible] = useState(false); // 알림의 표시 여부를 상위 컴포넌트에서 관리
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         // SSE 연결 설정
@@ -24,7 +24,6 @@ function App() {
             setAlertMessage(e.data);
             setIsVisible(true);
         })
-        // 메시지 이벤트 리스너 설정
         eventSource.onerror = (event) => {
             eventSource.close();
             if (event.target.readyState === EventSource.CLOSED) {
