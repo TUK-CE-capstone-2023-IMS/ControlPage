@@ -43,22 +43,30 @@
     margin-left: 30px;
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 2열 그리드 */
-    gap: 35px; /* 카드 사이의 간격 */
-    max-width: 600px; /* 최대 너비 설정 */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    max-width: 600px;
 }
 
 .room-card {
     width: 300px;
     height: 200px;
-    border: 1px solid #ddd; /* 경계선 스타일 */
-    border-radius: 10px; /* 경계선 둥근 모서리 */
-    padding: 20px; /* 내부 여백 */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 그림자 효과 */
-    background-color: #fff; /* 배경색 */
-    transition: transform 0.2s ease-in-out; /* 호버 시 변환 효과 */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
 }
 
 .room-card:hover {
-    transform: scale(1.05); /* 호버 시 카드 확대 */
+    transform: scale(1.05);
+}
+
+.available {
+    background-color: #FFC0CB;
+}
+
+.occupied {
+    background-color: #90EE90;
 }
