@@ -1,25 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import LoginPage from './pages/AuthPage/Login';
+import Sidebar from './pages/MainPage/Sidebar';
+import ForgotPasswordPage from './pages/AuthPage/ForgotPassword';
+import SignUpPage from './pages/AuthPage/SignUp';
+import MainPage from './pages/MainPage/main';
+<<<<<<< HEAD
+import Calendar from './pages/MainPage/Calendar';
+import MyPage from './pages/AuthPage/MyPage';
+import PatientForm from './pages/ManagePage/PatientForm'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <PatientForm></PatientForm>
+=======
+import React from "react";
+import {BrowserRouter,Route,Routes} from "react-router-dom"
+
+function App() {
+  return (
+      <BrowserRouter>
+        <div className="App">
+          <Routes>
+              <Route path = "/" element={<MainPage/> }/>
+              <Route path = "/login" element={<LoginPage/>}/>
+          </Routes>
+        </div>
+      </BrowserRouter>
+>>>>>>> 50c0c16eb069228ef828b9ed82c174393b831509
   );
 }
-
 export default App;
+
+
+
