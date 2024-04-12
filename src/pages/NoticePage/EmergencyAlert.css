@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.emergency-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: blink-overlay-animation 1s infinite;
+}
+
+.emergency-layout {
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: blink-animation 1s infinite;
+}
+.emergency-roomNum {
+    font-size: 50px;
+}
+.emergency-title {
+    font-size: 30px;
+}
+.emergency-alert .close-btn {
+    width: 120px;
+    height: 50px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.emergency-alert .close-btn:hover {
+    background-color: #333;
+}
+
+@keyframes blink-animation {
+    0%, 100% { background-color: white; }
+    50% { background-color: red; }
+}
+
+@keyframes blink-overlay-animation {
+    0%, 100% { background: rgba(0, 0, 0, 0.5); }
+    50% { background: rgba(255, 0, 0, 0.5); }
+}
