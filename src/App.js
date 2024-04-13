@@ -4,6 +4,8 @@ import MainPage from './pages/MainPage/main';
 import LoginPage from './pages/AuthPage/Login';
 import RoomForm from "./pages/ManagePage/RoomForm";
 import LogForm from "./pages/LogPage/LogForm";
+import MyPage from "./pages/AuthPage/MyPage";
+import PatientForm from "./pages/ManagePage/PatientForm"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EmergencyAlert from './pages/NoticePage/EmergencyAlert';
 
@@ -45,8 +47,9 @@ function App() {
                 <Routes>
                     <Route path="/" element={<MainPage />} />
                     <Route path="/login" element={<LoginPage />} />
-                    <Route path="/rooms" element={<RoomForm />} />
+                    <Route path="/patients" element={<PatientForm />} />
                     <Route path="/dashboard" element={<LogForm />} />
+                    <Route path="/mypage" element={<MyPage />} />
                 </Routes>
             </div>
         </BrowserRouter>
