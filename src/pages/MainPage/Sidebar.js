@@ -36,7 +36,7 @@ const Sidebar = () => {
                         <a href="./mypage">송채연 님</a>
                     </div>
                     <div className="topbar_text">
-                        <a href="#">로그아웃</a>
+                        <a href="login">로그아웃</a>
                     </div>
                 </div>
             </div>
