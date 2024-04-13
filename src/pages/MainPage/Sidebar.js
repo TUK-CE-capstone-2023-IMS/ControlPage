@@ -11,10 +11,10 @@ const Sidebar = () => {
                             <a href="/">메인 홈</a>
                         </div>
                         <div>
-                            <a href="./dashboard">대시 보드</a>
+                            <a href="./rooms">대시 보드</a>
                         </div>
                         <div>
-                            <a href="./rooms">환자 목록</a>
+                            <a href="./patients">환자 목록</a>
                         </div>
                         <div>
                             <a href="#">환경 설정</a>
