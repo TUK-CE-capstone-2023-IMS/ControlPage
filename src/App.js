@@ -13,17 +13,21 @@ function App() {
 
     useEffect(() => {
         // SSE 연결 설정
-        const eventSource = new EventSource('http://localhost:8080/alert',{
-        });
+        const eventSource = new EventSource('http://localhost:8080/alert');
 
         eventSource.onopen = () => {
             console.log("SSE-Connect")
         }
-        eventSource.addEventListener("emergency",function (e){
+        /*eventSource.addEventListener("emergency",function (e){
             console.log(e.data)
             setAlertMessage(e.data);
             setIsVisible(true);
-        })
+        })*/
+        eventSource.onmessage = (event) =>{
+            console.log(event.data)
+            setAlertMessage(event.data)
+            setIsVisible(true)
+        }
         eventSource.onerror = (event) => {
             eventSource.close();
             if (event.target.readyState === EventSource.CLOSED) {
