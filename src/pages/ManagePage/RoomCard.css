@@ -1,0 +1,14 @@
+
+.room-num{
+    font-size: 45px;
+}
+.status {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.patient-info {
+    display: flex;
+    justify-content: right;
+    font-size: 10px;
+}
