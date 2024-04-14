@@ -16,7 +16,7 @@ const Sidebar = () => {
                             <a href="/">메인 홈</a>
                         </div>
                         <div className="sidebar_text">
-                            <a href="./dashboard">대시 보드</a>
+                            <a href="./rooms">대시 보드</a>
                         </div>
                         <div className="sidebar_text">
                             <a href="./patients">환자 목록</a>
