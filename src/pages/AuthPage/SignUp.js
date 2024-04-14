@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import './SignUp.css';
+import {Link, useNavigate} from "react-router-dom";
+import axios from "axios";
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({
-        email: '',
+        managerid:'',
         password: '',
-        fullName: '',
-        birthday: '',
-        gender: '남자',
-        phoneNumber: '',
-        affiliation: '',
+        email: '',
+        name: '',
+        address: '',
+        age: '',
+        phone: '',
+        gender: '',
+        etc: ''
     });
 
     const handleChange = (e) => {
@@ -18,6 +22,20 @@ const SignupPage = () => {
             ...formData,
             [name]: value,
         });
+    };
+
+    const navigate  = useNavigate();
+    const handleSignup = async () => {
+        try {
+            const response = await axios.post('http://localhost:8080/manager/signin', formData);
+            console.log('회원가입 요청 성공:', response.data);
+            if (response.data.success) {
+                navigate("/login");
+            }
+        } catch (error) {
+            console.error('회원가입 요청 실패:', error.response ? error.response.data : error.message);
+            // 오류 처리
+        }
     };
 
     const handleSubmit = (e) => {
@@ -33,11 +51,11 @@ const SignupPage = () => {
                 <div className="boxes">
                     <div className="email">
                         <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
+                            type="text"
+                            name="managerid"
+                            value={formData.managerid}
                             onChange={handleChange}
-                            placeholder="이메일"
+                            placeholder="아이디"
                             required
                         />
                     </div>
@@ -51,11 +69,21 @@ const SignupPage = () => {
                             required
                         />
                     </div>
+                    <div className="email">
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="이메일"
+                            required
+                        />
+                    </div>
                     <div className="name">
                         <input
                             type="text"
-                            name="fullName"
-                            value={formData.fullName}
+                            name="name"
+                            value={formData.name}
                             onChange={handleChange}
                             placeholder="성명"
                             required
@@ -72,38 +100,41 @@ const SignupPage = () => {
                             <option value="여자">여자</option>
                         </select>
                     </div>
-                    <div className="birth">
-                        <input
-                            type="date"
-                            name="birthday"
-                            value={formData.birthday}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
                     <div className="phone_number">
                         <input
                             type="text"
-                            name="phoneNumber"
-                            value={formData.phoneNumber}
+                            name="phone"
+                            value={formData.phone}
                             onChange={handleChange}
                             placeholder="전화번호"
                             required
                         />
                     </div>
-                    <div className="affiliation">
+                    <div className="age">
+                        <input
+                            type="number"
+                            name="age"
+                            value={formData.age}
+                            onChange={handleChange}
+                            placeholder="나이"
+                            required
+                        />
+                    </div>
+                    <div className="etc">
                         <input
                             type="text"
-                            name="affiliation"
-                            value={formData.affiliation}
+                            name="etc"
+                            value={formData.etc}
                             onChange={handleChange}
-                            placeholder="소속"
-                            required
+                            placeholder="etc"
                         />
                     </div>
                 </div>
                 <div signup_button>
-                    <button type="submit">회원가입</button>
+                    <button onClick={handleSignup} type="submit">회원가입</button>
+                </div>
+                <div cancel>
+                    <Link to="/login"><button>취소</button></Link>
                 </div>
             </div>
         </form>
