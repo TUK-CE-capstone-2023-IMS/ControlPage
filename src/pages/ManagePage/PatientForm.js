@@ -17,7 +17,7 @@ const PatientFormPage = () => {
             home: '서울특별시 강남구'
         },
         {
-            name: '김예린',
+            name: '김나현',
             age: '30',
             gender: '여성',
             height:'165',

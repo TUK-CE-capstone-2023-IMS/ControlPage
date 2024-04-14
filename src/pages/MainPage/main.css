@@ -6,20 +6,19 @@
 
 .hello_box{
     background-color: #F3F3F3;
-    height: 25vh;
-    width: 70vw;
+    height: 415px;
+    width: 1380px;
     text-align: center;
-    margin-right: 50px;
-    margin-left: 350px;
-    margin-top: 70px;
+    margin-left: 450px;
+    margin-top: 50px;
 }
 
 .text1{
-    padding-top: 60px;
-    font-size: 30px;
+    padding-top: 120px;
+    font-size: 48px;
 }
 
 .text2{
-    padding-top: 20px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 32px;
 }

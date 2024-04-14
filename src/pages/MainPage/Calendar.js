@@ -35,9 +35,15 @@ const Calendar = () => {
     return (
         <div className="calendar">
             <div className="controls">
-                <button onClick={handlePrevMonth}>이전 달</button>
-                <div className="month">{`${currentYear}년 ${currentMonth + 1}월`}</div>
-                <button onClick={handleNextMonth}>다음 달</button>
+                <div className="last_month">
+                    <button onClick={handlePrevMonth}>이전 달</button>
+                </div>
+                <div className="month">
+                    {`${currentYear}년 ${currentMonth + 1}월`}
+                </div>
+                <div className="next_month">
+                    <button onClick={handleNextMonth}>다음 달</button>
+                </div>
             </div>
             <div className="days">
                 {['일', '월', '화', '수', '목', '금', '토'].map(day => (
