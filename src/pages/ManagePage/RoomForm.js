@@ -18,7 +18,7 @@ const RoomForm = () => {
 
     return (
         <div className="RoomForm-Layout">
-            <Sidebar />
+            <Sidebar/>
             <div className="room-manager">
                 <div className="title">
                     <div className="title-inner">방 관리</div>

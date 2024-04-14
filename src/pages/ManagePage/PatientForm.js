@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './PatientForm.css';
+import Sidebar from "../MainPage/Sidebar";
 
 const PatientFormPage = () => {
     const [patients, setPatients] = useState([]);
@@ -39,6 +40,7 @@ const PatientFormPage = () => {
 
     return (
         <div>
+            <Sidebar/>
             {patients.map((patient, index) => (
                 <div className="patientformpage" key={index}>
                     <div className="total">
