@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import MainPage from './pages/MainPage/main';
 import LoginPage from './pages/AuthPage/Login';
+import SignupPage from './pages/AuthPage/SignUp';
 import RoomForm from "./pages/ManagePage/RoomForm";
 import LogForm from "./pages/LogPage/LogForm";
 import MyPage from "./pages/AuthPage/MyPage";
@@ -47,6 +48,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<MainPage />} />
                     <Route path="/login" element={<LoginPage />} />
+                    <Route path="/signup" element={<SignupPage />} />
                     <Route path="/patients" element={<PatientForm />} />
                     <Route path="/dashboard" element={<LogForm />} />
                     <Route path="/mypage" element={<MyPage />} />
