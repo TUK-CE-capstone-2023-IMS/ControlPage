@@ -12,9 +12,9 @@ const AdminMyPage = () => {
     });
 
     const savedAdminInfo = {
-        name: '관리자',
+        name: '송채연',
         birthdate: '1990/01/01',
-        gender: '남성',
+        gender: '여성',
         email: 'admin@example.com',
         phoneNumber: '010-1234-5678',
         affiliation: '회사명'

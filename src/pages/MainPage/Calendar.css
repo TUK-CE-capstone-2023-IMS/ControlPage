@@ -16,17 +16,17 @@
     margin-bottom: 10px;
 }
 
-.controls button {
+.controls {
     background-color: white;
     border: none;
     cursor: pointer;
 }
 
-.cal_last_month button {
+.cal_last_month_button button{
     margin-left: 10px;
 }
 
-.cal_next_month button {
+.cal_next_month_button button{
     margin-right: 10px;
 }
 

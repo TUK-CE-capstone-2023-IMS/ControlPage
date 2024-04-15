@@ -35,13 +35,13 @@ const Calendar = () => {
     return (
         <div className="calendar_page">
             <div className="cal_controls">
-                <div className="cal_last_month">
+                <div className="cal_last_month_button">
                     <button onClick={handlePrevMonth}>이전 달</button>
                 </div>
                 <div className="cal_month">
                     {`${currentYear}년 ${currentMonth + 1}월`}
                 </div>
-                <div className="cal_next_month">
+                <div className="cal_next_month_button">
                     <button onClick={handleNextMonth}>다음 달</button>
                 </div>
             </div>
