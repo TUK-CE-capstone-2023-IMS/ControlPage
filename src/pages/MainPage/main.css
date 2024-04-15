@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.hello_box{
+.main_hello_box{
     background-color: #F3F3F3;
     height: 415px;
     width: 1380px;
@@ -13,12 +13,12 @@
     margin-top: 50px;
 }
 
-.text1{
+.main_text1{
     padding-top: 120px;
     font-size: 48px;
 }
 
-.text2{
+.main_text2{
     margin-top: 20px;
     font-size: 32px;
 }

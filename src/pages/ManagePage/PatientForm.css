@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.patientformpage{
+.patientform_page{
     width: 1340px;
     height: 430px;
     margin-left: 480px;
@@ -15,18 +15,19 @@
     font-size: 25px;
 }
 
-.total{
-    margin-left: 30px;
-
+.patient_total_box{
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
 }
 
-.signout_button button{
+.patient_signout_button button{
     background-color: white;
     width: 130px;
     height: 40px;
     color: black;
     margin-left: 1200px;
-    margin-top: 5px;
+    margin-top: 20px;
     text-align: center;
     border: 2px solid black;
     border-radius: 10px;

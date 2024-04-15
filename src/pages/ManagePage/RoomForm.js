@@ -5,7 +5,7 @@ import './RoomForm.css'
 const RoomForm = () => {
     const rooms = [
         { id: 1, roomNumber: 'A101', status: '외출중', patientName: '', age: '', bloodType: '' },
-        { id: 2, roomNumber: 'A102', status: '재실중', patientName: '김철수', age: 30, bloodType: 'A+' },
+        { id: 2, roomNumber: 'A102', status: '재실중', patientName: '조은상', age: 30, bloodType: 'A+' },
         { id: 3, roomNumber: 'A103', status: '재실중', patientName: '박영희', age: 25, bloodType: 'B+' },
         { id: 4, roomNumber: 'A104', status: '재실중', patientName: '이소라', age: 40, bloodType: 'O-' },
         { id: 5, roomNumber: 'B201', status: '재실중', patientName: '장민호', age: 60, bloodType: 'AB+' },

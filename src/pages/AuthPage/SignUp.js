@@ -29,9 +29,9 @@ const SignupPage = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="signup_page">
-                <p>레이더 관리자 서비스 시스템</p>
-                <div className="boxes">
-                    <div className="email">
+                <p className="signup_text">레이더 관리자 서비스 시스템</p>
+                <div className="signup_box">
+                    <div className="signup_email">
                         <input
                             type="email"
                             name="email"
@@ -41,7 +41,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="password_input">
+                    <div className="signup_password_input">
                         <input
                             type="password"
                             name="password"
@@ -51,7 +51,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="name">
+                    <div className="signup_name">
                         <input
                             type="text"
                             name="fullName"
@@ -61,7 +61,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="gender">
+                    <div className="signup_gender">
                         <select
                             name="gender"
                             value={formData.gender}
@@ -72,7 +72,7 @@ const SignupPage = () => {
                             <option value="여자">여자</option>
                         </select>
                     </div>
-                    <div className="birth">
+                    <div className="signup_birth">
                         <input
                             type="date"
                             name="birthday"
@@ -81,7 +81,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="phone_number">
+                    <div className="signup_phone_number">
                         <input
                             type="text"
                             name="phoneNumber"
@@ -91,7 +91,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="affiliation">
+                    <div className="signup_aff">
                         <input
                             type="text"
                             name="affiliation"
@@ -103,7 +103,7 @@ const SignupPage = () => {
                     </div>
                 </div>
                 <div signup_button>
-                    <button type="submit">회원가입</button>
+                    <button className="signup_button" type="submit">회원가입</button>
                 </div>
             </div>
         </form>

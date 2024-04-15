@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .room-manager {
     width: 1400px;
     height: 860px;
@@ -70,3 +71,5 @@
 .occupied {
     background-color: #90EE90;
 }
+
+

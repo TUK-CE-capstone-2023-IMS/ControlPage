@@ -48,7 +48,7 @@ function App() {
                     <Route path="/" element={<MainPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/patients" element={<PatientForm />} />
-                    <Route path="/dashboard" element={<LogForm />} />
+                    <Route path="/dashboard" element={<RoomForm />} />
                     <Route path="/mypage" element={<MyPage />} />
                 </Routes>
             </div>

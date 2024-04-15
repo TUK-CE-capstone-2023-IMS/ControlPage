@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Sidebar from "../MainPage/Sidebar";
 import './PatientForm.css';
 
 const PatientFormPage = () => {
@@ -40,42 +41,42 @@ const PatientFormPage = () => {
     return (
         <div>
             {patients.map((patient, index) => (
-                <div className="patientformpage" key={index}>
-                    <div className="total">
-                        <div className="name">
+                <div className="patientform_page" key={index}>
+                    <div className="patient_total_box">
+                        <div className="patient_name">
                             <label>이름 : </label>
                             <span>{patient.name}</span>
                         </div>
-                        <div className="age">
+                        <div className="patient_age">
                             <label>나이 : </label>
                             <span>{patient.age}</span>
                         </div>
-                        <div className="gender">
+                        <div className="patient_gender">
                             <label>성별 : </label>
                             <span>{patient.gender}</span>
                         </div>
-                        <div className="height">
+                        <div className="patient_height">
                             <label>키 : </label>
                             <span>{patient.height}</span>
                         </div>
-                        <div className="weight">
+                        <div className="patient_weight">
                             <label>몸무게 : </label>
                             <span>{patient.weight}</span>
                         </div>
-                        <div className="phone_num">
+                        <div className="patient_phone_num">
                             <label>전화번호 : </label>
                             <span>{patient.phoneNumber}</span>
                         </div>
-                        <div className="emergency_num">
+                        <div className="patient_emergency_num">
                             <label>비상 연락망 : </label>
                             <span>{patient.emergencyNumber}</span>
                         </div>
-                        <div className="home">
+                        <div className="patient_home">
                             <label>주소 : </label>
                             <span>{patient.home}</span>
                         </div>
                     </div>
-                    <div className="signout_button">
+                    <div className="patient_signout_button">
                         <button onClick={() => handleDelete(index)}>삭제</button>
                     </div>
                 </div>

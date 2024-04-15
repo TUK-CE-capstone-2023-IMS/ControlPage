@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './ForgotPassword.css'
+import './ForgotPassword.css';
+
 const ForgotPasswordPage = () => {
     const [formData, setFormData] = useState({
         email: '',
@@ -22,8 +23,8 @@ const ForgotPasswordPage = () => {
     return (
         <form onSubmit={handleForgotPassword}>
             <div className="forgotpassword_page">
-                <p class="password">비밀번호를 찾고자 하는 아이디를 입력해주세요.</p>
-                <div className="email">
+                <p class="forgotpassword_msg">비밀번호를 찾고자 하는 아이디를 입력해주세요.</p>
+                <div className="forgotpassword_email">
                     <label htmlFor="email"> </label>
                     <input
                         type="email"
@@ -34,7 +35,7 @@ const ForgotPasswordPage = () => {
                         required
                     />
                 </div>
-                <button type="submit">비밀번호 재설정</button>
+                <button className="forgotpassword_button" type="submit">비밀번호 재설정</button>
             </div>
         </form>
     );

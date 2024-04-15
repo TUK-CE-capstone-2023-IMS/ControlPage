@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-.box{
+.login_box{
     width:600px;
     height:900px;
     margin: auto;
@@ -19,34 +19,34 @@
     border: 2px solid black;
 }
 
-.title {
+.login_title {
     text-align: center;
     font-size: 40px;
     padding-top: 25px;
 }
 
-.id{
+.login_id{
     font-size: 30px;
     text-align: left;
     padding-top: 60px;
     padding-left: 80px;
 }
 
-.password{
+.login_password{
     font-size: 30px;
     text-align: left;
     padding-left: 80px;
 }
 
-.forgot{
+.login_forgot_msg{
     text-decoration: underline;
     text-align: right;
     font-size: 18px;
     padding-right: 80px;
 }
 
-.idbox input ,
-.passwordbox input{
+.login_idbox input ,
+.login_passwordbox input{
     width: 420px;
     height: 70px;
     padding: 10px 10px 10px 0px;
@@ -54,6 +54,8 @@
     margin-top: 10px;
     border-radius: 10px;
     border: 2px solid black;
+    font-size: 25px;
+    padding-left: 10px;
 }
 
 .login_button button ,
@@ -71,7 +73,7 @@
     font-size: 25px;
 }
 
-.total_button{
+.login_total_button{
     margin-top: 200px;
 }
 

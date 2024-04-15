@@ -1,4 +1,4 @@
-.calendar {
+.calendar_page {
     max-width: 450px;
     margin-top: 50px;
     margin-left: 450px;
@@ -9,7 +9,7 @@
     font-size: 15px;
 }
 
-.controls {
+.cal_controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,36 +22,36 @@
     cursor: pointer;
 }
 
-.last_month button {
+.cal_last_month button {
     margin-left: 10px;
 }
 
-.next_month button {
+.cal_next_month button {
     margin-right: 10px;
 }
 
-.month {
+.cal_month {
     width: 200px;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
 }
 
-.days {
+.cal_days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
 
-.day {
+.cal_day {
     text-align: center;
     padding: 5px;
 }
 
-.empty-cell {
+.cal_empty-cell {
     visibility: hidden;
 }
 
-.today {
+.cal_today {
     background-color: #f3f3f3;
     border-radius: 10px;
     font-weight: 400;

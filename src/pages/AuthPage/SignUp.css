@@ -10,25 +10,25 @@
     text-align: center;
 }
 
-p{
+.signup_text{
     font-size: 30px;
     margin-top: 20px;
 }
 
-.email input,
-.password_input input,
-.name input,
-.gender select,
-.birth input,
-.phone_number input,
-.affiliation input{
+.signup_email input,
+.signup_password_input input,
+.signup_name input,
+.signup_gender select,
+.signup_birth input,
+.signup_phone_number input,
+.signup_aff input{
     height: 40px;
     width: 300px;
     border-radius: 5px;
     border: 1px solid black;
 }
 
-button {
+.signup_button button {
     height: 40px;
     width: 300px;
     border-radius: 5px;
@@ -37,6 +37,6 @@ button {
 
 }
 
-.boxes{
+.signup_box{
     margin-top: 40px;
 }
