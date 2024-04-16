@@ -40,6 +40,7 @@ const PatientFormPage = () => {
 
     return (
         <div>
+            <Sidebar/>
             {patients.map((patient, index) => (
                 <div className="patientform_page" key={index}>
                     <div className="patient_total_box">

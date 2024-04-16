@@ -5,8 +5,8 @@ const LogCard = ({ logInfo })=>{
     return(
         <div className={logClass}>
             <div className="log-info">
-                <p className="log-contents">{logInfo.log}</p>
-                <p className="log-time">{logInfo.time}</p>
+                <p className="log-contents">{logInfo.content}</p>
+                <p className="log-time">{logInfo.datetime}</p>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ControlPage.iml" filepath="$PROJECT_DIR$/ControlPage.iml" />
       <module fileurl="file://$PROJECT_DIR$/../radarcontrolsystem.iml" filepath="$PROJECT_DIR$/../radarcontrolsystem.iml" />
     </modules>
   </component>

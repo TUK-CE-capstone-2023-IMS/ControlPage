@@ -1,7 +1,18 @@
-import React, {useState} from 'react';
-import './EmergencyAlert.css'
-const EmergencyAlert = ({message,onClose}) => {
-    const alert = {id: 1, roomNum: 'B 204', title: '낙상발생'}
+import React, { useEffect } from 'react';
+import './EmergencyAlert.css';
+import useSound from 'use-sound';
+import sound from './tfile.mp3';
+
+const EmergencyAlert = ({ message, onClose }) => {
+    const alert = { id: 1, roomNum: 'B 204', title: '낙상발생' };
+    const [play, { stop }] = useSound(sound);
+    useEffect(() => {
+        play();
+    }, [play]);
+    const handleClose = () => {
+        stop();
+        onClose();
+    };
 
     return (
         <div className="emergency-overlay">
@@ -11,11 +22,11 @@ const EmergencyAlert = ({message,onClose}) => {
                         <p className="emergency-roomNum">{alert.roomNum}</p>
                         <p className="emergency-title">{alert.title}</p>
                     </div>
-                    <button className="close-btn" onClick={onClose}>닫기</button> {/* 닫기 버튼 클릭 시 onClose 함수 호출 */}
+                    <button className="close-btn" onClick={handleClose}>닫기</button>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default EmergencyAlert;

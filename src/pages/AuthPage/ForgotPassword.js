@@ -35,7 +35,9 @@ const ForgotPasswordPage = () => {
                         required
                     />
                 </div>
-                <button className="forgotpassword_button" type="submit">비밀번호 재설정</button>
+                <div className="forgotpassword_button">
+                    <button type="submit">비밀번호 재설정</button>
+                </div>
             </div>
         </form>
     );

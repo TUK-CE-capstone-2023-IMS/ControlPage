@@ -21,9 +21,11 @@
 .signup_gender select,
 .signup_birth input,
 .signup_phone_number input,
-.signup_aff input{
+.signup_age input,
+.signup_etc input{
     height: 40px;
     width: 300px;
+    padding-left: 5px;
     border-radius: 5px;
     border: 1px solid black;
 }
