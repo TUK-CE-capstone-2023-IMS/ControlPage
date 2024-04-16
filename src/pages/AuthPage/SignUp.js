@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './SignUp.css';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
+import { BsPerson } from "react-icons/bs";
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({
@@ -49,7 +50,6 @@ const SignupPage = () => {
             <div className="signup_page">
                 <p className="signup_text">레이더 관리자 서비스 시스템</p>
                 <div className="signup_box">
-
                     <div className="signup_email">
                         <input
                             type="text"
@@ -57,6 +57,7 @@ const SignupPage = () => {
                             value={formData.managerid}
                             onChange={handleChange}
                             placeholder="아이디"
+                            id="BsPerson"
                             required
                         />
                     </div>

@@ -45,15 +45,16 @@ const Calendar = () => {
                     <button onClick={handleNextMonth}>다음 달</button>
                 </div>
             </div>
+
             <div className="cal_days">
                 {['일', '월', '화', '수', '목', '금', '토'].map(day => (
-                    <div key={day} className="cal_day">{day}</div>
+                    <div key={day} className="cal_dw">{day}</div>
                 ))}
                 {emptyCellsStart.map((cell, index) => (
                     <div key={`empty-start-${index}`} className="cal_empty-cell"></div>
                 ))}
                 {daysInMonth.map(day => (
-                    <div key={day} className={`day ${new Date(currentYear, currentMonth, day).toDateString() === new Date().toDateString() ? 'cal_today' : ''}`}>{day}</div>
+                    <div key={day} className={`cal_day ${new Date(currentYear, currentMonth, day).toDateString() === new Date().toDateString() ? 'cal_today' : ''}`}>{day}</div>
                 ))}
                 {emptyCellsEnd.map((cell, index) => (
                     <div key={`empty-end-${index}`} className="cal_empty-cell"></div>

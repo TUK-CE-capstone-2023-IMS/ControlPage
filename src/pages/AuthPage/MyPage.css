@@ -5,28 +5,35 @@
 }
 
 .my_page{
-    width: 1343px;
-    height: 443px;
+    width: 1340px;
+    height: 440px;
     margin-left: 480px;
-    margin-top: 200px;
     background-color: #f3f3f3;
-    border-radius: 10px;
+    border-radius: 16px;
     text-align: left;
-    border: 2px solid black;
+    border: 1px solid gray;
     font-size: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .mypage_text{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-right: 800px;
     font-size: 30px;
-    font-weight: 700;
-    margin-left: 20px;
+    font-weight: 400;
+    color: #333333;
 }
 
 .mypage_totalbox{
     margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 45px;
+}
+
+.mypage_name, .mypage_birth, .mypage_gender, .mypage_email, .mypage_phone_num, .mypage_aff {
+    padding-bottom: 20px;
+    color: #333333;
+
 }
 
 .mypage_signout_button button{
@@ -37,8 +44,14 @@
     margin-left: 1200px;
     margin-top: 50px;
     text-align: center;
-    border: 2px solid black;
+    border: 1px solid gray;
     border-radius: 10px;
+    font-size: 22px;
+    color: #333333;
+}
+
+.mypage_signout_button button:hover{
+    font-weight: 600;
     cursor: pointer;
-    font-size: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
