@@ -4,23 +4,24 @@ import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-    const navigate = useNavigate(); // useNavigate 훅 사용
+    const navigate = useNavigate();
 
-    const [managerId, setManagerId] = useState('');
+    const [managerid, setManagerid] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
             const response = await axios.post('http://localhost:8080/manager/login', {
-                managerId: managerId,
+                managerid: managerid,
                 password: password
             });
 
             if (response && response.data && response.data.success) { // 성공적으로 로그인한 경우
                 console.log('로그인 요청 성공:', response.data);
-                localStorage.setItem('managerId', managerId);
-                setManagerId('');
+                localStorage.setItem('managerid', managerid);
+                localStorage.setItem('managername', response.data.name);
+                setManagerid('');
                 setPassword('');
                 navigate('/'); // '/'로 페이지 이동
             } else {
@@ -43,9 +44,9 @@ const LoginPage = () => {
                         <div className="idbox">
                             <input
                                 type="text"
-                                id="managerId"
-                                value={managerId}
-                                onChange={(e) => setManagerId(e.target.value)}
+                                id="managerid"
+                                value={managerid}
+                                onChange={(e) => setManagerid(e.target.value)}
                                 required />
                         </div>
                     </div>
@@ -71,9 +72,6 @@ const LoginPage = () => {
                         </div>
                         <div className="signin_button">
                             <Link to="/signup"><button>회원가입</button></Link>
-                        </div>
-                        <div cancel>
-                            <Link to="/"><button>취소</button></Link>
                         </div>
                     </div>
                 </form>

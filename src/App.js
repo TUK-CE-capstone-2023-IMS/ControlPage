@@ -6,10 +6,14 @@ import SignupPage from './pages/AuthPage/SignUp';
 import RoomForm from "./pages/ManagePage/RoomForm";
 import LogForm from "./pages/LogPage/LogForm";
 import MyPage from "./pages/AuthPage/MyPage";
-import PatientForm from "./pages/ManagePage/PatientForm"
+import PatientForm from "./pages/ManagePage/PatientInfoForm"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EmergencyAlert from './pages/NoticePage/EmergencyAlert';
-import SignUp from "./pages/AuthPage/SignUp";
+import PatientInfoChangeForm from "./pages/ManagePage/PatientInfoChangeForm";
+
+function PatientInfoForm() {
+    return null;
+}
 
 function App() {
     const [alertMessage, setAlertMessage] = useState('');
@@ -55,7 +59,9 @@ function App() {
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignupPage />} />
                     <Route path="/patients" element={<PatientForm />} />
-                    <Route path="/dashboard" element={<LogForm />} />
+                    <Route path="/log" element={<LogForm />} />
+                    <Route path="/PatientInfo" element={<PatientInfoForm />} />
+                    <Route path="/PatientInfoChangeForm" element={<PatientInfoChangeForm />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/rooms" element={<RoomForm />} />
 

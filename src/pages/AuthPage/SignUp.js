@@ -12,7 +12,7 @@ const SignupPage = () => {
         address: '',
         age: '',
         phone: '',
-        gender: '',
+        sex: '',
         etc: ''
     });
 
@@ -40,7 +40,6 @@ const SignupPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // 여기에 회원가입 로직 추가
         console.log('회원가입 정보:', formData);
     };
 
@@ -49,7 +48,7 @@ const SignupPage = () => {
             <div className="signup_page">
                 <p>레이더 관리자 서비스 시스템</p>
                 <div className="boxes">
-                    <div className="email">
+                    <div className="id">
                         <input
                             type="text"
                             name="managerid"
@@ -89,15 +88,16 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="gender">
+                    <div className="sex">
                         <select
-                            name="gender"
-                            value={formData.gender}
+                            name="sex"
+                            value={formData.sex}
                             onChange={handleChange}
                             required
                         >
-                            <option value="남자">남자</option>
-                            <option value="여자">여자</option>
+                            <option value="">성별 선택</option>
+                            <option value="male">남자</option>
+                            <option value="female">여자</option>
                         </select>
                     </div>
                     <div className="phone_number">
@@ -117,6 +117,16 @@ const SignupPage = () => {
                             value={formData.age}
                             onChange={handleChange}
                             placeholder="나이"
+                            required
+                        />
+                    </div>
+                    <div className="address">
+                        <input
+                            type="text"
+                            name="address"
+                            value={formData.address}
+                            onChange={handleChange}
+                            placeholder="주소"
                             required
                         />
                     </div>
