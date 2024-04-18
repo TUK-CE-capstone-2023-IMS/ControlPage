@@ -1,42 +1,58 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from "../MainPage/Sidebar";
 import './MyPage.css';
-const AdminMyPage = () => {
+import axios from 'axios';
+import {Link, useNavigate} from "react-router-dom";
 
+const AdminMyPage = () => {
+    const navigate = useNavigate();
     const [adminInfo, setAdminInfo] = useState({
+        managerid: '',
         name: '',
-        birthdate: '',
-        gender: '',
+        age: '',
+        sex: '',
+        phone: '',
         email: '',
-        phoneNumber: '',
-        affiliation: ''
+        address: '',
+        etc: ''
     });
 
-    const savedAdminInfo = {
-        name: '송채연',
-        birthdate: '1990/01/01',
-        gender: '여성',
-        email: 'admin@example.com',
-        phoneNumber: '010-1234-5678',
-        affiliation: '회사명'
-    };
-
     useEffect(() => {
-        setAdminInfo(savedAdminInfo);
+        const managerid = localStorage.getItem('managerid');
+        if (managerid) {
+            fetch(`http://localhost:8080/manager/info?managerid=${managerid}`)
+                .then(response => response.json())
+                .then(data => {
+                    setAdminInfo(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching admin info:', error);
+                });
+        }
     }, []);
 
-    const handleDelete = () => {
-        // 여기에 삭제 로직 구현
-        // 이 예시에서는 단순히 상태를 초기화.
-        setAdminInfo({
-            name: '',
-            birthdate: '',
-            gender: '',
-            email: '',
-            phoneNumber: '',
-            affiliation: ''
-        });
+    const handleDelete = async () => {
+        try {
+            const managerid = localStorage.getItem('managerid');
+            const response = await axios.post('http://localhost:8080/manager/signout', {
+                managerid: managerid
+            });
+            console.log('회원 탈퇴 요청 성공:', response.data);
+
+            if (response.data.success) {
+                // 회원 탈퇴 성공 시 로컬 스토리지에서 관리자 ID 삭제
+                localStorage.clear()
+
+                // 페이지 리로드 또는 로그아웃 등 추가 작업 수행
+                navigate('/login');
+            } else {
+                console.error('회원 탈퇴 실패:', response.data.message);
+            }
+        } catch (error) {
+            console.error('회원 탈퇴 요청 실패:', error.response ? error.response.data : error.message);
+        }
     };
+
 
     return (
         <div>
@@ -69,9 +85,36 @@ const AdminMyPage = () => {
                         <span>{adminInfo.affiliation}</span>
                     </div>
                 </div>
-                <div className="mypage_signout_button">
-                    <button onClick={handleDelete}>회원 탈퇴</button>
+                <div className="age">
+                    <label>나이 : </label>
+                    <span>{adminInfo.age}</span>
                 </div>
+                <div className="sex">
+                    <label>성별 : </label>
+                    <span>{adminInfo.sex}</span>
+                </div>
+                <div className="phone">
+                    <label>전화번호 : </label>
+                    <span>{adminInfo.phone}</span>
+                </div>
+                <div className="email">
+                    <label>이메일 : </label>
+                    <span>{adminInfo.email}</span>
+                </div>
+                <div className="address">
+                    <label>주소 : </label>
+                    <span>{adminInfo.address}</span>
+                </div>
+                <div className="etc">
+                    <label>기타 : </label>
+                    <span>{adminInfo.etc}</span>
+                </div>
+            </div>
+            <div className="signout_button">
+                <button onClick={handleDelete}>회원 탈퇴</button>
+            </div>
+            <div cancel>
+                <Link to="/"><button>취소</button></Link>
             </div>
         </div>
     );
