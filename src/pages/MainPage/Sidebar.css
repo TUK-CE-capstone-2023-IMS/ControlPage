@@ -12,7 +12,7 @@
     display: inline-block;
     color:#b4b1a7;
     vertical-align: middle;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .sidebar {
@@ -30,17 +30,18 @@
     text-decoration: none;
 }
 
+.sidebar a:hover{
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
 ul{
     margin-top: 200px;
 }
 
 .sidebar_text{
-
-    font-size: 30px;
-}
-
-div{
-    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 28px;
 }
 
 .sidebar-divider {
@@ -65,8 +66,12 @@ div{
 }
 
 .topbar_text a {
-    color: black;
+    color: #333333;
     text-decoration: none;
 }
 
+.topbar_text:hover{
+    font-weight: 600;
+    cursor: pointer;
+}
 

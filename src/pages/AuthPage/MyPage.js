@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Sidebar from "../MainPage/Sidebar";
 import './MyPage.css';
 const AdminMyPage = () => {
 
@@ -12,9 +13,9 @@ const AdminMyPage = () => {
     });
 
     const savedAdminInfo = {
-        name: '관리자',
+        name: '송채연',
         birthdate: '1990/01/01',
-        gender: '남성',
+        gender: '여성',
         email: 'admin@example.com',
         phoneNumber: '010-1234-5678',
         affiliation: '회사명'
@@ -38,36 +39,39 @@ const AdminMyPage = () => {
     };
 
     return (
-        <div className="mypage">
-            <h1>개인 정보</h1>
-            <div className="total">
-                <div className="name">
-                    <label>이름 : </label>
-                    <span>{adminInfo.name}</span>
+        <div>
+        <Sidebar/>
+            <h1 className="mypage_text">개인 정보</h1>
+            <div className="my_page">
+                <div className="mypage_totalbox">
+                    <div className="mypage_name">
+                        <label>이름 : </label>
+                        <span>{adminInfo.name}</span>
+                    </div>
+                    <div className="mypage_birth">
+                        <label>생년월일 : </label>
+                        <span>{adminInfo.birthdate}</span>
+                    </div>
+                    <div className="mypage_gender">
+                        <label>성별 : </label>
+                        <span>{adminInfo.gender}</span>
+                    </div>
+                    <div className="mypage_email">
+                        <label>이메일 : </label>
+                        <span>{adminInfo.email}</span>
+                    </div>
+                    <div className="mypage_phone_num">
+                        <label>전화번호 : </label>
+                        <span>{adminInfo.phoneNumber}</span>
+                    </div>
+                    <div className="mypage_aff">
+                        <label>소속 : </label>
+                        <span>{adminInfo.affiliation}</span>
+                    </div>
                 </div>
-                <div className="birth">
-                    <label>생년월일 : </label>
-                    <span>{adminInfo.birthdate}</span>
+                <div className="mypage_signout_button">
+                    <button onClick={handleDelete}>회원 탈퇴</button>
                 </div>
-                <div className="gender">
-                    <label>성별 : </label>
-                    <span>{adminInfo.gender}</span>
-                </div>
-                <div className="email">
-                    <label>이메일 : </label>
-                    <span>{adminInfo.email}</span>
-                </div>
-                <div className="phone_num">
-                    <label>전화번호 : </label>
-                    <span>{adminInfo.phoneNumber}</span>
-                </div>
-                <div className="aff">
-                    <label>소속 : </label>
-                    <span>{adminInfo.affiliation}</span>
-                </div>
-            </div>
-            <div className="signout_button">
-                <button onClick={handleDelete}>회원 탈퇴</button>
             </div>
         </div>
     );

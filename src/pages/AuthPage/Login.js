@@ -33,14 +33,16 @@ const LoginPage = () => {
 
     return (
         <div className="login_page">
-            <div className="box">
-                <p className="title">레이더 관리자 서비스 시스템</p>
+            <div className="login_box">
+                <p className="login_title">레이더 관리자 서비스 시스템</p>
+
                 <form onSubmit={handleSubmit}>
-                    <div>
-                        <div className="id">
+                    <div className="login_id">
+                        <div className="login_id_text">
                             <label htmlFor="managerId">아이디</label>
                         </div>
-                        <div className="idbox">
+
+                        <div className="login_idbox">
                             <input
                                 type="text"
                                 id="managerId"
@@ -49,11 +51,13 @@ const LoginPage = () => {
                                 required />
                         </div>
                     </div>
-                    <div>
-                        <div className="password">
+
+                    <div class= "login_password">
+                        <div class= "login_password_text">
                             <label htmlFor="password">비밀번호</label>
                         </div>
-                        <div className="passwordbox">
+
+                        <div className="login_passwordbox">
                             <input
                                 type="password"
                                 id="password"
@@ -62,20 +66,25 @@ const LoginPage = () => {
                                 required />
                         </div>
                     </div>
-                    <div className="forgot">
-                        <p>아이디 또는 비밀번호를 잃어버리셨나요?</p>
+
+                    <div className="login_forgot_msg">
+                        <a href="./forgotpassword">아이디 또는 비밀번호를 잃어버리셨나요?</a>
                     </div>
-                    <div className="total_button">
+
+                    <div className="login_total_button">
                         <div className="login_button">
                             <button type="submit">로그인</button>
                         </div>
+
                         <div className="signin_button">
                             <Link to="/signup"><button>회원가입</button></Link>
                         </div>
-                        <div cancel>
+
+                        <div className="login_cancel">
                             <Link to="/"><button>취소</button></Link>
                         </div>
                     </div>
+
                 </form>
             </div>
         </div>

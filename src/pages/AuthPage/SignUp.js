@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './SignUp.css';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
+import { BsPerson } from "react-icons/bs";
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({
@@ -47,19 +48,21 @@ const SignupPage = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="signup_page">
-                <p>레이더 관리자 서비스 시스템</p>
-                <div className="boxes">
-                    <div className="email">
+                <p className="signup_text">레이더 관리자 서비스 시스템</p>
+                <div className="signup_box">
+                    <div className="signup_email">
                         <input
                             type="text"
                             name="managerid"
                             value={formData.managerid}
                             onChange={handleChange}
                             placeholder="아이디"
+                            id="BsPerson"
                             required
                         />
                     </div>
-                    <div className="password_input">
+
+                    <div className="signup_password_input">
                         <input
                             type="password"
                             name="password"
@@ -69,7 +72,8 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="email">
+
+                    <div className="signup_email">
                         <input
                             type="email"
                             name="email"
@@ -79,7 +83,8 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="name">
+
+                    <div className="signup_name">
                         <input
                             type="text"
                             name="name"
@@ -89,7 +94,8 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="gender">
+
+                    <div className="signup_gender">
                         <select
                             name="gender"
                             value={formData.gender}
@@ -100,7 +106,18 @@ const SignupPage = () => {
                             <option value="여자">여자</option>
                         </select>
                     </div>
-                    <div className="phone_number">
+
+                    <div className="signup_birth">
+                        <input
+                            type="date"
+                            name="birthday"
+                            value={formData.birthday}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+
+                    <div className="signup_phone_number">
                         <input
                             type="text"
                             name="phone"
@@ -110,7 +127,8 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="age">
+
+                    <div className="signup_age">
                         <input
                             type="number"
                             name="age"
@@ -120,20 +138,24 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="etc">
+
+                    <div className="signup_etc">
                         <input
                             type="text"
                             name="etc"
                             value={formData.etc}
                             onChange={handleChange}
-                            placeholder="etc"
+                            placeholder="소속"
                         />
                     </div>
+
                 </div>
-                <div signup_button>
-                    <button onClick={handleSignup} type="submit">회원가입</button>
+
+                <div className= "signup_button">
+                    <button className="signup_button" type="submit">회원가입</button>
                 </div>
-                <div cancel>
+
+                <div className="cancel">
                     <Link to="/login"><button>취소</button></Link>
                 </div>
             </div>

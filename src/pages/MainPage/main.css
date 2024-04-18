@@ -4,21 +4,27 @@
     box-sizing: border-box;
 }
 
-.hello_box{
+.main_hello_box{
     background-color: #F3F3F3;
     height: 415px;
     width: 1380px;
     text-align: center;
     margin-left: 450px;
     margin-top: 50px;
+    border-radius: 16px;
 }
 
-.text1{
+.main_hello_box:hover{
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.main_text1{
     padding-top: 120px;
     font-size: 48px;
 }
 
-.text2{
-    margin-top: 20px;
+.main_text2{
+    margin-top: 30px;
     font-size: 32px;
 }
