@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import Sidebar from "../MainPage/Sidebar";
 import './MyPage.css';
 import axios from 'axios';
@@ -56,65 +56,47 @@ const AdminMyPage = () => {
 
     return (
         <div>
-        <Sidebar/>
+            <Sidebar/>
             <h1 className="mypage_text">개인 정보</h1>
             <div className="my_page">
                 <div className="mypage_totalbox">
-                    <div className="mypage_name">
+                    <div className="name">
                         <label>이름 : </label>
                         <span>{adminInfo.name}</span>
                     </div>
-                    <div className="mypage_birth">
-                        <label>생년월일 : </label>
-                        <span>{adminInfo.birthdate}</span>
+                    <div className="age">
+                        <label>나이 : </label>
+                        <span>{adminInfo.age}</span>
                     </div>
-                    <div className="mypage_gender">
+                    <div className="sex">
                         <label>성별 : </label>
-                        <span>{adminInfo.gender}</span>
+                        <span>{adminInfo.sex}</span>
                     </div>
-                    <div className="mypage_email">
+                    <div className="phone">
+                        <label>전화번호 : </label>
+                        <span>{adminInfo.phone}</span>
+                    </div>
+                    <div className="email">
                         <label>이메일 : </label>
                         <span>{adminInfo.email}</span>
                     </div>
-                    <div className="mypage_phone_num">
-                        <label>전화번호 : </label>
-                        <span>{adminInfo.phoneNumber}</span>
+                    <div className="address">
+                        <label>주소 : </label>
+                        <span>{adminInfo.address}</span>
                     </div>
-                    <div className="mypage_aff">
-                        <label>소속 : </label>
-                        <span>{adminInfo.affiliation}</span>
+                    <div className="etc">
+                        <label>기타 : </label>
+                        <span>{adminInfo.etc}</span>
                     </div>
-                </div>
-                <div className="age">
-                    <label>나이 : </label>
-                    <span>{adminInfo.age}</span>
-                </div>
-                <div className="sex">
-                    <label>성별 : </label>
-                    <span>{adminInfo.sex}</span>
-                </div>
-                <div className="phone">
-                    <label>전화번호 : </label>
-                    <span>{adminInfo.phone}</span>
-                </div>
-                <div className="email">
-                    <label>이메일 : </label>
-                    <span>{adminInfo.email}</span>
-                </div>
-                <div className="address">
-                    <label>주소 : </label>
-                    <span>{adminInfo.address}</span>
-                </div>
-                <div className="etc">
-                    <label>기타 : </label>
-                    <span>{adminInfo.etc}</span>
                 </div>
             </div>
             <div className="signout_button">
                 <button onClick={handleDelete}>회원 탈퇴</button>
             </div>
             <div cancel>
-                <Link to="/"><button>취소</button></Link>
+                <Link to="/">
+                    <button>취소</button>
+                </Link>
             </div>
         </div>
     );
