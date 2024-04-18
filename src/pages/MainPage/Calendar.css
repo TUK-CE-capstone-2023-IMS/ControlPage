@@ -1,58 +1,74 @@
-.calendar {
-    max-width: 450px;
+.calendar_page {
+    width: 450px;
+    height: 300px;
     margin-top: 50px;
     margin-left: 450px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0px 3px 6px #ccc;
+    border: 1px solid gray;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     padding: 5px;
     font-size: 15px;
 }
 
-.controls {
+.cal_controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.controls button {
-    background-color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.last_month button {
+.cal_last_month_button button{
     margin-left: 10px;
+    width: 60px;
+    background-color: white;
+    border: 1px solid white;
+    font-size: 15px;
 }
 
-.next_month button {
+.cal_next_month_button button{
     margin-right: 10px;
+    width: 60px;
+    background-color: white;
+    border: 1px solid white;
+    font-size: 15px;
 }
 
-.month {
+.cal_last_month_button button:hover,
+.cal_next_month_button button:hover{
+    font-weight: 600;
+    cursor: pointer;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.cal_month {
     width: 200px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     text-align: center;
 }
 
-.days {
+.cal_days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
 
-.day {
+.cal_dw {
     text-align: center;
-    padding: 5px;
+    margin-top: 10px;
 }
 
-.empty-cell {
+.cal_day{
+    margin-top: 8px;
+    padding: 5px 10px;
+}
+
+.cal_empty-cell {
     visibility: hidden;
 }
 
-.today {
+.cal_today {
     background-color: #f3f3f3;
-    border-radius: 10px;
-    font-weight: 400;
+    border-radius: 16px;
+    font-weight: 600;
 }

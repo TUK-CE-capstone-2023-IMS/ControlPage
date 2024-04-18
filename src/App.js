@@ -9,6 +9,7 @@ import MyPage from "./pages/AuthPage/MyPage";
 import PatientForm from "./pages/ManagePage/PatientForm"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EmergencyAlert from './pages/NoticePage/EmergencyAlert';
+import ForgotPasswordPage from "./pages/AuthPage/ForgotPassword";
 import SignUp from "./pages/AuthPage/SignUp";
 
 function App() {
@@ -55,9 +56,10 @@ function App() {
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignupPage />} />
                     <Route path="/patients" element={<PatientForm />} />
-                    <Route path="/dashboard" element={<LogForm />} />
+                    <Route path="/dashboard" element={<RoomForm />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/rooms" element={<RoomForm />} />
+                    <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
 
                 </Routes>
             </div>
