@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SignUp.css';
+import './SignIn.css';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import { BsPerson } from "react-icons/bs";
@@ -26,7 +26,7 @@ const SignupPage = () => {
     };
 
     const navigate  = useNavigate();
-    const handleSignup = async () => {
+    const handleSignIn = async () => {
         try {
             const response = await axios.post('http://localhost:8080/manager/signin', formData);
             console.log('회원가입 요청 성공:', response.data);
@@ -93,7 +93,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="sex">
+                    <div className="signup_sex">
                         <select
                             name="sex"
                             value={formData.sex}
@@ -105,17 +105,6 @@ const SignupPage = () => {
                             <option value="female">여자</option>
                         </select>
                     </div>
-
-                    <div className="signup_birth">
-                        <input
-                            type="date"
-                            name="birthday"
-                            value={formData.birthday}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-
                     <div className="signup_phone_number">
                         <input
                             type="text"
@@ -137,7 +126,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="address">
+                    <div className="signup_address">
                         <input
                             type="text"
                             name="address"
@@ -147,7 +136,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="etc">
+                    <div className="signup_etc">
                         <input
                             type="text"
                             name="etc"
@@ -160,7 +149,7 @@ const SignupPage = () => {
                 </div>
 
                 <div className= "signup_button">
-                    <button className="signup_button" type="submit">회원가입</button>
+                    <button className="signup_button" type="submit" onClick={handleSignIn}>회원가입</button>
                 </div>
 
                 <div className="cancel">
