@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './SignUp.css';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
-import { BsPerson } from "react-icons/bs";
+import lock from "../../image/lock.png"
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({
@@ -63,6 +63,7 @@ const SignupPage = () => {
                     </div>
 
                     <div className="signup_password_input">
+                        <img src={lock} width="24px" height="24px" className="lockIcon"/>
                         <input
                             type="password"
                             name="password"

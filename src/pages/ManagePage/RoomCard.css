@@ -1,10 +1,13 @@
-
 .room-num{
     font-size: 45px;
+    color: #333333;
 }
+
 .status {
+    margin-top: 5px;
     font-size: 20px;
     font-weight: bold;
+    color: #333333;
 }
 
 .patient-info {
@@ -12,6 +15,7 @@
     justify-content: right;
     font-size: 10px;
 }
+
 .room-card-menu {
     position: absolute;
     top: 100%;
@@ -29,11 +33,13 @@
     padding: 5px 10px;
     margin: 5px 0;
     white-space: nowrap;
+    font-size: 15px;
 }
 
 .room-card-menu-select-btn:hover {
     background-color: #f0f0f0;
 }
+
 .room-card-menu-btn {
     width: 24px;
     height: 24px;

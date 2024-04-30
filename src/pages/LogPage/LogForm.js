@@ -15,7 +15,7 @@ const LogForm = () => {
             <div className="log-form">
                 <div className="room-info">
                     <p className="log-room-num">B 102</p>
-                    <p className="patient-name">{state.name}</p>
+                    <p className="patient-name">{state.name}님</p>
                 </div>
                 <div className="log-list">
                     {logs.map(log => (

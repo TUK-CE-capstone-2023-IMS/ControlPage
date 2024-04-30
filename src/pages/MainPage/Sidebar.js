@@ -1,7 +1,10 @@
 import React from 'react';
 import './Sidebar.css';
-import { MdHomeFilled } from "react-icons/md";
 import { MdAccountCircle } from "react-icons/md";
+import { GoHome } from "react-icons/go";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoPersonOutline } from "react-icons/io5";
 
 const Sidebar = () => {
     return (
@@ -9,20 +12,37 @@ const Sidebar = () => {
             <div className="sidebar">
                 <ul>
                     <div>
-                        <div className="homeIcon">
-                            <MdHomeFilled size={64}/>
+                        <div className="mainhome_sidebar">
+                            <div className="homeIcon">
+                                <GoHome size={45}/>
+                            </div>
+                            <div className="sidebar_mainhome_text">
+                                <a href="/">메인 홈</a>
+                            </div>
                         </div>
-                        <div className="sidebar_text">
-                            <a href="/">메인 홈</a>
+                        <div className="dashboard_sidebar">
+                            <div className="dashboardIcon">
+                                <LuLayoutDashboard size={45}/>
+                            </div>
+                            <div className="sidebar_dashboard_text">
+                                <a href="./rooms">대시 보드</a>
+                            </div>
                         </div>
-                        <div className="sidebar_text">
-                            <a href="./rooms">대시 보드</a>
+                        <div className="patientlist_sidebar">
+                            <div className="patientlistIcon">
+                                <IoPersonOutline size={45}/>
+                            </div>
+                            <div className="sidebar_patientlist_text">
+                                <a href="./patients">환자 목록</a>
+                            </div>
                         </div>
-                        <div className="sidebar_text">
-                            <a href="./patients">환자 목록</a>
-                        </div>
-                        <div className="sidebar_text">
-                            <a href="#">환경 설정</a>
+                        <div className="setting_sidebar">
+                            <div className="settingIcon">
+                                <IoSettingsOutline size={45}/>
+                            </div>
+                            <div className="sidebar_setting_text">
+                                <a href="#">환경 설정</a>
+                            </div>
                         </div>
                     </div>
                 </ul>

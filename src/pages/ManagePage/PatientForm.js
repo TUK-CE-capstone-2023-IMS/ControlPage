@@ -3,6 +3,7 @@ import Sidebar from "../MainPage/Sidebar";
 import './PatientForm.css';
 
 const PatientFormPage = () => {
+
     const [patients, setPatients] = useState([]);
 
     const savedPatients = [
@@ -41,6 +42,7 @@ const PatientFormPage = () => {
     return (
         <div>
             <Sidebar/>
+            <h1 className="patientform_text">환자 정보</h1>
             {patients.map((patient, index) => (
                 <div className="patientform_page" key={index}>
                     <div className="patient_total_box">

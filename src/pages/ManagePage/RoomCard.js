@@ -29,29 +29,17 @@ const RoomCard = ({ roomInfo }) => {
     };
 
     return (
-
-        <div  className={cardClass}>
-            <h4 className="room-num">{roomInfo.roomNumber}</h4>
-            <p className="status">{roomInfo.status}</p>
-            {roomInfo.status === '재실중' && (
-                <div className="patient-info">
-                    <p>{roomInfo.patientName}</p>
-                    <p>({roomInfo.age})님</p>
-                </div>
-            )}
-
-            <div className={cardClass}>
-                <button className="room-card-menu-btn" onClick={handleToggleMenu}>
-                    {isMenuOpen && (
-                        <div className="room-card-menu">
-                            <button className="room-card-menu-select-btn">환경설정</button>
-                            <button className="room-card-menu-select-btn" onClick={handleDetailClick}>세부정보</button>
-                        </div>
-                    )}
-                </button>
-                    <h4 className="room-num">{roomInfo.name}님</h4>
-                    <p className="status">{roomInfo.age}세 {roomInfo.sex}</p>
-            </div>
+        <div className={cardClass}>
+            <button className="room-card-menu-btn" onClick={handleToggleMenu}>
+                {isMenuOpen && (
+                    <div className="room-card-menu">
+                        <button className="room-card-menu-select-btn">환경설정</button>
+                        <button className="room-card-menu-select-btn" onClick={handleDetailClick}>세부정보</button>
+                    </div>
+                )}
+            </button>
+            <h4 className="room-num">{roomInfo.name}님</h4>
+            <p className="status">{roomInfo.age}세 {roomInfo.sex}</p>
         </div>
     );
 };
