@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom'; // useNavigate로 변경
+import { useNavigate } from 'react-router-dom'; // useNavigate로 변경
 import './RoomCard.css';
 
-const RoomCard = ({roomInfo}) => {
+const RoomCard = ({ roomInfo }) => {
     const navigate = useNavigate(); // useNavigate 사용
     const cardClass = `room-card ${roomInfo.status === '외출중' ? 'available' : 'occupied'}`;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +12,6 @@ const RoomCard = ({roomInfo}) => {
     const handleToggleMenu = () => {
         setIsMenuOpen(prevState => !prevState);
     };
-
     const handledInfoClick = async () => {
         navigate('/patients', {state: {patientid: roomInfo.patientid}});
     };
@@ -26,7 +25,7 @@ const RoomCard = ({roomInfo}) => {
 
             if (response && response.data) {
                 setPatientDetails(response.data);
-                navigate('/log', {state: {logs: response.data, name: roomInfo.name,}});
+                navigate('/dashboard', { state: { logs: response.data ,name:roomInfo.name,} });
             } else {
                 console.error('서버 응답에 데이터가 없음');
             }
