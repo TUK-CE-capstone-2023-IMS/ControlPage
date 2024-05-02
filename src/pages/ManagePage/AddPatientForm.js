@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import './PatientInfoChangeForm.css';
+import './AddPatientForm.css';
 import {Link, useNavigate, useLocation} from "react-router-dom";
 import axios from "axios";
 
-const PatientInfoChangeFormPage = () => {
-    const location = useLocation();
+const AddPatientFormPage = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         patientid: '',
@@ -19,20 +18,7 @@ const PatientInfoChangeFormPage = () => {
     });
 
     useEffect(() => {
-        // 페이지가 시작될 때 환자 정보를 받아오는 함수
-        const fetchPatientInfo = async () => {
-            try {
-                const response = await axios.get(`http://localhost:8080/patient/info?patientid=${location.state.patientid}`);
-                // 받아온 환자 정보를 formData에 설정
-                setFormData(response.data);
-            } catch (error) {
-                console.error('환자 정보를 받아오는데 실패했습니다:', error);
-            }
-        };
-
-        // 환자 정보를 받아오기 위한 함수 호출
-        fetchPatientInfo();
-    }, [location.state.patientid]);
+    }, []);
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -43,18 +29,18 @@ const PatientInfoChangeFormPage = () => {
     };
 
     const cancel = async (e) => {
-        navigate("/patients", {state: {patientid: location.state.patientid}});
+        navigate("/rooms");
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             // 수정된 환자 정보를 서버로 전송하여 업데이트하는 요청
-            const response = await axios.put('http://localhost:8080/patient/info', formData);
+            const response = await axios.post('http://localhost:8080/patient/info', formData);
             if (response.data.success) {
-                navigate("/patients", {state: {patientid: location.state.patientid}});
+                navigate("/rooms");
             }
         } catch (error) {
-            console.error('환자 정보 수정 실패:', error.response ? error.response.data : error.message);
+            console.error('환자 생성 실패:', error.response ? error.response.data : error.message);
             // 오류 처리
         }
     };
@@ -62,7 +48,7 @@ const PatientInfoChangeFormPage = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="signup_page">
-                <p>환자 정보 수정</p>
+                <p>환자 생성</p>
                 <div className="boxes">
                     <div className="id">
                         <input
@@ -166,4 +152,4 @@ const PatientInfoChangeFormPage = () => {
     );
 };
 
-export default PatientInfoChangeFormPage;
+export default AddPatientFormPage;

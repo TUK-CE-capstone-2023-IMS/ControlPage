@@ -23,6 +23,10 @@ const Sidebar = () => {
         }
     };
 
+    const addPatient = async (e) => {
+        navigate("/AddPatient");
+    }
+
     return (
         <div className="sidebar-container">
             <div className="sidebar">
@@ -36,6 +40,9 @@ const Sidebar = () => {
                         </div>
                         <div className="sidebar_text">
                             <a href="./rooms">대시 보드</a>
+                        </div>
+                        <div className="sidebar_text" onClick={addPatient}>
+                            <a href="#">환자 생성</a>
                         </div>
                         {/*<div className="sidebar_text">*/}
                         {/*    <a href="./patients">환자 목록</a>*/}
