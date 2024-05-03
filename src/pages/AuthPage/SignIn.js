@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SignUp.css';
+import './SignIn.css';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import lock from "../../image/lock.png"
@@ -13,7 +13,7 @@ const SignupPage = () => {
         address: '',
         age: '',
         phone: '',
-        gender: '',
+        sex: '',
         etc: ''
     });
 
@@ -26,7 +26,7 @@ const SignupPage = () => {
     };
 
     const navigate  = useNavigate();
-    const handleSignup = async () => {
+    const handleSignIn = async () => {
         try {
             const response = await axios.post('http://localhost:8080/manager/signin', formData);
             console.log('회원가입 요청 성공:', response.data);
@@ -41,16 +41,15 @@ const SignupPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // 여기에 회원가입 로직 추가
         console.log('회원가입 정보:', formData);
     };
 
     return (
         <form onSubmit={handleSubmit}>
             <div className="signup_page">
-                <p className="signup_text">레이더 관리자 서비스 시스템</p>
-                <div className="signup_box">
-                    <div className="signup_email">
+                <p>레이더 관리자 서비스 시스템</p>
+                <div className="boxes">
+                    <div className="id">
                         <input
                             type="text"
                             name="managerid"
@@ -95,29 +94,18 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-
-                    <div className="signup_gender">
+                    <div className="signup_sex">
                         <select
-                            name="gender"
-                            value={formData.gender}
+                            name="sex"
+                            value={formData.sex}
                             onChange={handleChange}
                             required
                         >
-                            <option value="남자">남자</option>
-                            <option value="여자">여자</option>
+                            <option value="">성별 선택</option>
+                            <option value="male">남자</option>
+                            <option value="female">여자</option>
                         </select>
                     </div>
-
-                    <div className="signup_birth">
-                        <input
-                            type="date"
-                            name="birthday"
-                            value={formData.birthday}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-
                     <div className="signup_phone_number">
                         <input
                             type="text"
@@ -139,21 +127,30 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-
+                    <div className="signup_address">
+                        <input
+                            type="text"
+                            name="address"
+                            value={formData.address}
+                            onChange={handleChange}
+                            placeholder="주소"
+                            required
+                        />
+                    </div>
                     <div className="signup_etc">
                         <input
                             type="text"
                             name="etc"
                             value={formData.etc}
                             onChange={handleChange}
-                            placeholder="소속"
+                            placeholder="etc"
                         />
                     </div>
 
                 </div>
 
                 <div className= "signup_button">
-                    <button className="signup_button" type="submit">회원가입</button>
+                    <button className="signup_button" type="submit" onClick={handleSignIn}>회원가입</button>
                 </div>
 
                 <div className="cancel">
