@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.minipatientboard_box{
+    height: 300px;
+    width: 420px;
+    margin-left: 30px;
+    margin-top: 50px;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.minipatientboard_box:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.minipatientboard_text1{
+    padding-top: 20px;
+    padding-right: 230px;
+    font-size: 30px;
+    color: #333333;
+    font-weight: 600;
+}
+
+.minipatientboard_text2, .minipatientboard_text3, .minipatientboard_text4, .minipatientboard_text5{
+    padding-top: 20px;
+    padding-right: 250px;
+    font-size: 25px;
+    color: #333333;
+}
+
+.minipatientboard_text2:hover, .minipatientboard_text3:hover, .minipatientboard_text4:hover, .minipatientboard_text5:hover{
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.minipatientboard_text a {
+    color: #333333;
+    text-decoration: none;
+}

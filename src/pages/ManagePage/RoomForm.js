@@ -41,9 +41,7 @@ const RoomForm = () => {
         <div className="RoomForm-Layout">
             <Sidebar/>
             <div className="room-manager">
-                <div className="title">
-                    <div className="title-inner">방 관리</div>
-                </div>
+                <div className="roomform_title">방 관리</div>
                 <div className="room-form">
                     <div className="room-list">
                         {patients.map(patient => (

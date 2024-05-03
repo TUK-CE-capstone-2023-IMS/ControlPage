@@ -16,13 +16,12 @@
     margin: auto;
     background-color: #F3F3F3;
     border-radius: 16px;
-    border: 1px solid gray;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .login_title {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     padding-top: 25px;
 }
 
@@ -67,14 +66,15 @@
     margin-bottom: 10px;
     margin-top: 10px;
     border-radius: 10px;
-    border: 1px solid gray;
+    border: 1px solid white;
     font-size: 25px;
     padding-left: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .login_idbox input:hover ,
 .login_passwordbox input:hover{
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .login_button button ,
@@ -85,18 +85,19 @@
     margin-bottom: 20px;
     background-color: white;
     color: #333333;
-    border: 1px solid gray;
+    border: 1px solid white;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 400;
     font-size: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .login_button button:hover ,
 .signin_button button:hover{
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .login_total_button{

@@ -11,4 +11,4 @@ const LogCard = ({ logInfo })=>{
         </div>
     )
 }
-export default LogCard
+export default LogCard;

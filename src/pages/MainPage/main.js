@@ -2,6 +2,8 @@ import React from 'react';
 import './main.css';
 import Sidebar from "./Sidebar";
 import Calendar from "./Calendar";
+import MiniDashboard from "./MiniDashboard";
+import MiniPatientBoard from "./MiniPatientboard";
 
 const MainPage = () => {
     return (
@@ -15,7 +17,11 @@ const MainPage = () => {
                         <p className="main_text2">대시보드를 통해 환자 모니터링 및 관리를 시작해보세요!</p>
                     </div>
                 </div>
-                <Calendar/>
+                <div className="main_sub">
+                    <Calendar/>
+                    <MiniDashboard/>
+                    <MiniPatientBoard/>
+                </div>
             </div>
         </div>
     );
