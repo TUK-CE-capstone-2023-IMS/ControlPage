@@ -47,9 +47,11 @@ const SignupPage = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="signup_page">
-                <p>레이더 관리자 서비스 시스템</p>
-                <div className="boxes">
-                    <div className="id">
+                <div className="signup_text">
+                    <p>레이더 관리자 서비스 시스템</p>
+                </div>
+                <div className="signup_box">
+                    <div className="signup_id">
                         <input
                             type="text"
                             name="managerid"
@@ -62,7 +64,7 @@ const SignupPage = () => {
                     </div>
 
                     <div className="signup_password_input">
-                        <img src={lock} width="24px" height="24px" className="lockIcon"/>
+                        {/*<img src={lock} width="24px" height="24px" className="lockIcon"/>*/}
                         <input
                             type="password"
                             name="password"
@@ -153,7 +155,7 @@ const SignupPage = () => {
                     <button className="signup_button" type="submit" onClick={handleSignIn}>회원가입</button>
                 </div>
 
-                <div className="cancel">
+                <div className="signup_cancel">
                     <Link to="/login"><button>취소</button></Link>
                 </div>
             </div>

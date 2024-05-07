@@ -7,12 +7,12 @@ import RoomForm from "./pages/ManagePage/RoomForm";
 import LogForm from "./pages/LogPage/LogForm";
 import LogCard from "./pages/LogPage/LogCard";
 import MyPage from "./pages/AuthPage/MyPage";
+import PatientInfoForm from "./pages/ManagePage/PatientInfoForm";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EmergencyAlert from './pages/NoticePage/EmergencyAlert';
-
-import ForgotPasswordPage from "./pages/AuthPage/ForgotPassword";
 import PatientInfoChangeForm from "./pages/ManagePage/PatientInfoChangeForm";
 import AddPatientForm from "./pages/ManagePage/AddPatientForm";
+import PatientForm from "./pages/ManagePage/PatientForm";
 
 function App() {
     const [alertMessage, setAlertMessage] = useState('');
@@ -57,19 +57,17 @@ function App() {
                     <Route path="/" element={<MainPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignupPage />} />
-
                     <Route path="/dashboard" element={<LogForm />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/rooms" element={<RoomForm />} />
-                    <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
                     <Route path="/logcard" element={<LogCard/>}/>
                     <Route path="/AddPatient" element={<AddPatientForm />} />
                     <Route path="/log" element={<LogForm />} />
-                    <Route path="/PatientInfoChangeForm" element={<PatientInfoChangeForm />} />
+                    <Route path="/ChangePatient" element={<PatientInfoChangeForm />} />
+                    <Route path="/patients" element={<PatientForm/>}/>
                     <Route path="/dashboard" element={<LogForm />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/rooms" element={<RoomForm />} />
-                    {/* <Route path="/forgotpassword" element={<ForgotPasswordPage />} /> */}
 
                 </Routes>
             </div>

@@ -58,39 +58,45 @@ const AdminMyPage = () => {
         <div>
             <Sidebar/>
             <h1 className="mypage_text">개인 정보</h1>
+            {/*<div className="edit-menu">*/}
+            {/*    <button className="edit-menu-btn" onClick={handleToggleMenu}>*/}
+            {/*</div>*/}
             <div className="my_page">
                 <div className="mypage_totalbox">
-                    <div className="name">
-                        <label>이름 : </label>
+                    <div className="mypage_name">
+                        <label>이름 </label>
                         <span>{adminInfo.name}</span>
                     </div>
-                    <div className="age">
-                        <label>나이 : </label>
-                        <span>{adminInfo.age}</span>
-                    </div>
-                    <div className="sex">
-                        <label>성별 : </label>
-                        <span>{adminInfo.sex}</span>
-                    </div>
-                    <div className="phone">
-                        <label>전화번호 : </label>
-                        <span>{adminInfo.phone}</span>
-                    </div>
-                    <div className="email">
-                        <label>이메일 : </label>
-                        <span>{adminInfo.email}</span>
-                    </div>
-                    <div className="address">
-                        <label>주소 : </label>
+                    <div className="mypage_aff">
+                        <label>소속 </label>
                         <span>{adminInfo.address}</span>
                     </div>
-                    <div className="etc">
-                        <label>기타 : </label>
-                        <span>{adminInfo.etc}</span>
+                    <div className="mypage_line"></div>
+                    <div className="mypage_info">
+                        <div className="mypage_age">
+                            <label>나이 </label>
+                            <span>{adminInfo.age}</span>
+                        </div>
+                        <div className="mypage_email">
+                            <label>이메일 </label>
+                            <span>{adminInfo.email}</span>
+                        </div>
+                        <div className="mypage_sex">
+                            <label>성별 </label>
+                            <span>{adminInfo.sex}</span>
+                        </div>
+                        <div className="mypage_phone_num">
+                            <label>전화번호 </label>
+                            <span>{adminInfo.phone}</span>
+                        </div>
+                        <div className="mypage_etc">
+                            <label>기타 </label>
+                            <span>{adminInfo.etc}</span>
+                        </div>
                     </div>
-                </div>
+                    </div>
             </div>
-            <div className="signout_button">
+            <div className="mypage_signout_btn">
                 <button onClick={handleDelete}>회원 탈퇴</button>
             </div>
             <div cancel>

@@ -68,10 +68,6 @@ const LoginPage = () => {
                         </div>
                     </div>
 
-                    <div className="login_forgot_msg">
-                        <a href="./forgotpassword">아이디 또는 비밀번호를 잃어버리셨나요?</a>
-                    </div>
-
                     <div className="login_total_button">
                         <div className="login_button">
                             <button type="submit">로그인</button>
