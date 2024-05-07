@@ -14,6 +14,7 @@
 .signup_text{
     font-size: 25px;
     margin-top: 20px;
+    color: #333333;
 }
 
 .signup_email input,
@@ -24,13 +25,14 @@
 .signup_phone_number input,
 .signup_age input,
 .signup_etc input{
-    height: 40px;
-    width: 300px;
+    height: 50px;
+    width: 400px;
     padding-left: 5px;
     margin-bottom: 10px;
     border-radius: 5px;
     font-size: 15px;
-    border: 1px solid gray;
+    border: 1px solid white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .signup_email input:hover,
@@ -41,22 +43,25 @@
 .signup_phone_number input:hover,
 .signup_age input:hover,
 .signup_etc input:hover{
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .signup_button button {
-    height: 40px;
-    width: 300px;
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
     border-radius: 5px;
-    border: 1px solid gray;
+    color: #333333;
+    border: 1px solid #f3f3f3;
     margin-top: 30px;
-    background-color: white;
+    background-color: #f3f3f3;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .signup_button button:hover{
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .signup_box{

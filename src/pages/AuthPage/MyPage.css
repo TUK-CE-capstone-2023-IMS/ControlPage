@@ -11,9 +11,9 @@
     background-color: #f3f3f3;
     border-radius: 16px;
     text-align: left;
-    border: 1px solid gray;
+    border: 1px solid #F3F3F3;
     font-size: 25px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.15);
 }
 
 .mypage_text{
@@ -21,7 +21,7 @@
     margin-bottom: 15px;
     margin-right: 800px;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 600;
     color: #333333;
 }
 
@@ -33,25 +33,24 @@
 .mypage_name, .mypage_birth, .mypage_gender, .mypage_email, .mypage_phone_num, .mypage_aff {
     padding-bottom: 20px;
     color: #333333;
-
 }
 
 .mypage_signout_button button{
     background-color: white;
     width: 130px;
     height: 40px;
-    color: black;
     margin-left: 1200px;
     margin-top: 50px;
     text-align: center;
-    border: 1px solid gray;
+    border: 1px solid white;
     border-radius: 10px;
     font-size: 22px;
     color: #333333;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.15);
 }
 
 .mypage_signout_button button:hover{
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }

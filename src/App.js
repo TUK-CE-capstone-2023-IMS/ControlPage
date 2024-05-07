@@ -5,9 +5,12 @@ import LoginPage from './pages/AuthPage/Login';
 import SignupPage from './pages/AuthPage/SignIn';
 import RoomForm from "./pages/ManagePage/RoomForm";
 import LogForm from "./pages/LogPage/LogForm";
+import LogCard from "./pages/LogPage/LogCard";
 import MyPage from "./pages/AuthPage/MyPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EmergencyAlert from './pages/NoticePage/EmergencyAlert';
+
+import ForgotPasswordPage from "./pages/AuthPage/ForgotPassword";
 import PatientInfoChangeForm from "./pages/ManagePage/PatientInfoChangeForm";
 import AddPatientForm from "./pages/ManagePage/AddPatientForm";
 
@@ -54,6 +57,12 @@ function App() {
                     <Route path="/" element={<MainPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignupPage />} />
+
+                    <Route path="/dashboard" element={<LogForm />} />
+                    <Route path="/mypage" element={<MyPage />} />
+                    <Route path="/rooms" element={<RoomForm />} />
+                    <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
+                    <Route path="/logcard" element={<LogCard/>}/>
                     <Route path="/AddPatient" element={<AddPatientForm />} />
                     <Route path="/log" element={<LogForm />} />
                     <Route path="/PatientInfoChangeForm" element={<PatientInfoChangeForm />} />
@@ -61,7 +70,6 @@ function App() {
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/rooms" element={<RoomForm />} />
                     {/* <Route path="/forgotpassword" element={<ForgotPasswordPage />} /> */}
-
 
                 </Routes>
             </div>

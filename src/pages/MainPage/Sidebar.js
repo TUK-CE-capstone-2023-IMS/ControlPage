@@ -1,9 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './Sidebar.css';
-import { MdHomeFilled } from "react-icons/md";
 import { MdAccountCircle } from "react-icons/md";
+import { GoHome } from "react-icons/go";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { IoSettingsOutline, IoPersonOutline } from "react-icons/io5";
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
 
 const Sidebar = () => {
     const navigate = useNavigate();
@@ -23,50 +25,67 @@ const Sidebar = () => {
         }
     };
 
-    const addPatient = async (e) => {
+    const addPatient = () => {
         navigate("/AddPatient");
-    }
+    };
 
     return (
         <div className="sidebar-container">
             <div className="sidebar">
                 <ul>
                     <div>
-                        <div className="homeIcon">
-                            <MdHomeFilled size={64}/>
+                        <div className="mainhome_sidebar">
+                            <div className="homeIcon">
+                                <GoHome size={45}/>
+                            </div>
+                            <div className="sidebar_mainhome_text">
+                                <Link to="/">메인 홈</Link>
+                            </div>
                         </div>
-                        <div className="sidebar_text">
-                            <a href="/">메인 홈</a>
+                        <div className="dashboard_sidebar">
+                            <div className="dashboardIcon">
+                                <LuLayoutDashboard size={45}/>
+                            </div>
+                            <div className="sidebar_dashboard_text">
+                                <Link to="/rooms">대시 보드</Link>
+                            </div>
                         </div>
-                        <div className="sidebar_text">
-                            <a href="./rooms">대시 보드</a>
+                        <div className="patientlist_sidebar">
+                            <div className="patientlistIcon">
+                                <IoPersonOutline size={45}/>
+                            </div>
+                            <div className="sidebar_patientlist_text">
+                                <Link to="/patients">환자 목록</Link>
+                            </div>
                         </div>
-                        <div className="sidebar_text" onClick={addPatient}>
-                            <a href="#">환자 생성</a>
+                        <div className="setting_sidebar">
+                            <div className="settingIcon">
+                                <IoSettingsOutline size={45}/>
+                            </div>
+                            <div className="sidebar_setting_text">
+                                <Link to="#">환경 설정</Link>
+                            </div>
+                            <div className="sidebar_text" onClick={addPatient}>
+                                <Link to="#">환자 생성</Link>
+                            </div>
                         </div>
-                        {/*<div className="sidebar_text">*/}
-                        {/*    <a href="./patients">환자 목록</a>*/}
-                        {/*</div>*/}
-                        {/*<div className="sidebar_text">*/}
-                        {/*    <a href="#">환경 설정</a>*/}
-                        {/*</div>*/}
                     </div>
                 </ul>
             </div>
+
             <div className="sidebar-divider">
                 <div className="topbar">
                     <div className="peopleIcon">
                         <MdAccountCircle size={50}/>
                     </div>
                     <div className="topbar_text">
-                        <a href="./mypage">{managername} 님</a>
+                        <Link to="/mypage">{managername} 님</Link>
                     </div>
                     <div className="topbar_text">
-                        <a href="#" onClick={handleLogout}>로그아웃</a>
+                        <Link to="#" onClick={handleLogout}>로그아웃</Link>
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
