@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.patientform_page{
+    width: 1000px;
+    height: 500px;
+    margin-left: 480px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.patient_total_box{
+    margin-left: 20px;
+    margin-top: 45px;
+}
+
+.patientform_text{
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-right: 800px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.patient_name{
+    width: 570px;
+    font-size: 40px;
+    color: #333333;
+    margin-left: 430px;
+    padding-top: 60px;
+}
+
+.patient_home{
+    width: 570px;
+    height: 50px;
+    font-size: 20px;
+    color: #b4b4b6;
+    margin-left: 430px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.patientform_line{
+    width: 570px;
+    border-top: 1px solid #767A83;
+    margin-left: 400px;
+}
+
+.patient_age, .patient_gender, .patient_phone_num,
+.patient_emergency_num, .patient_home{
+    width: 485px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 430px;
+    padding-bottom: 20px;
+    color: #767A83;
+}
+
+.patient_info{
+    margin-top: 30px;
+}
+
+.patient_signout_button button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    color: #6D8FE4;
+    margin-left: 830px;
+    margin-top: 80px;
+    text-align: center;
+    border: 3px solid #6D8FE4;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.patientform_add_patient_button button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    color: #ababab;
+    margin-left: 880px;
+    margin-top: 10px;
+    text-align: center;
+    border: 3px solid #ababab;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.patientform_add_patient_button button:hover, .patient_signout_button button:hover{
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
