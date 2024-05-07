@@ -2,38 +2,29 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from "../MainPage/Sidebar";
 import './PatientForm.css';
 import {Link} from "react-router-dom";
+import axios from "axios";
 
 const PatientFormPage = () => {
 
     const [patients, setPatients] = useState([]);
 
-    const savedPatients = [
-        {
-            name: '조은상',
-            age: '25',
-            gender: '남성',
-            height:'178',
-            weight:'70',
-            phoneNumber: '010-1234-5678',
-            emergencyNumber: '010-3333-7777',
-            home: '서울특별시 강남구'
-        },
-        {
-            name: '김나현',
-            age: '30',
-            gender: '여성',
-            height:'165',
-            weight:'55',
-            phoneNumber: '010-9876-5432',
-            emergencyNumber: '010-5555-8888',
-            home: '서울특별시 강서구'
-        }
-    ];
-
     useEffect(() => {
-        setPatients(savedPatients);
-    }, []);
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:8080/patient/read');
 
+                if (response && response.data) {
+                    setPatients(response.data);
+                } else {
+                    console.error('서버 응답에 데이터가 없음');
+                }
+            } catch (error) {
+                console.error('데이터를 불러오는 중 오류 발생:', error.response ? error.response.data : error.message);
+            }
+        };
+
+        fetchData();
+    }, []);
     const handleDelete = (index) => {
         const updatedPatients = [...patients];
         updatedPatients.splice(index, 1);
