@@ -1,51 +1,73 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.patientform_page{
-    width: 1340px;
-    height: 430px;
-    margin-left: 450px;
-    margin-top: 50px;
-    background-color: #f3f3f3;
-    border-radius: 10px;
-    border: 1px solid gray;
-    font-size: 25px;
+.add_patient_text{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333333;
+}
+
+/*.add_patient_boxes{*/
+/*    width: 850px;*/
+/*    height: 430px;*/
+/*    margin-left: 450px;*/
+/*    margin-top: 30px;*/
+/*    background-color: #f3f6f9;*/
+/*    border-radius: 10px;*/
+/*    border: 1px solid #f3f6f9;*/
+/*    font-size: 25px;*/
+/*    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+/*}*/
+
+
+.add_patient_id input, .add_patient_name input, .add_patient_age input, .add_patient_sex select,
+.add_patient_phone_num input, .add_patient_email input, .add_patient_managerid input,
+.add_patient_emergency_num input, .add_patient_address input{
+    height: 50px;
+    width: 400px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.patient_total_box{
-    margin-left: 20px;
-    margin-top: 20px;
-    text-align: left;
-}
-
-.patient_name, .patient_age, .patient_gender,
-.patient_height, .patient_weight, .patient_phone_num,
-.patient_emergency_num, .patient_home{
-    padding-bottom: 15px;
-    color: #333333;
-}
-
-.patient_signout_button button{
+.add_patient_yesbtn button{
     background-color: white;
     width: 130px;
     height: 40px;
-    color: #333333;
-    margin-left: 1200px;
+    color: #6D8FE4;
     margin-top: 10px;
     text-align: center;
-    border: 1px solid gray;
+    border: 3px solid #6D8FE4;
     border-radius: 10px;
     font-size: 22px;
 }
 
-.patient_signout_button button:hover{
+.add_patient_nobtn button{
+    background-color: white;
+    width: 130px;
+    height: 40px;
+    color: #ababab;
+    margin-top: 10px;
+    text-align: center;
+    border: 3px solid #ababab;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.add_patient_button button{
+    display: inline-block;
+}
+
+.add_patient_button button:hover{
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    /*transition: all 0.3s cubic-bezier(.25,.8,.25,1);*/
 }

@@ -61,10 +61,12 @@ const PatientInfoChangeFormPage = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="signup_page">
-                <p>환자 정보 수정</p>
-                <div className="boxes">
-                    <div className="id">
+            <div className="change_patient_page">
+                <div className="add_patient_text">
+                    <p>환자 정보 수정</p>
+                </div>
+                <div className="change_patient_boxes">
+                    <div className="change_patient_id">
                         <input
                             type="text"
                             name="patientid"
@@ -74,7 +76,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="name">
+                    <div className="change_patient_name">
                         <input
                             type="text"
                             name="name"
@@ -84,7 +86,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="age">
+                    <div className="change_patient_age">
                         <input
                             type="text"
                             name="age"
@@ -94,7 +96,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="sex">
+                    <div className="change_patient_sex">
                         <select
                             name="sex"
                             value={formData.sex}
@@ -106,7 +108,7 @@ const PatientInfoChangeFormPage = () => {
                             <option value="female">여자</option>
                         </select>
                     </div>
-                    <div className="phone_number">
+                    <div className="change_patient_phone_num">
                         <input
                             type="text"
                             name="phone"
@@ -116,7 +118,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="email">
+                    <div className="change_patient_email">
                         <input
                             type="email"
                             name="email"
@@ -126,7 +128,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="address">
+                    <div className="change_patient_address">
                         <input
                             type="text"
                             name="address"
@@ -136,7 +138,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="emergencycall">
+                    <div className="change_patient_emergency_num">
                         <input
                             type="text"
                             name="emergencycall"
@@ -146,7 +148,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="managerid">
+                    <div className="change_patient_managerid">
                         <input
                             type="text"
                             name="managerid"
@@ -157,9 +159,13 @@ const PatientInfoChangeFormPage = () => {
                         />
                     </div>
                 </div>
-                <div className="button-group">
-                    <button type="submit">확인</button>
-                    <button onClick={cancel}>취소</button>
+                <div className="change_patient_button">
+                    <div className="change_patient_yesbtn">
+                        <button type="submit">확인</button>
+                    </div>
+                    <div className="change_patient_nobtn">
+                        <button onClick={cancel}>취소</button>
+                    </div>
                 </div>
             </div>
         </form>
