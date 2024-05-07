@@ -35,8 +35,6 @@ const RoomCard = ({ roomInfo }) => {
     };
 
     return (
-<<<<<<< HEAD
-=======
 
         // <div  className={cardClass}>
         // <h4 className="room-num">{roomInfo.roomNumber}</h4>
@@ -47,19 +45,17 @@ const RoomCard = ({ roomInfo }) => {
         //         <p>({roomInfo.age})님</p>
         //     </div>
         // )}
->>>>>>> 5f5bf9190879346e0ee3478b7c34750597ffa089
         <div className={cardClass}>
             <button className="room-card-menu-btn" onClick={handleToggleMenu}>
                 {isMenuOpen && (
                     <div className="room-card-menu">
-<<<<<<< HEAD
+
                         <button className="room-card-menu-select-btn">환경설정</button>
                         <button className="room-card-menu-select-btn" onClick={handleDetailClick}>세부정보</button>
-=======
+
                         <button className="room-card-menu-select-btn" onClick={handledInfoClick}>환자 정보 확인</button>
                         <button className="room-card-menu-select-btn" onClick={handleSettingClick}>개인 감지 영역 설정</button>
                         <button className="room-card-menu-select-btn" onClick={handleDetailClick}>로그 데이터 확인</button>
->>>>>>> 5f5bf9190879346e0ee3478b7c34750597ffa089
                     </div>
                 )}
             </button>
