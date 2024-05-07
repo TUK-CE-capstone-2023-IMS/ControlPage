@@ -13,11 +13,9 @@ const RoomCard = ({ roomInfo }) => {
         setIsMenuOpen(prevState => !prevState);
     };
     const handledInfoClick = async () => {
-        navigate('/patients', {state: {patientid: roomInfo.patientid}});
+        navigate('/patientInfo', {state: {patientid: roomInfo.patientid}});
     };
 
-    const handleSettingClick = async () => {
-    };
 
     const handleDetailClick = async () => {
         try {
@@ -25,7 +23,7 @@ const RoomCard = ({ roomInfo }) => {
 
             if (response && response.data) {
                 setPatientDetails(response.data);
-                navigate('/dashboard', { state: { logs: response.data ,name:roomInfo.name,} });
+                navigate('/dashboard', { state: { logs: response.data ,name:roomInfo.name,address:roomInfo.address} });
             } else {
                 console.error('서버 응답에 데이터가 없음');
             }
@@ -36,38 +34,20 @@ const RoomCard = ({ roomInfo }) => {
 
     return (
 
-        // <div  className={cardClass}>
-        // <h4 className="room-num">{roomInfo.roomNumber}</h4>
-        // <p className="status">{roomInfo.status}</p>
-        // {roomInfo.status === '재실중' && (
-        //     <div className="patient-info">
-        //         <p>{roomInfo.patientName}</p>
-        //         <p>({roomInfo.age})님</p>
-        //     </div>
-        // )}
 
         <div className={cardClass}>
-            <div className="roomcard_box">
-                <button className="room-card-menu-btn" onClick={handleToggleMenu}>
-                    {isMenuOpen && (
-                        <div className="room-card-menu">
-                            <button className="room-card-menu-select-btn">환경설정</button>
-                            <button className="room-card-menu-select-btn" onClick={handleDetailClick}>세부정보</button>
-                            <button className="room-card-menu-select-btn" onClick={handledInfoClick}>환자 정보 확인</button>
-                            <button className="room-card-menu-select-btn" onClick={handleSettingClick}>개인 감지 영역 설정</button>
-                            <button className="room-card-menu-select-btn" onClick={handleDetailClick}>로그 데이터 확인</button>
-                        </div>
-                    )}
-                </button>
-                <div className="roomcard_info">
-                    <div className="roomcard_address">
-                        <h4>{roomInfo.address}</h4>
+            <button className="room-card-menu-btn" onClick={handleToggleMenu}>
+                {isMenuOpen && (
+                    <div className="room-card-menu">
+
+                        <button className="room-card-menu-select-btn">환경설정</button>
+                        <button className="room-card-menu-select-btn" onClick={handledInfoClick}>환자 정보 확인</button>
+                        <button className="room-card-menu-select-btn" onClick={handleDetailClick}>로그 데이터 확인</button>
                     </div>
-                    <div className="roomcard_name">
-                        <p>{roomInfo.name}</p>
-                    </div>
-                </div>
-            </div>
+                )}
+            </button>
+            <h4 className="room-num">{roomInfo.name}님</h4>
+            <p className="status">{roomInfo.age}세 {roomInfo.sex}</p>
         </div>
     );
 };

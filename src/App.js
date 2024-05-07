@@ -68,6 +68,8 @@ function App() {
                     <Route path="/dashboard" element={<LogForm />} />
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/rooms" element={<RoomForm />} />
+                    <Route path="patientInfo"element={<PatientInfoForm/>}/>
+                    {/* <Route path="/forgotpassword" element={<ForgotPasswordPage />} /> */}
 
                 </Routes>
             </div>
