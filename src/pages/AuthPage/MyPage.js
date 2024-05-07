@@ -20,24 +20,30 @@ const AdminMyPage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false); // 모달 창 상태 변수
 
     useEffect(() => {
-        const managerid = localStorage.getItem('managerid');
-        if (managerid) {
-            fetch(`http://localhost:8080/manager/info?managerid=${managerid}`)
-                .then(response => response.json())
-                .then(data => {
-                    setAdminInfo(data);
-                })
-                .catch(error => {
-                    console.error('Error fetching admin info:', error);
-                });
+        const managerId = localStorage.getItem('managerId');
+        if (managerId) {
+            const fetchData = async () => {
+                try {
+                    const response = await axios.get(`http://localhost:8080/manager/info?managerId=${managerId}`);
+                    console.log('관리자 정보 요청 성공:', response.data);
+                    if (response.data.success) {
+                        setAdminInfo(response.data)
+                    } else {
+                        console.error('관리자 정보 요청 실패:', response.data.message);
+                    }
+                } catch (error) {
+                    console.error('환자 탈퇴 요청 실패:', error.response ? error.response.data : error.message);
+                }
+            };
+            fetchData()
         }
     }, []);
 
     const handleDelete = async () => {
         try {
-            const managerid = localStorage.getItem('managerid');
+            const managerId = localStorage.getItem('managerId');
             const response = await axios.post('http://localhost:8080/manager/signout', {
-                managerid: managerid
+                managerId: managerId
             });
             console.log('회원 탈퇴 요청 성공:', response.data);
 
