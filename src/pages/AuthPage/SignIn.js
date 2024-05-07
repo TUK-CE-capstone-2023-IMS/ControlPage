@@ -48,7 +48,7 @@ const SignupPage = () => {
         <form onSubmit={handleSubmit}>
             <div className="signup_page">
                 <div className="signup_text">
-                    <p>레이더 관리자 서비스 시스템</p>
+                    <p>회원가입 폼</p>
                 </div>
                 <div className="signup_box">
                     <div className="signup_id">
