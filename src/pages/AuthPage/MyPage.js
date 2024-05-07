@@ -17,6 +17,8 @@ const AdminMyPage = () => {
         etc: ''
     });
 
+    const [isModalOpen, setIsModalOpen] = useState(false); // 모달 창 상태 변수
+
     useEffect(() => {
         const managerid = localStorage.getItem('managerid');
         if (managerid) {
@@ -53,45 +55,62 @@ const AdminMyPage = () => {
         }
     };
 
+    const openModal = () => {
+        setIsModalOpen(true); // 모달 창 열기
+    };
 
     return (
         <div>
             <Sidebar/>
             <h1 className="mypage_text">개인 정보</h1>
-            {/*<div className="edit-menu">*/}
-            {/*    <button className="edit-menu-btn" onClick={handleToggleMenu}>*/}
-            {/*</div>*/}
+            <div className="edit-menu">
+                <button className="edit-menu-btn" onClick={openModal}></button>
+            </div>
+            {isModalOpen && (
+                <div className="modal"> {/* 모달 창 */}
+                    {/* 모달 내용 */}
+                    <div className="modal-content">
+                        {/* 모달 내용 */}
+                        <h2>모달 창</h2>
+                        <p>모달 창 내용</p>
+                        <button onClick={() => setIsModalOpen(false)}>닫기</button>
+                    </div>
+                </div>
+            )}
             <div className="my_page">
                 <div className="mypage_totalbox">
-                    <div className="mypage_name">
-                        <label>이름 </label>
-                        <span>{adminInfo.name}</span>
-                    </div>
-                    <div className="mypage_aff">
-                        <label>소속 </label>
-                        <span>{adminInfo.address}</span>
-                    </div>
-                    <div className="mypage_line"></div>
-                    <div className="mypage_info">
-                        <div className="mypage_age">
-                            <label>나이 </label>
-                            <span>{adminInfo.age}</span>
+                    <div className="mypage_profile"></div>
+                    <div className="mypage_info_box">
+                        <div className="mypage_name">
+                            <label>이름 </label>
+                            <span>{adminInfo.name}</span>
                         </div>
-                        <div className="mypage_email">
-                            <label>이메일 </label>
-                            <span>{adminInfo.email}</span>
+                        <div className="mypage_aff">
+                            <label>소속 </label>
+                            <span>{adminInfo.address}</span>
                         </div>
-                        <div className="mypage_sex">
-                            <label>성별 </label>
-                            <span>{adminInfo.sex}</span>
-                        </div>
-                        <div className="mypage_phone_num">
-                            <label>전화번호 </label>
-                            <span>{adminInfo.phone}</span>
-                        </div>
-                        <div className="mypage_etc">
-                            <label>기타 </label>
-                            <span>{adminInfo.etc}</span>
+                        <div className="mypage_line"></div>
+                        <div className="mypage_info">
+                            <div className="mypage_age">
+                                <label>나이 </label>
+                                <span>{adminInfo.age}</span>
+                            </div>
+                            <div className="mypage_email">
+                                <label>이메일 </label>
+                                <span>{adminInfo.email}</span>
+                            </div>
+                            <div className="mypage_sex">
+                                <label>성별 </label>
+                                <span>{adminInfo.sex}</span>
+                            </div>
+                            <div className="mypage_phone_num">
+                                <label>전화번호 </label>
+                                <span>{adminInfo.phone}</span>
+                            </div>
+                            <div className="mypage_etc">
+                                <label>기타 </label>
+                                <span>{adminInfo.etc}</span>
+                            </div>
                         </div>
                     </div>
                     </div>

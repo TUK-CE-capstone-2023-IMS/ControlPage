@@ -18,11 +18,6 @@
     margin-top: 45px;
 }
 
-/*.patientform_total_box{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*}*/
-
 .patientform_text{
     margin-top: 40px;
     margin-bottom: 15px;
@@ -38,6 +33,7 @@
     background-color: red;
     margin-top: 90px;
     margin-left: 30px;
+    float: left;
 }
 
 .patient_name{
@@ -45,7 +41,7 @@
     font-size: 40px;
     color: #333333;
     margin-left: 430px;
-    /*padding-top: 60px;*/
+    padding-top: 60px;
 }
 
 .patient_home{
@@ -83,8 +79,8 @@
     width: 130px;
     height: 40px;
     color: #6D8FE4;
-    margin-left: 830px;
-    margin-top: 80px;
+    margin-left: 840px;
+    margin-top: 40px;
     text-align: center;
     border: 3px solid #6D8FE4;
     border-radius: 10px;
@@ -96,7 +92,7 @@
     width: 130px;
     height: 40px;
     color: #ababab;
-    margin-left: 880px;
+    margin-left: 900px;
     margin-top: 10px;
     text-align: center;
     border: 3px solid #ababab;
