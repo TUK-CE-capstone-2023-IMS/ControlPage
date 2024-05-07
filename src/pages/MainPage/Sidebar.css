@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.mainhome_sidebar, .dashboard_sidebar, .patientlist_sidebar, .setting_sidebar {
+.mainhome_sidebar, .dashboard_sidebar, .patientlist_sidebar, .setting_sidebar{
     display: flex;
     align-items: center;
     margin-bottom: 20px;

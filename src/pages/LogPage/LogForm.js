@@ -14,8 +14,12 @@ const LogForm = () => {
             <Sidebar />
             <div className="log-form">
                 <div className="room-info">
-                    <p className="log-room-num">B 102</p>
-                    <p className="patient-name">{state.name}님</p>
+                    <div className="log-room-num">
+                        <p>B 102</p>
+                    </div>
+                    <div className="log-patient-name">
+                        <p>{state.name}님</p>
+                    </div>
                 </div>
                 <div className="log-list">
                     {logs.map(log => (

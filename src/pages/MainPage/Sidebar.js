@@ -65,9 +65,6 @@ const Sidebar = () => {
                             <div className="sidebar_setting_text">
                                 <Link to="#">환경 설정</Link>
                             </div>
-                            <div className="sidebar_text" onClick={addPatient}>
-                                <Link to="#">환자 생성</Link>
-                            </div>
                         </div>
                     </div>
                 </ul>

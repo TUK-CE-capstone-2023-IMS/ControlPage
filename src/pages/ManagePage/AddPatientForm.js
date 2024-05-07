@@ -37,7 +37,7 @@ const AddPatientFormPage = () => {
             // 수정된 환자 정보를 서버로 전송하여 업데이트하는 요청
             const response = await axios.post('http://localhost:8080/patient/info', formData);
             if (response.data.success) {
-                navigate("/rooms");
+                navigate("");
             }
         } catch (error) {
             console.error('환자 생성 실패:', error.response ? error.response.data : error.message);
@@ -47,10 +47,12 @@ const AddPatientFormPage = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="signup_page">
-                <p>환자 생성</p>
-                <div className="boxes">
-                    <div className="id">
+            <div className="add_patient_page">
+                <div className="add_patient_text">
+                    <p>환자 추가 폼</p>
+                </div>
+                <div className="add_patient_boxes">
+                    <div className="add_patient_id">
                         <input
                             type="text"
                             name="patientid"
@@ -60,7 +62,7 @@ const AddPatientFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="name">
+                    <div className="add_patient_name">
                         <input
                             type="text"
                             name="name"
@@ -70,7 +72,7 @@ const AddPatientFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="age">
+                    <div className="add_patient_age">
                         <input
                             type="text"
                             name="age"
@@ -80,7 +82,7 @@ const AddPatientFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="sex">
+                    <div className="add_patient_sex">
                         <select
                             name="sex"
                             value={formData.sex}
@@ -92,7 +94,7 @@ const AddPatientFormPage = () => {
                             <option value="female">여자</option>
                         </select>
                     </div>
-                    <div className="phone_number">
+                    <div className="add_patient_phone_num">
                         <input
                             type="text"
                             name="phone"
@@ -102,7 +104,7 @@ const AddPatientFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="email">
+                    <div className="add_patient_email">
                         <input
                             type="email"
                             name="email"
@@ -112,7 +114,7 @@ const AddPatientFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="address">
+                    <div className="add_patient_address">
                         <input
                             type="text"
                             name="address"
@@ -122,7 +124,7 @@ const AddPatientFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="emergencycall">
+                    <div className="add_patient_emergency_num">
                         <input
                             type="text"
                             name="emergencycall"
@@ -132,7 +134,7 @@ const AddPatientFormPage = () => {
                             required
                         />
                     </div>
-                    <div className="managerid">
+                    <div className="add_patient_managerid">
                         <input
                             type="text"
                             name="managerid"
@@ -143,9 +145,13 @@ const AddPatientFormPage = () => {
                         />
                     </div>
                 </div>
-                <div className="button-group">
-                    <button type="submit">확인</button>
-                    <button onClick={cancel}>취소</button>
+                <div className="add_patient_button">
+                    <div className="add_patient_yesbtn">
+                        <button type="submit">확인</button>
+                    </div>
+                    <div className="add_patient_nobtn">
+                        <button onClick={cancel}>취소</button>
+                    </div>
                 </div>
             </div>
         </form>
