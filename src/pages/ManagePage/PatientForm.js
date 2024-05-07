@@ -46,44 +46,47 @@ const PatientFormPage = () => {
             <h1 className="patientform_text">환자 정보</h1>
             {patients.map((patient, index) => (
                 <div className="patientform_page" key={index}>
-                    <div className="patient_total_box">
-                        <div className="patient_name">
-                            <label>이름 </label>
-                            <span>{patient.name}</span>
-                        </div>
-                        <div className="patient_home">
-                            <label>주소 </label>
-                            <span>{patient.home}</span>
-                        </div>
-                        <div className="patientform_line"></div>
-                        <div className="patient_info">
-                            <div className="patient_phone_num">
-                                <label>연락처 </label>
-                                <span>{patient.phoneNumber}</span>
+                    <div className="patientform_total_box">
+                        <div className="patientform_profile"></div>
+                        <div className="patientform_info_box">
+                            <div className="patient_name">
+                                <label>이름 </label>
+                                <span>{patient.name}</span>
                             </div>
-                            <div className="patient_age">
-                                <label>나이 </label>
-                                <span>{patient.age}</span>
+                            <div className="patient_home">
+                                <label>주소 </label>
+                                <span>{patient.home}</span>
                             </div>
-                            {/*<div className="patient_height">*/}
-                            {/*    <label>키 : </label>*/}
-                            {/*    <span>{patient.height}</span>*/}
-                            {/*</div>*/}
-                            {/*<div className="patient_weight">*/}
-                            {/*    <label>몸무게 : </label>*/}
-                            {/*    <span>{patient.weight}</span>*/}
-                            {/*</div>*/}
-                            <div className="patient_emergency_num">
-                                <label>비상 연락망 </label>
-                                <span>{patient.emergencyNumber}</span>
+                            <div className="patientform_line"></div>
+                            <div className="patient_info">
+                                <div className="patient_phone_num">
+                                    <label>연락처 </label>
+                                    <span>{patient.phoneNumber}</span>
+                                </div>
+                                <div className="patient_age">
+                                    <label>나이 </label>
+                                    <span>{patient.age}</span>
+                                </div>
+                                {/*<div className="patient_height">*/}
+                                {/*    <label>키 : </label>*/}
+                                {/*    <span>{patient.height}</span>*/}
+                                {/*</div>*/}
+                                {/*<div className="patient_weight">*/}
+                                {/*    <label>몸무게 : </label>*/}
+                                {/*    <span>{patient.weight}</span>*/}
+                                {/*</div>*/}
+                                <div className="patient_emergency_num">
+                                    <label>비상 연락망 </label>
+                                    <span>{patient.emergencyNumber}</span>
+                                </div>
+                                <div className="patient_gender">
+                                    <label>성별 </label>
+                                    <span>{patient.gender}</span>
+                                </div>
                             </div>
-                            <div className="patient_gender">
-                                <label>성별 </label>
-                                <span>{patient.gender}</span>
+                            <div className="patient_signout_button">
+                                <button onClick={() => handleDelete(index)}>삭제</button>
                             </div>
-                        </div>
-                        <div className="patient_signout_button">
-                            <button onClick={() => handleDelete(index)}>삭제</button>
                         </div>
                     </div>
                 </div>
