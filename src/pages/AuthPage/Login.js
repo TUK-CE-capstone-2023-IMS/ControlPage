@@ -13,14 +13,13 @@ const LoginPage = () => {
         event.preventDefault();
         try {
             const response = await axios.post('http://localhost:8080/manager/login', {
-                managerid: managerid,
+                managerId: managerid,
                 password: password
             });
 
             if (response && response.data && response.data.success) { // 성공적으로 로그인한 경우
                 console.log('로그인 요청 성공:', response.data);
-                localStorage.setItem('managerid', managerid);
-                localStorage.setItem('managername', response.data.name);
+                localStorage.setItem('managerId', managerid);
                 setManagerid('');
                 setPassword('');
                 navigate('/'); // '/'로 페이지 이동
