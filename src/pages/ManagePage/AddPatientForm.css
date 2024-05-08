@@ -24,7 +24,6 @@
 /*    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
 /*}*/
 
-
 .add_patient_id input, .add_patient_name input, .add_patient_age input, .add_patient_sex select,
 .add_patient_phone_num input, .add_patient_email input, .add_patient_managerid input,
 .add_patient_emergency_num input, .add_patient_address input{
@@ -38,7 +37,7 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.add_patient_yesbtn button{
+.add_patient_yesbtn button {
     background-color: white;
     width: 130px;
     height: 40px;
@@ -50,20 +49,22 @@
     font-size: 22px;
 }
 
-.add_patient_nobtn button{
+.add_patient_nobtn button {
     background-color: white;
     width: 130px;
     height: 40px;
     color: #ababab;
     margin-top: 10px;
+    margin-left: 5px;
     text-align: center;
     border: 3px solid #ababab;
     border-radius: 10px;
     font-size: 22px;
 }
 
-.add_patient_button button{
-    display: inline-block;
+.add_patient_button {
+    display: flex;
+    justify-content: center;
 }
 
 .add_patient_button button:hover{

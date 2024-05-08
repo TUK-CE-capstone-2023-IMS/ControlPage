@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from "../MainPage/Sidebar";
 import './MyPage.css';
 import axios from 'axios';
-import {Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AdminMyPage = () => {
     const navigate = useNavigate();
@@ -14,7 +14,6 @@ const AdminMyPage = () => {
         phone: '',
         email: '',
         address: '',
-        etc: ''
     });
 
     const [isModalOpen, setIsModalOpen] = useState(false); // 모달 창 상태 변수
@@ -65,31 +64,31 @@ const AdminMyPage = () => {
         setIsModalOpen(true); // 모달 창 열기
     };
 
+    const closeModal = () => {
+        setIsModalOpen(false); // 모달 창 닫기
+    };
+
     return (
         <div>
-            <Sidebar/>
+            <Sidebar />
             <h1 className="mypage_text">개인 정보</h1>
-            <div className="edit-menu">
-                <button className="edit-menu-btn" onClick={openModal}></button>
-            </div>
-            {isModalOpen && (
-                <div className="modal"> {/* 모달 창 */}
-                    {/* 모달 내용 */}
-                    <div className="modal-content">
-                        {/* 모달 내용 */}
-                        <h2>모달 창</h2>
-                        <p>모달 창 내용</p>
-                        <button onClick={() => setIsModalOpen(false)}>닫기</button>
-                    </div>
-                </div>
-            )}
             <div className="my_page">
-                <div className="mypage_totalbox">
+                <div className="mypage_total_box">
                     <div className="mypage_profile"></div>
                     <div className="mypage_info_box">
                         <div className="mypage_name">
                             <label>이름 </label>
                             <span>{adminInfo.name}</span>
+                        </div>
+                        <div className="mypage_total_btn">
+                            <div className="mypage_edit-menu">
+                                <Link to="/">
+                                    <button className="mypage_edit-menu-btn"></button>
+                                </Link>
+                            </div>
+                            <div className="mypage_delete-menu">
+                                <button className="mypage_delete-menu-btn" onClick={openModal}></button>
+                            </div>
                         </div>
                         <div className="mypage_aff">
                             <label>소속 </label>
@@ -113,21 +112,19 @@ const AdminMyPage = () => {
                                 <label>전화번호 </label>
                                 <span>{adminInfo.phone}</span>
                             </div>
-                            <div className="mypage_etc">
-                                <label>기타 </label>
-                                <span>{adminInfo.etc}</span>
-                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className={`modal ${isModalOpen ? 'open' : ''}`}>
+                <div className="modal_popup">
+                    <h3>회원 탈퇴</h3>
+                    <p>회원을 탈퇴하시겠습니까?</p>
+                    <div className="modal_buttons">
+                        <button onClick={handleDelete}>회원 탈퇴</button>
+                        <button onClick={closeModal}>취소</button>
                     </div>
-            </div>
-            <div className="mypage_signout_btn">
-                <button onClick={handleDelete}>회원 탈퇴</button>
-            </div>
-            <div cancel>
-                <Link to="/">
-                    <button>취소</button>
-                </Link>
+                </div>
             </div>
         </div>
     );

@@ -7,7 +7,9 @@ const MiniDashBoard = () => {
             <div className="minidashboard_page">
                 <div className="minidashboard_box">
                     <div className= "minidashboard_text">
-                        <p className="minidashboard_text1">대시보드</p>
+                        <div className="minidashboard_text1">
+                            <a href="#">대시보드</a>
+                        </div>
                         <div className="minidashboard_text2">
                             <a href="#">B102</a>
                         </div>

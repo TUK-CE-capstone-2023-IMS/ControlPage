@@ -29,7 +29,7 @@ const AddPatientFormPage = () => {
     };
 
     const cancel = async (e) => {
-        navigate("/rooms");
+        navigate("/");
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
