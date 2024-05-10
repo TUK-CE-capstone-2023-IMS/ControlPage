@@ -62,6 +62,7 @@ const PatientFormPage = () => {
                                     <div className="patientform_name_box">
                                         <p>{patient.name}</p>
                                     </div>
+
                                     <div className="patientform_total_btn">
                                         <div className="patientform_edit-menu">
                                             <Link to="/">
@@ -80,6 +81,7 @@ const PatientFormPage = () => {
                                         {/*<span>{patient.home}</span>*/}
                                     </div>
                                 </div>
+
                             </div>
 
                             <div className="patientform_line"></div>
