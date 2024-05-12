@@ -33,6 +33,7 @@ const LoginPage = () => {
 
     return (
         <div className="login_page">
+
             <div className="login_hello_box">
                 <div className="login_hello_text">
                     <div className="login_first_hello_box">
@@ -47,6 +48,7 @@ const LoginPage = () => {
                     </div>
                 </div>
             </div>
+
             <div className="login_box">
                 <p className="login_title">Login</p>
 
@@ -90,7 +92,6 @@ const LoginPage = () => {
                         {/*    <Link to="/signup"><button>회원가입</button></Link>*/}
                         {/*</div>*/}
                     </div>
-
                 </form>
             </div>
         </div>
