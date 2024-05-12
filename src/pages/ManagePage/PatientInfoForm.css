@@ -4,32 +4,205 @@
     box-sizing: border-box;
 }
 
-.patientformpage{
-    width: 1340px;
-    height: 430px;
+.patient_infoform_page{
+    width: 1000px;
+    height: 500px;
     margin-left: 480px;
-    margin-top: 50px;
-    background-color: #f3f3f3;
-    border-radius: 10px;
-    border: 2px solid black;
-    font-size: 25px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.15);
 }
 
-.total{
+.patient_infoform_text {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-right: 800px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.patient_infoform_total_box{
+    display: flex;
+}
+
+.patient_infoform_profile_box{
+    width: 350px;
+    height: 500px;
+    float: left;
+}
+
+.patient_infoform_profile{
+    width: 320px;
+    height: 320px;
+    background-color: #6D8FE4;
+    margin-top: 90px;
     margin-left: 30px;
+    float: left;
+}
+
+.patient_infoform_name_box{
+    width: 120px;
+    height: 50px;
+    font-size: 40px;
+    color: #333333;
+    margin-left: 80px;
+}
+
+.patient_infoform_total_btn{
+    display: flex;
+    justify-content: left;
+    width: 85px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.patient_infoform_first_info{
+    display: flex;
+    margin-top: 60px;
+}
+
+.patient_infoform_home_box{
+    font-size: 20px;
+    color: #b4b4b6;
+}
+
+.patient_infoform_second_info{
+    width: 570px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.patient_infoform_line{
+    width: 570px;
+    border-top: 1px solid #767A83;
+    margin-left: 70px;
+}
+
+.patient_infoform_info_box_2{
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.patient_infoform_age_title, .patient_infoform_gender_title, .patient_infoform_phone_num_title,
+.patient_infoform_emergency_num_title{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #B4B4B6;
+}
+
+.patient_infoform_age, .patient_infoform_gender, .patient_infoform_phone_num,
+.patient_infoform_emergency_num{
+    margin-left: 60px;
+    font-size: 20px;
+    color: #767A83;
+    display: flex;
+}
+
+.patient_infoform_age_box, .patient_infoform_gender_box, .patient_infoform_phone_num_box,
+.patient_infoform_emergency_num_box{
+    display: flex;
+}
+
+.patient_infoform_edit-menu-btn {
+    width: 24px;
+    height: 24px;
+    background-image: url('./edit_btn.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.patient_infoform_delete-menu-btn {
+    width: 24px;
+    height: 24px;
+    background-image: url('./trashbox_btn.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal.open {
+    display: block;
+}
+
+.patient_infoform_modal_popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.patient_infoform_modal_popup h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.patient_infoform_modal_popup p {
+    margin-bottom: 20px;
+}
+
+.patient_infoform_modal_buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.patient_infoform_modal_delete_btn button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 3px solid #6D8FE4;
+    border-radius: 16px;
+    color: #6D8FE4;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.patient_infoform_modal_cancel_btn button {
+
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 3px solid #ababab;
+    border-radius: 16px;
+    color: #ababab;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
 
 }
 
-.signout_button button{
-    background-color: white;
-    width: 130px;
-    height: 40px;
-    color: black;
-    margin-left: 1200px;
-    margin-top: 5px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 25px;
+.modal_infoform_buttons button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }

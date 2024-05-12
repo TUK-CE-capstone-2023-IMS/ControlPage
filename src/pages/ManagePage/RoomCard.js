@@ -46,8 +46,8 @@ const RoomCard = ({ roomInfo }) => {
                     </div>
                 )}
             </button>
-            <h4 className="room-num">{roomInfo.name}님</h4>
-            <p className="status">{roomInfo.age}세 {roomInfo.sex}</p>
+            <h4 className="roomcard_name">{roomInfo.name}님</h4>
+            <p className="roomcard_age">{roomInfo.age}세</p>
         </div>
     );
 };

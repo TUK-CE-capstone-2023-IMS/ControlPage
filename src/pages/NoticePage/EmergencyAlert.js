@@ -4,7 +4,7 @@ import useSound from 'use-sound';
 import sound from './tfile.mp3';
 
 const EmergencyAlert = ({ message, onClose }) => {
-    const alert = { id: 1, roomNum: 'B 204', title: '낙상발생' };
+    const alert = { id: 1, roomNum: '한국공학대학교 산학융합관 716호', title: '낙상 발생!', name: '조은상 님' };
     const [play, { stop }] = useSound(sound);
     useEffect(() => {
         play();
@@ -19,10 +19,14 @@ const EmergencyAlert = ({ message, onClose }) => {
             <div className="emergency-layout">
                 <div className="emergency-alert">
                     <div className="emergency-info">
-                        <p className="emergency-roomNum">{alert.roomNum}</p>
+                        <div className="emergency_img">
+                            <img src={require('./free-icon-emergency-4349849.png')} alt="My Image" />
+                        </div>
                         <p className="emergency-title">{alert.title}</p>
+                        <p className="emergency-roomNum">{alert.roomNum}</p>
+                        <p className="emergency-name">{alert.name}</p>
                     </div>
-                    <button className="close-btn" onClick={handleClose}>닫기</button>
+                    <button className="close-btn" onClick={handleClose}>확인</button>
                 </div>
             </div>
         </div>
