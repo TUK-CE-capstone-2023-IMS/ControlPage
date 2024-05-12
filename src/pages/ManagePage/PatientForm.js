@@ -136,12 +136,16 @@ const PatientFormPage = () => {
             </div>
 
             <div className={`modal ${isModalOpen ? 'open' : ''}`}>
-                <div className="modal_popup">
+                <div className="patientform_modal_popup">
                     <h3>환자 삭제</h3>
                     <p>환자를 삭제하시겠습니까?</p>
-                    <div className="modal_buttons">
-                        <button onClick={handleDelete}>삭제</button>
-                        <button onClick={closeModal}>취소</button>
+                    <div className="patientform_modal_buttons">
+                        <div className="patientform_modal_delete_btn">
+                            <button onClick={handleDelete}>삭제</button>
+                        </div>
+                        <div className="patientform_modal_cancel_btn">
+                            <button onClick={closeModal}>취소</button>
+                        </div>
                     </div>
                 </div>
             </div>

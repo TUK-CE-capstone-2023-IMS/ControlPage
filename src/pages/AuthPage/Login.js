@@ -33,8 +33,22 @@ const LoginPage = () => {
 
     return (
         <div className="login_page">
+            <div className="login_hello_box">
+                <div className="login_hello_text">
+                    <div className="login_first_hello_box">
+                        <div className="login_hello_text_1">환영합니다!</div>
+                        <div className="login_hello_text_2">대시보드를 통해 환자 모니터링 및 관리를 시작해보세요!</div>
+                    </div>
+                    <div className="login_second_hello_box">
+                        <div className="login_hello_text_3">처음이신가요?</div>
+                        <div className="login_hello_text_4">
+                            <a href="/signup">회원가입 하러가기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="login_box">
-                <p className="login_title">레이더 관리자 서비스 시스템</p>
+                <p className="login_title">Login</p>
 
                 <form onSubmit={handleSubmit}>
                     <div className="login_id">
@@ -72,9 +86,9 @@ const LoginPage = () => {
                             <button type="submit">로그인</button>
                         </div>
 
-                        <div className="signin_button">
-                            <Link to="/signup"><button>회원가입</button></Link>
-                        </div>
+                        {/*<div className="signin_button">*/}
+                        {/*    <Link to="/signup"><button>회원가입</button></Link>*/}
+                        {/*</div>*/}
                     </div>
 
                 </form>
