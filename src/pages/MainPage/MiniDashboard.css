@@ -10,33 +10,38 @@
     margin-left: 30px;
     margin-top: 50px;
     border-radius: 16px;
+    padding-left: 40px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.minidashboard_address_list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .minidashboard_box:hover{
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.minidashboard_text2, .minidashboard_text3, .minidashboard_text4, .minidashboard_text5{
+.minidashboard_address{
     padding-top: 20px;
-    padding-right: 300px;
     font-size: 25px;
     color: #333333;
 }
 
-.minidashboard_text1{
+.minidashboard_title{
     padding-top: 20px;
-    padding-right: 250px;
     font-size: 30px;
     color: #333333;
     font-weight: 600;
 }
 
-.minidashboard_text2:hover, .minidashboard_text3:hover, .minidashboard_text4:hover, .minidashboard_text5:hover{
+.minidashboard_address:hover{
     text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.minidashboard_text a {
-    color: #333333;
-    text-decoration: none;
-}
+
