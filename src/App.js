@@ -16,7 +16,7 @@ import PatientForm from "./pages/ManagePage/PatientForm";
 
 function App() {
     const [alertMessage, setAlertMessage] = useState('');
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
         // SSE 연결 설정
