@@ -7,7 +7,9 @@ const MiniPatientBoard = () => {
             <div className="minipatientboard_page">
                 <div className="minipatientboard_box">
                     <div className= "minipatientboard_text">
-                        <p className="minipatientboard_text1">환자목록</p>
+                        <div className="minipatientboard_text1">
+                            <a href="#">환자목록</a>
+                        </div>
                         <div className="minipatientboard_text2">
                             <a href="#">송채연님</a>
                         </div>

@@ -47,10 +47,9 @@ const SignupPage = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="signup_page">
-                <div className="signup_text">
-                    <p>회원가입 폼</p>
-                </div>
                 <div className="signup_box">
+                    <p className="signup_title">SignIn</p>
+
                     <div className="signup_id">
                         <input
                             type="text"
@@ -96,6 +95,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
+
                     <div className="signup_sex">
                         <select
                             name="sex"
@@ -108,6 +108,7 @@ const SignupPage = () => {
                             <option value="female">여자</option>
                         </select>
                     </div>
+
                     <div className="signup_phone_number">
                         <input
                             type="text"
@@ -129,6 +130,7 @@ const SignupPage = () => {
                             required
                         />
                     </div>
+
                     <div className="signup_address">
                         <input
                             type="text"
@@ -139,24 +141,38 @@ const SignupPage = () => {
                             required
                         />
                     </div>
-                    <div className="signup_etc">
-                        <input
-                            type="text"
-                            name="etc"
-                            value={formData.etc}
-                            onChange={handleChange}
-                            placeholder="etc"
-                        />
+
+                    {/*<div className="signup_etc">*/}
+                    {/*    <input*/}
+                    {/*        type="text"*/}
+                    {/*        name="etc"*/}
+                    {/*        value={formData.etc}*/}
+                    {/*        onChange={handleChange}*/}
+                    {/*        placeholder="etc"*/}
+                    {/*    />*/}
+                    {/*</div>*/}
+
+                    <div className= "signup_button">
+                        <button className="signup_button" type="submit" onClick={handleSignIn}>회원가입</button>
                     </div>
-
+                    {/*<div className="signup_cancel">*/}
+                    {/*    <Link to="/login"><button>취소</button></Link>*/}
+                    {/*</div>*/}
                 </div>
 
-                <div className= "signup_button">
-                    <button className="signup_button" type="submit" onClick={handleSignIn}>회원가입</button>
-                </div>
-
-                <div className="signup_cancel">
-                    <Link to="/login"><button>취소</button></Link>
+                <div className="signup_hello_box">
+                    <div className="signup_hello_text">
+                        <div className="signup_first_hello_box">
+                            <div className="signup_hello_text_1">환영합니다!</div>
+                            <div className="signup_hello_text_2">대시보드를 통해 환자 모니터링 및 관리를 시작해보세요!</div>
+                        </div>
+                        <div className="signup_second_hello_box">
+                            <div className="signup_hello_text_3">이미 계정이 있으신가요?</div>
+                            <div className="signup_hello_text_4">
+                                <a href="/login">로그인 하러가기</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>

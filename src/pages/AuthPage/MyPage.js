@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from "../MainPage/Sidebar";
 import './MyPage.css';
 import axios from 'axios';
-import {Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AdminMyPage = () => {
     const navigate = useNavigate();
@@ -14,8 +14,9 @@ const AdminMyPage = () => {
         phone: '',
         email: '',
         address: '',
-        etc: ''
     });
+
+    const [isModalOpen, setIsModalOpen] = useState(false); // 모달 창 상태 변수
 
     useEffect(() => {
         const managerId = localStorage.getItem('managerId');
@@ -59,56 +60,116 @@ const AdminMyPage = () => {
         }
     };
 
+    const openModal = () => {
+        setIsModalOpen(true); // 모달 창 열기
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false); // 모달 창 닫기
+    };
 
     return (
         <div>
-            <Sidebar/>
+            <Sidebar />
             <h1 className="mypage_text">개인 정보</h1>
-            {/*<div className="edit-menu">*/}
-            {/*    <button className="edit-menu-btn" onClick={handleToggleMenu}>*/}
-            {/*</div>*/}
             <div className="my_page">
-                <div className="mypage_totalbox">
-                    <div className="mypage_name">
-                        <label>이름 </label>
-                        <span>{adminInfo.name}</span>
+
+                <div className="mypage_total_box">
+
+                    <div className="mypage_profile_box">
+                        <div className="mypage_profile"></div>
                     </div>
-                    <div className="mypage_aff">
-                        <label>소속 </label>
-                        <span>{adminInfo.address}</span>
+
+                    <div className="mypage_total_info_box">
+
+                        <div className="mypage_info_box_1">
+
+                            <div className="mypage_first_info">
+                                <div className="mypage_name_box">
+                                    <span>{adminInfo.name}</span>
+                                </div>
+
+                                <div className="mypage_total_btn">
+                                    <div className="mypage_edit-menu">
+                                        <Link to="/">
+                                            <button className="mypage_edit-menu-btn"></button>
+                                        </Link>
+                                    </div>
+                                    <div className="mypage_delete-menu">
+                                        <button className="mypage_delete-menu-btn" onClick={openModal}></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mypage_second_info">
+                                <div className="mypage_aff_box">
+                                    <span>{adminInfo.address}</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className="mypage_line"></div>
+
+                        <div className="mypage_info_box_2">
+
+                            <div className="mypage_age_box">
+                                <div className="mypage_age_title">
+                                    <label>나이 </label>
+                                </div>
+                                <div className="mypage_age">
+                                    <span>{adminInfo.age}</span>
+                                </div>
+                            </div>
+
+                            <div className="mypage_email_box">
+                                <div className="mypage_email_title">
+                                    <label>이메일 </label>
+                                </div>
+                                <div className="mypage_email">
+                                    <span>{adminInfo.email}</span>
+                                </div>
+                            </div>
+
+                            <div className="mypage_sex_box">
+                                <div className="mypage_sex_title">
+                                    <label>성별 </label>
+                                </div>
+                                <div className="mypage_sex">
+                                    <span>{adminInfo.sex}</span>
+                                </div>
+                            </div>
+
+                            <div className="mypage_phone_num_box">
+                                <div className="mypage_phone_num_title">
+                                    <label>전화번호 </label>
+                                </div>
+                                <div className="mypage_phone_num">
+                                    <span>{adminInfo.phone}</span>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div className="mypage_line"></div>
-                    <div className="mypage_info">
-                        <div className="mypage_age">
-                            <label>나이 </label>
-                            <span>{adminInfo.age}</span>
-                        </div>
-                        <div className="mypage_email">
-                            <label>이메일 </label>
-                            <span>{adminInfo.email}</span>
-                        </div>
-                        <div className="mypage_sex">
-                            <label>성별 </label>
-                            <span>{adminInfo.sex}</span>
-                        </div>
-                        <div className="mypage_phone_num">
-                            <label>전화번호 </label>
-                            <span>{adminInfo.phone}</span>
-                        </div>
-                        <div className="mypage_etc">
-                            <label>기타 </label>
-                            <span>{adminInfo.etc}</span>
-                        </div>
-                    </div>
-                    </div>
+
+                </div>
+
             </div>
-            <div className="mypage_signout_btn">
-                <button onClick={handleDelete}>회원 탈퇴</button>
-            </div>
-            <div cancel>
-                <Link to="/">
-                    <button>취소</button>
-                </Link>
+
+            <div className={`modal ${isModalOpen ? 'open' : ''}`}>
+                <div className="mypage_modal_popup">
+                    <h3>회원 탈퇴</h3>
+                    <p>회원을 탈퇴하시겠습니까?</p>
+                    <div className="mypage_modal_buttons">
+                        <div className="mypage_modal_delete_btn">
+                            <button onClick={handleDelete}>탈퇴</button>
+                        </div>
+                        <div className="mypage_modal_cancel_btn">
+                            <button onClick={closeModal}>취소</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

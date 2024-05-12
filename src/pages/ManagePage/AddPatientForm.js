@@ -29,7 +29,7 @@ const AddPatientFormPage = () => {
     };
 
     const cancel = async (e) => {
-        navigate("/rooms");
+        navigate("/");
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -49,7 +49,7 @@ const AddPatientFormPage = () => {
         <form onSubmit={handleSubmit}>
             <div className="add_patient_page">
                 <div className="add_patient_text">
-                    <p>환자 추가 폼</p>
+                    <p>Add Patient</p>
                 </div>
                 <div className="add_patient_boxes">
                     <div className="add_patient_id">

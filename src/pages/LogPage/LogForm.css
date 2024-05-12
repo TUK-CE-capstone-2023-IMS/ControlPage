@@ -24,13 +24,17 @@
 
 .log-room-num {
     margin-top: 10px;
+    margin-left: 10px;
     font-size: 45px;
+    width: 450px;
     color: #333333;
     font-weight: 600;
 }
 
 .log-patient-name {
-    margin-left: 15px;
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 20px;
     text-align: left;
     font-size: 30px;
     color: #333333;
