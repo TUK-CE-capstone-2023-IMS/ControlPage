@@ -20,7 +20,7 @@ const EmergencyAlert = ({ message, onClose }) => {
                 <div className="emergency-alert">
                     <div className="emergency-info">
                         <div className="emergency_img">
-                            <img src={require('./free-icon-emergency-4349849.png')} alt="My Image" />
+                            <img src={require('./free-icon-siren.png')} alt="My Image" />
                         </div>
                         <p className="emergency-title">{alert.title}</p>
                         <p className="emergency-roomNum">{alert.roomNum}</p>

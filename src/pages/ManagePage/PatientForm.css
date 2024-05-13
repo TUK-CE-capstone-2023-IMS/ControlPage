@@ -111,9 +111,9 @@
 }
 
 .patientform_edit-menu-btn {
-    width: 24px;
-    height: 24px;
-    background-image: url('./edit_btn.png');
+    width: 36px;
+    height: 36px;
+    background-image: url('./free-icon-edit.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -126,9 +126,9 @@
 }
 
 .patientform_delete-menu-btn {
-    width: 24px;
-    height: 24px;
-    background-image: url('./trashbox_btn.png');
+    width: 32px;
+    height: 32px;
+    background-image: url('./free-icon-recycle-bin-outline-symbol-inside-a-circle.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

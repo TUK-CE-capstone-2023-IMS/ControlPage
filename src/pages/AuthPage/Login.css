@@ -12,7 +12,7 @@
 .login_hello_box{
     width: 1080px;
     height: 900px;
-    background-color: #496BF5;
+    background-color: #002455;
     border-radius: 100px;
 }
 
@@ -75,7 +75,7 @@
     width: 500px;
     padding-left: 90px;
     height: 80px;
-    color: #496BF5;
+    color: #002455;
     font-weight: 600;
 }
 
@@ -84,14 +84,14 @@
     text-align: left;
     padding-top: 60px;
     padding-left: 90px;
-    color: #496BF5;
+    color: #002455;
 }
 
 .login_password_text{
     font-size: 30px;
     text-align: left;
     padding-left: 90px;
-    color: #496BF5;
+    color: #002455;
 }
 
 .login_id, .login_password{
@@ -115,7 +115,7 @@
 
 .login_idbox input:hover ,
 .login_passwordbox input:hover{
-    border: 3px solid #496BF5;
+    border: 3px solid #002445;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -125,9 +125,9 @@
     height: 80px;
     padding: 10px;
     margin-bottom: 20px;
-    background-color: #496BF5;
-    color: #ffffff;
-    border: 1px solid #496BF5;
+    background-color: #f3f6f9;
+    color: #002455;
+    border: 1px solid #f3f6f9;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 400;
