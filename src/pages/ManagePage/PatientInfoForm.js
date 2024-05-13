@@ -35,7 +35,6 @@ const PatientFormPage = () => {
             const response = await axios.delete(`http://localhost:8080/patient/info?patientid=${patientid}`);
             console.log('환자 탈퇴 요청 성공:', response.data);
             if (response.data.success) {
-                // 페이지 리로드 또는 환자 목록으로 이동
                 navigate('/rooms');
             } else {
                 console.error('환자 탈퇴 실패:', response.data.message);
@@ -46,7 +45,7 @@ const PatientFormPage = () => {
     };
 
     const handleChangeSetting = async () => {
-        navigate('/PatientInfoChangeForm', {state: {patientid: patientid}});
+        navigate('/ChangePatient', {state: {patientid: patientid}});
     };
 
     const openModal = () => {
@@ -79,9 +78,7 @@ const PatientFormPage = () => {
                                 </div>
                                 <div className="patient_infoform_total_btn">
                                     <div className="patient_infoform_edit-menu">
-                                        <Link to="/">
-                                            <button className="patient_infoform_edit-menu-btn"></button>
-                                        </Link>
+                                        <button className="patient_infoform_edit-menu-btn" onClick={handleChangeSetting}></button>
                                     </div>
                                     <div className="patient_infoform_delete-menu">
                                         <button className="patient_infoform_delete-menu-btn" onClick={openModal}></button>
