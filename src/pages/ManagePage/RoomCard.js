@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // useNavigate로 변경
+import { useNavigate } from 'react-router-dom';
 import './RoomCard.css';
 
 const RoomCard = ({ roomInfo }) => {
-    const navigate = useNavigate(); // useNavigate 사용
+    const navigate = useNavigate();
     const cardClass = `room-card ${roomInfo.status === '외출중' ? 'available' : 'occupied'}`;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [patientDetails, setPatientDetails] = useState(null);
@@ -46,8 +46,8 @@ const RoomCard = ({ roomInfo }) => {
                     </div>
                 )}
             </button>
-            <h4 className="room-num">{roomInfo.name}님</h4>
-            <p className="status">{roomInfo.age}세 {roomInfo.sex}</p>
+            <h4 className="roomcard_name">{roomInfo.name}님</h4>
+            <p className="roomcard_age">{roomInfo.age}세</p>
         </div>
     );
 };

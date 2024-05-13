@@ -104,7 +104,7 @@ const Sidebar = () => {
                     </div>
                     <div className="topbar_text">
                         {managerInfo && (
-                            <Link to="#" onClick={handleLogout}>
+                            <Link to="/login" onClick={handleLogout}>
                                 로그아웃
                             </Link>
                         )}

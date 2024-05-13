@@ -5,14 +5,24 @@
 }
 
 .signup_page{
-    margin: 40px 0 40px 1130px;
     text-align: center;
+    display: flex;
 }
 
-.signup_text{
-    font-size: 25px;
+.signup_box{
+    margin-top: 50px;
+}
+
+.signup_title{
+    font-size: 40px;
     margin-top: 20px;
-    color: #333333;
+    margin-left: 20px;
+    padding-left: 40px;
+    text-align: left;
+    width: 500px;
+    height: 80px;
+    color: #496BF5;
+    font-weight: 600;
 }
 
 .signup_id input,
@@ -35,6 +45,7 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.signup_id input:hover,
 .signup_email input:hover,
 .signup_password_input input:hover,
 .signup_name input:hover,
@@ -42,19 +53,21 @@
 .signup_birth input:hover,
 .signup_phone_number input:hover,
 .signup_age input:hover,
-.signup_etc input:hover{
+.signup_address input:hover{
+    border: 3px solid #496BF5;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .signup_button button {
-    height: 50px;
+    height: 60px;
     width: 400px;
     font-size: 20px;
-    border-radius: 5px;
-    color: #333333;
-    border: 1px solid #f3f6f9;
+    font-weight: 400;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px solid #496BF5;
     margin-top: 30px;
-    background-color: #f3f6f9;
+    background-color: #496BF5;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
@@ -64,6 +77,51 @@
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.signup_box{
-    margin-top: 40px;
+.signup_hello_box{
+    width: 1080px;
+    height: 900px;
+    background-color: #496BF5;
+    border-radius: 100px;
+    margin-left: 300px;
+}
+
+.signup_hello_text_1{
+    color: white;
+    font-size: 80px;
+    margin-left: 100px;
+    margin-top: 250px;
+    text-align: left;
+    width: 700px;
+    height: 100px;
+}
+
+.signup_hello_text_2{
+    width: 700px;
+    height: 100px;
+    color: white;
+    font-size: 40px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.signup_hello_text_3{
+    width: 700px;
+    height: 50px;
+    color: white;
+    font-size: 40px;
+    margin-top: 225px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.signup_hello_text_4 a{
+    width: 700px;
+    height: 50px;
+    color: white;
+    font-size: 22px;
+}
+
+.signup_hello_text_4{
+    margin-left: 100px;
+    text-align: left;
 }

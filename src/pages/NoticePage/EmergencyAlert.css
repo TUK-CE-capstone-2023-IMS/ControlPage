@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .emergency-overlay {
     position: fixed;
     top: 0;
@@ -16,10 +17,10 @@
 }
 
 .emergency-layout {
-    width: 400px;
-    height: 300px;
+    width: 800px;
+    height: 500px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,32 +28,51 @@
     position: relative;
     animation: blink-animation 1s infinite;
 }
+
 .emergency-roomNum {
-    font-size: 50px;
+    font-size: 20px;
+    margin-top: 5px;
+    color: #333333;
 }
+
+.emergency-name{
+    margin-top: 5px;
+    font-size: 20px;
+    color: #333333;
+}
+
 .emergency-title {
-    font-size: 30px;
+    font-size: 60px;
+    color: #333333;
 }
+
+.emergency_img img{
+    width: 150px;
+    height: 150px;
+}
+
 .emergency-alert .close-btn {
-    width: 120px;
-    height: 50px;
-    margin-top: 30px;
-    background-color: black;
-    color: white;
-    border: none;
+    width: 200px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 24px;
+    background-color: #ffffff;
+    border: 3px solid #ABABAB;
+    color: #333333;
     border-radius: 20px;
     padding: 5px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.15);
     cursor: pointer;
 }
 
 .emergency-alert .close-btn:hover {
-    background-color: #333;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-@keyframes blink-animation {
-    0%, 100% { background-color: white; }
-    50% { background-color: red; }
-}
+/*@keyframes blink-animation {*/
+/*    0%, 100% { background-color: white; }*/
+/*    50% { background-color: red; }*/
+/*}*/
 
 @keyframes blink-overlay-animation {
     0%, 100% { background: rgba(0, 0, 0, 0.5); }
