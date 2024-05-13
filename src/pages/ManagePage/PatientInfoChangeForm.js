@@ -22,7 +22,7 @@ const PatientInfoChangeFormPage = () => {
         // 페이지가 시작될 때 환자 정보를 받아오는 함수
         const fetchPatientInfo = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/patient/info?patientid=${location.state.patientid}`);
+                const response = await axios.get(`http://localhost:8080/patient/info?patientId=${location.state.patientid}`);
                 // 받아온 환자 정보를 formData에 설정
                 setFormData(response.data);
             } catch (error) {
@@ -32,7 +32,7 @@ const PatientInfoChangeFormPage = () => {
 
         // 환자 정보를 받아오기 위한 함수 호출
         fetchPatientInfo();
-    }, [location.state.patientid]);
+    }, []);
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -48,14 +48,12 @@ const PatientInfoChangeFormPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // 수정된 환자 정보를 서버로 전송하여 업데이트하는 요청
             const response = await axios.put('http://localhost:8080/patient/info', formData);
             if (response.data.success) {
                 navigate("/patients", {state: {patientid: location.state.patientid}});
             }
         } catch (error) {
             console.error('환자 정보 수정 실패:', error.response ? error.response.data : error.message);
-            // 오류 처리
         }
     };
 
