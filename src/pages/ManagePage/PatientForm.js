@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from "../MainPage/Sidebar";
 import './PatientForm.css';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 
 const PatientFormPage = () => {
 
+    const navigate = useNavigate()
     const [patients, setPatients] = useState([]);
 
     const [isModalOpen, setIsModalOpen] = useState(false); // 모달 창 상태 변수
@@ -32,7 +33,6 @@ const PatientFormPage = () => {
         updatedPatients.splice(index, 1);
         setPatients(updatedPatients);
     };
-
     const openModal = () => {
         setIsModalOpen(true); // 모달 창 열기
     };
@@ -40,41 +40,35 @@ const PatientFormPage = () => {
     const closeModal = () => {
         setIsModalOpen(false); // 모달 창 닫기
     };
-
+    const handleChangeSetting = async (patientid) => {
+        console.log(patientid)
+        navigate('/ChangePatient', {state: {patientid: patientid}});
+    };
     return (
         <div>
             <Sidebar/>
             <h1 className="patientform_text">환자 정보</h1>
-            {patients.map((patient, index) => (
-                <div className="patientform_page" key={index}>
-
+            {patients.map((patient) => (
+                <div className="patientform_page" key={patient.patientid}>
                     <div className="patientform_total_box">
-
                         <div className="patientform_profile_box">
                             <div className="patientform_profile"></div>
                         </div>
-
                         <div className="patientform_total_info_box">
-
                             <div className="patientform_info_box_1">
-
                                 <div className="patientform_first_info">
                                     <div className="patientform_name_box">
                                         <p>{patient.name}</p>
                                     </div>
-
                                     <div className="patientform_total_btn">
                                         <div className="patientform_edit-menu">
-                                            <Link to="/">
-                                                <button className="patientform_edit-menu-btn"></button>
-                                            </Link>
+                                            <button className="patientform_edit-menu-btn" onClick={()=>handleChangeSetting(patient.patientid)}></button>
                                         </div>
                                         <div className="patientform_delete-menu">
                                             <button className="patientform_delete-menu-btn" onClick={openModal}></button>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div className="patientform_second_info">
                                     <div className="patientform_home_box">
                                         <p>avaegdagddf</p>
