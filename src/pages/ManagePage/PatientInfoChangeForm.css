@@ -5,20 +5,27 @@
 }
 
 .change_patient_page{
+    width: 400px;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.change_patient_box{
+    width: 400px;
+    height: 550px;
+    margin: 25px 0;
 }
 
 .change_patient_text{
     height: 50px;
     width: 400px;
-    margin-top: 40px;
     text-align: left;
-    margin-bottom: 40px;
+    margin: 20px 0;
     display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 30px;
     font-weight: 600;
     color: #002455;
@@ -49,7 +56,7 @@
     width: 130px;
     height: 40px;
     color: #6D8FE4;
-    margin-top: 10px;
+    margin: 0 10px;
     text-align: center;
     border: 3px solid #6D8FE4;
     border-radius: 10px;
@@ -61,8 +68,7 @@
     width: 130px;
     height: 40px;
     color: #ababab;
-    margin-top: 10px;
-    margin-left: 5px;
+    margin: 0 10px;
     text-align: center;
     border: 3px solid #ababab;
     border-radius: 10px;
@@ -72,7 +78,8 @@
 .change_patient_button {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    width: 400px;
+    height: 40px;
 }
 
 .change_patient_button button:hover{

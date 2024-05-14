@@ -60,10 +60,11 @@ const PatientInfoChangeFormPage = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="change_patient_page">
+                <div className="add_patient_text">
+                    <p>Change Patient</p>
+                </div>
+
                 <div className="change_patient_box">
-                    <div className="add_patient_text">
-                        <p>Change Patient</p>
-                    </div>
                     <div className="change_patient_id">
                         <input
                             type="text"
@@ -74,6 +75,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
+
                     <div className="change_patient_name">
                         <input
                             type="text"
@@ -84,6 +86,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
+
                     <div className="change_patient_age">
                         <input
                             type="text"
@@ -94,6 +97,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
+
                     <div className="change_patient_sex">
                         <select
                             name="sex"
@@ -106,6 +110,7 @@ const PatientInfoChangeFormPage = () => {
                             <option value="female">여자</option>
                         </select>
                     </div>
+
                     <div className="change_patient_phone_num">
                         <input
                             type="text"
@@ -116,6 +121,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
+
                     <div className="change_patient_email">
                         <input
                             type="email"
@@ -126,6 +132,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
+
                     <div className="change_patient_address">
                         <input
                             type="text"
@@ -136,6 +143,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
+
                     <div className="change_patient_emergency_num">
                         <input
                             type="text"
@@ -146,6 +154,7 @@ const PatientInfoChangeFormPage = () => {
                             required
                         />
                     </div>
+
                     <div className="change_patient_managerid">
                         <input
                             type="text"
@@ -157,10 +166,12 @@ const PatientInfoChangeFormPage = () => {
                         />
                     </div>
                 </div>
+
                 <div className="change_patient_button">
                     <div className="change_patient_yesbtn">
                         <button type="submit">확인</button>
                     </div>
+
                     <div className="change_patient_nobtn">
                         <button onClick={cancel}>취소</button>
                     </div>
