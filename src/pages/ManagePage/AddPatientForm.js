@@ -47,113 +47,113 @@ const AddPatientFormPage = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="add_patient_page">
-                <div className="add_patient_text">
-                    <p>Add Patient</p>
+                <div className="add_patient_page">
+                    <div className="add_patient_text">
+                        <p>Add Patient</p>
+                    </div>
+                    <div className="add_patient_box">
+                        <div className="add_patient_id">
+                            <input
+                                type="text"
+                                name="patientid"
+                                value={formData.patientid}
+                                onChange={handleChange}
+                                placeholder="환자 ID"
+                                required
+                            />
+                        </div>
+                        <div className="add_patient_name">
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                placeholder="이름"
+                                required
+                            />
+                        </div>
+                        <div className="add_patient_age">
+                            <input
+                                type="text"
+                                name="age"
+                                value={formData.age}
+                                onChange={handleChange}
+                                placeholder="나이"
+                                required
+                            />
+                        </div>
+                        <div className="add_patient_sex">
+                            <select
+                                name="sex"
+                                value={formData.sex}
+                                onChange={handleChange}
+                                required
+                            >
+                                <option value="">성별 선택</option>
+                                <option value="male">남자</option>
+                                <option value="female">여자</option>
+                            </select>
+                        </div>
+                        <div className="add_patient_phone_num">
+                            <input
+                                type="text"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                placeholder="전화번호"
+                                required
+                            />
+                        </div>
+                        <div className="add_patient_email">
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="이메일"
+                                required
+                            />
+                        </div>
+                        <div className="add_patient_address">
+                            <input
+                                type="text"
+                                name="address"
+                                value={formData.address}
+                                onChange={handleChange}
+                                placeholder="주소"
+                                required
+                            />
+                        </div>
+                        <div className="add_patient_emergency_num">
+                            <input
+                                type="text"
+                                name="emergencycall"
+                                value={formData.emergencycall}
+                                onChange={handleChange}
+                                placeholder="비상 연락처"
+                                required
+                            />
+                        </div>
+                        <div className="add_patient_managerid">
+                            <input
+                                type="text"
+                                name="managerid"
+                                value={formData.managerid}
+                                onChange={handleChange}
+                                placeholder="manager ID"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div className="add_patient_button">
+                        <div className="add_patient_yesbtn">
+                            <button type="submit">확인</button>
+                        </div>
+                        <div className="add_patient_nobtn">
+                            <button onClick={cancel}>취소</button>
+                        </div>
+                    </div>
                 </div>
-                <div className="add_patient_boxes">
-                    <div className="add_patient_id">
-                        <input
-                            type="text"
-                            name="patientid"
-                            value={formData.patientid}
-                            onChange={handleChange}
-                            placeholder="환자 ID"
-                            required
-                        />
-                    </div>
-                    <div className="add_patient_name">
-                        <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            placeholder="이름"
-                            required
-                        />
-                    </div>
-                    <div className="add_patient_age">
-                        <input
-                            type="text"
-                            name="age"
-                            value={formData.age}
-                            onChange={handleChange}
-                            placeholder="나이"
-                            required
-                        />
-                    </div>
-                    <div className="add_patient_sex">
-                        <select
-                            name="sex"
-                            value={formData.sex}
-                            onChange={handleChange}
-                            required
-                        >
-                            <option value="">성별 선택</option>
-                            <option value="male">남자</option>
-                            <option value="female">여자</option>
-                        </select>
-                    </div>
-                    <div className="add_patient_phone_num">
-                        <input
-                            type="text"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            placeholder="전화번호"
-                            required
-                        />
-                    </div>
-                    <div className="add_patient_email">
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder="이메일"
-                            required
-                        />
-                    </div>
-                    <div className="add_patient_address">
-                        <input
-                            type="text"
-                            name="address"
-                            value={formData.address}
-                            onChange={handleChange}
-                            placeholder="주소"
-                            required
-                        />
-                    </div>
-                    <div className="add_patient_emergency_num">
-                        <input
-                            type="text"
-                            name="emergencycall"
-                            value={formData.emergencycall}
-                            onChange={handleChange}
-                            placeholder="비상 연락처"
-                            required
-                        />
-                    </div>
-                    <div className="add_patient_managerid">
-                        <input
-                            type="text"
-                            name="managerid"
-                            value={formData.managerid}
-                            onChange={handleChange}
-                            placeholder="manager ID"
-                            required
-                        />
-                    </div>
-                </div>
-                <div className="add_patient_button">
-                    <div className="add_patient_yesbtn">
-                        <button type="submit">확인</button>
-                    </div>
-                    <div className="add_patient_nobtn">
-                        <button onClick={cancel}>취소</button>
-                    </div>
-                </div>
-            </div>
         </form>
     );
 };

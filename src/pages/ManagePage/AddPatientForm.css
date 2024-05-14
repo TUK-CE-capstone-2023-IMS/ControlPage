@@ -4,12 +4,28 @@
     box-sizing: border-box;
 }
 
+.add_patient_page{
+    width: 400px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.add_patient_box{
+    width: 400px;
+    height: 550px;
+    margin: 25px 0;
+}
+
 .add_patient_text{
     height: 50px;
     width: 400px;
-    margin-top: 40px;
     text-align: left;
-    margin-bottom: 40px;
+    margin: 20px 0;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
@@ -17,18 +33,6 @@
     font-weight: 600;
     color: #002455;
 }
-
-/*.add_patient_boxes{*/
-/*    width: 850px;*/
-/*    height: 430px;*/
-/*    margin-left: 450px;*/
-/*    margin-top: 30px;*/
-/*    background-color: #f3f6f9;*/
-/*    border-radius: 10px;*/
-/*    border: 1px solid #f3f6f9;*/
-/*    font-size: 25px;*/
-/*    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
-/*}*/
 
 .add_patient_id input, .add_patient_name input, .add_patient_age input, .add_patient_sex select,
 .add_patient_phone_num input, .add_patient_email input, .add_patient_managerid input,
@@ -55,7 +59,7 @@
     width: 130px;
     height: 40px;
     color: #6D8FE4;
-    margin-top: 10px;
+    margin: 0 10px;
     text-align: center;
     border: 3px solid #6D8FE4;
     border-radius: 10px;
@@ -67,8 +71,7 @@
     width: 130px;
     height: 40px;
     color: #ababab;
-    margin-top: 10px;
-    margin-left: 5px;
+    margin: 0 10px;
     text-align: center;
     border: 3px solid #ababab;
     border-radius: 10px;
@@ -78,7 +81,8 @@
 .add_patient_button {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    width: 400px;
+    height: 40px;
 }
 
 .add_patient_button button:hover{
