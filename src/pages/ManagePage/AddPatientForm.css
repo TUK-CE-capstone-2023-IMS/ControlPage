@@ -15,7 +15,7 @@
     margin-right: auto;
     font-size: 30px;
     font-weight: 600;
-    color: #496BF5;
+    color: #002455;
 }
 
 /*.add_patient_boxes{*/
@@ -46,7 +46,7 @@
 .add_patient_id input:hover, .add_patient_name input:hover, .add_patient_age input:hover, .add_patient_sex select:hover,
 .add_patient_phone_num input:hover, .add_patient_email input:hover, .add_patient_managerid input:hover,
 .add_patient_emergency_num input:hover, .add_patient_address input:hover{
-    border: 3px solid #496BF5;
+    border: 3px solid #002455;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 

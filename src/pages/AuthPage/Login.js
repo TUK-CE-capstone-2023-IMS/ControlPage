@@ -33,7 +33,6 @@ const LoginPage = () => {
 
     return (
         <div className="login_page">
-
             <div className="login_hello_box">
                 <div className="login_hello_text">
                     <div className="login_first_hello_box">

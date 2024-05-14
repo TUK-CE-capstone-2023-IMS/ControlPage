@@ -60,10 +60,10 @@ const PatientInfoChangeFormPage = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="change_patient_page">
-                <div className="add_patient_text">
-                    <p>환자 정보 수정</p>
-                </div>
-                <div className="change_patient_boxes">
+                <div className="change_patient_box">
+                    <div className="add_patient_text">
+                        <p>Change Patient</p>
+                    </div>
                     <div className="change_patient_id">
                         <input
                             type="text"

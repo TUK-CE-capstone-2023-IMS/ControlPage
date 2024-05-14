@@ -71,8 +71,7 @@ const PatientFormPage = () => {
                                 </div>
                                 <div className="patientform_second_info">
                                     <div className="patientform_home_box">
-                                        <p>avaegdagddf</p>
-                                        {/*<span>{patient.home}</span>*/}
+                                        <span>{patient.home}</span>
                                     </div>
                                 </div>
 
@@ -119,14 +118,13 @@ const PatientFormPage = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
             ))}
 
             <div className="patientform_add_patient_button">
-                <Link to="/AddPatient"><button>환자 추가</button></Link>
+                <Link to="/AddPatient"><button></button></Link>
             </div>
 
             <div className={`modal ${isModalOpen ? 'open' : ''}`}>
