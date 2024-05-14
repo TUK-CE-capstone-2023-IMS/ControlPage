@@ -5,19 +5,18 @@
 }
 
 .login_page{
-    height: 100vh;
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .login_hello_box{
-    width: 1080px;
-    height: 900px;
+    width: 900px;
+    height: 1080px;
     background-color: #002455;
     border-radius: 100px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 0;
 }
 
 .login_hello_text_1{
@@ -49,25 +48,22 @@
     text-align: left;
 }
 
-.login_hello_text_4 a{
-    width: 700px;
-    height: 50px;
-    color: white;
-    font-size: 22px;
-}
-
 .login_hello_text_4{
     margin-left: 100px;
+    width: 700px;
+    height: 50px;
     text-align: left;
+}
+
+.login_hello_text_4 a{
+    color: white;
+    font-size: 22px;
 }
 
 .login_box{
     width:600px;
     height:900px;
-    margin-top: 100px;
-    margin-left: 50px;
-    margin-bottom: 100px;
-    margin-right: 50px;
+    margin: 100px 200px;
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -76,45 +72,58 @@
 .login_title {
     text-align: left;
     font-size: 40px;
-    padding-top: 40px;
-    width: 500px;
-    padding-left: 90px;
+    margin-top: 40px;
+    margin-left: 90px;
+    width: 420px;
     height: 80px;
     color: #002455;
     font-weight: 600;
 }
 
+.login_input_box{
+    width: 420px;
+    height: 300px;
+    margin-top: 60px;
+    margin-left: 90px;
+}
+
 .login_id_text{
+    width: 420px;
+    height: 50px;
     font-size: 30px;
     text-align: left;
-    padding-top: 60px;
-    padding-left: 90px;
     color: #002455;
 }
 
 .login_password_text{
+    width: 420px;
+    height: 50px;
     font-size: 30px;
     text-align: left;
-    padding-left: 90px;
     color: #002455;
 }
 
-.login_id, .login_password{
-    margin-top: 15px;
+.login_id{
+    width: 420px;
+    height: 140px;
+}
+
+.login_password{
+    width: 420px;
+    height: 140px;
+    margin-top: 30px;
 }
 
 .login_idbox input ,
 .login_passwordbox input{
     width: 420px;
     height: 70px;
-    padding: 10px 10px 10px 0px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    padding: 10px;
+    margin: 10px 0;
     border-radius: 10px;
     background-color: #ffffff;
     border: 1px solid #ffffff;
     font-size: 25px;
-    padding-left: 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
@@ -124,12 +133,10 @@
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.login_button button ,
-.signin_button button {
+.login_button button {
     width: 420px;
     height: 80px;
-    padding: 10px;
-    margin-bottom: 20px;
+    margin-top: 250px;
     background-color: #f3f6f9;
     color: #002455;
     border: 1px solid #f3f6f9;
@@ -140,15 +147,10 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.login_button button:hover ,
-.signin_button button:hover{
+.login_button button:hover {
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.login_total_button{
-    margin-top: 280px;
 }
 
 
