@@ -60,14 +60,6 @@ const PatientFormPage = () => {
                                     <div className="patientform_name_box">
                                         <p>{patient.name}</p>
                                     </div>
-                                    <div className="patientform_total_btn">
-                                        <div className="patientform_edit-menu">
-                                            <button className="patientform_edit-menu-btn" onClick={()=>handleChangeSetting(patient.patientid)}></button>
-                                        </div>
-                                        <div className="patientform_delete-menu">
-                                            <button className="patientform_delete-menu-btn" onClick={openModal}></button>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div className="patientform_second_info">
                                     <div className="patientform_home_box">
@@ -117,7 +109,31 @@ const PatientFormPage = () => {
                                     </div>
                                 </div>
                             </div>
+
+                            <div className="patientform_total_btn">
+
+                                <button className="patientform_edit_menu_btn" onClick={()=>handleChangeSetting(patient.patientid)}>
+                                    <div className="patientform_edit_btn_input">
+                                        <div className="patientform_edit_btn">
+                                            <img src={require('./pencil_btn.png')} alt="pencil_btn" />
+                                        </div>
+                                        <p className="patientform_edit_btn_text">수정</p>
+                                    </div>
+                                </button>
+
+                                <button className="patientform_delete_menu_btn" onClick={openModal}>
+                                    <div className="patientform_delete_btn_input">
+                                        <div className="patientform_delete_btn">
+                                            <img src={require('./delete_btn.png')} alt="delete_btn" />
+                                        </div>
+                                        <p className="patientform_delete_btn_text">삭제</p>
+                                    </div>
+                                </button>
+
+                            </div>
+
                         </div>
+
                     </div>
 
                 </div>
