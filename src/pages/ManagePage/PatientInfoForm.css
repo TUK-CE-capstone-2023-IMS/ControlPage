@@ -40,7 +40,9 @@
 .patient_infoform_profile{
     width: 320px;
     height: 320px;
-    background-color: #6D8FE4;
+    background-image: url("/src/image/default_profile.png");
+    background-size: 320px 320px;
+    border-radius: 20px;
     margin-top: 90px;
     margin-left: 30px;
     float: left;
