@@ -88,17 +88,6 @@ const AdminMyPage = () => {
                                 <div className="mypage_name_box">
                                     <span>{adminInfo.name}</span>
                                 </div>
-
-                                <div className="mypage_total_btn">
-                                    <div className="mypage_edit-menu">
-                                        <Link to="/">
-                                            <button className="mypage_edit-menu-btn"></button>
-                                        </Link>
-                                    </div>
-                                    <div className="mypage_delete-menu">
-                                        <button className="mypage_delete-menu-btn" onClick={openModal}></button>
-                                    </div>
-                                </div>
                             </div>
 
                             <div className="mypage_second_info">
@@ -148,6 +137,28 @@ const AdminMyPage = () => {
                                     <span>{adminInfo.phone}</span>
                                 </div>
                             </div>
+
+                        </div>
+
+                        <div className="mypage_total_btn">
+
+                            {/*<button className="patientform_edit_menu_btn" onClick={()=>handleChangeSetting(patient.patientid)}>*/}
+                            {/*    <div className="patientform_edit_btn_input">*/}
+                            {/*        <div className="patientform_edit_btn">*/}
+                            {/*            <img src={require('./pencil_btn.png')} alt="pencil_btn" />*/}
+                            {/*        </div>*/}
+                            {/*        <p className="patientform_edit_btn_text">수정</p>*/}
+                            {/*    </div>*/}
+                            {/*</button>*/}
+
+                            <button className="mypage_delete_menu_btn" onClick={openModal}>
+                                <div className="mypage_delete_btn_input">
+                                    <div className="mypage_delete_btn">
+                                        <img src={require('./delete_btn.png')} alt="delete_btn" />
+                                    </div>
+                                    <p className="mypage_delete_btn_text">삭제</p>
+                                </div>
+                            </button>
 
                         </div>
 
