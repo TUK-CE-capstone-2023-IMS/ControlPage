@@ -5,7 +5,8 @@
 }
 
 .log-form {
-    background: #F3F6F9;
+    background-image: url("/src/image/tukorea.png");
+    background-size: 1350px 850px ;
     width: 1350px;
     height: 850px;
     margin-left: 450px;
@@ -23,30 +24,25 @@
 }
 
 .log-room-num {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 40px;
+    margin-left: 40px;
     font-size: 45px;
-    width: 450px;
-    color: #333333;
+    text-align: left;
+    width: 1350px;
+    color: #F3F3F3;
     font-weight: 600;
 }
 
 .log-patient-name {
     width: 120px;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
     text-align: left;
     font-size: 30px;
-    color: #333333;
+    color: #F3F3F3;
 }
 
-.log-list {
-    margin-left: 30px;
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-}
+
 
 .log-card {
     width: 400px;
@@ -68,27 +64,125 @@
     text-align: left;
     font-size: 35px;
     color: #333333;
-    margin-top: 40px;
-    margin-left: 150px;
 }
 
 .log-time {
     text-align: left;
     font-size: 25px;
     margin-top: 10px;
-    margin-left: 150px;
     color: #b3b3b3;
 }
-
+.log-img{
+    margin-left: 20px;
+    width: 96px;
+    height: 96px;
+}
 .log-card.normal {
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
     background-color: #ffffff;
 }
 
 @keyframes blink {
     0%, 100% { background-color: #ffcccc; }
-    50% { background-color: transparent; }
+    50% { background-color: #ffffff; }
 }
 
 .log-card.emergency {
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     animation: blink 1s infinite;
+}
+.log-info{
+
+    display: flex;
+}
+.log-info-box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.log-reload-btn {
+    background-image: url("/src/image/free-icon-reload-page-11348616.png");
+    background-size: 50px 50px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+    background-color: transparent;
+    transition: transform 0.3s;
+}
+
+.log-reload-btn:hover {
+    transform: scale(1.2);
+}
+
+.room-info-top{
+    width: 1350px;
+    display: flex;
+}
+
+
+.log-card-layout-title{
+    margin-top: 20px;
+    display: flex;
+    width: 1180px;
+    height: 20px;
+
+}
+
+.log-card-date{
+    margin-left: 240px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.log-card-type{
+    margin-left: 340px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.log-card-status{
+    margin-left: 350px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.log-list {
+    border-radius: 20px;
+    width: 1280px;
+    height: 200000px;
+    margin-left: 35px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    background-color: #F3F3F3;
+}
+.log-card-layout-contents{
+    display: flex;
+    width: 1180px;
+    height: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 300px;
+    align-items: center;
+    justify-content: start;
+}
+
+.log-card-content-type{
+    font-size: 20px;
+    font-weight: 600;
+}
+.log-card-content-date{
+    margin-left: 220px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.log-card-content-status{
+    font-size: 20px;
+    font-weight: 600;
 }
