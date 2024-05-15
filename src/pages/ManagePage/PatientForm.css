@@ -7,7 +7,7 @@
 .patientform_page{
     width: 1000px;
     height: 500px;
-    margin-left: 480px;
+    margin-left: 500px;
     margin-bottom: 50px;
     margin-top: 30px;
     border-radius: 16px;
@@ -16,12 +16,15 @@
 }
 
 .patientform_text {
+    width: 250px;
+    height: 50px;
     margin-top: 40px;
     margin-bottom: 15px;
-    margin-right: 800px;
+    margin-left: 500px;
     font-size: 30px;
     font-weight: 600;
     color: #333333;
+    text-align: left;
 }
 
 .patientform_total_box{
@@ -139,6 +142,28 @@
     z-index: 100;
     background-color: transparent;
 }
+
+.patientform_add_patient_button{
+    width: 60px;
+    height: 60px;
+    margin-left: 950px;
+}
+
+.patientform_add_patient_button button{
+    width: 60px;
+    height: 60px;
+    background-image: url('./free-icon-add.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    z-index: 100;
+    background-color: transparent;
+}
+
 
 .modal {
     display: none;

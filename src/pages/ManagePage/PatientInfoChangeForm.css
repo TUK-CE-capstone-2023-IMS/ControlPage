@@ -4,62 +4,85 @@
     box-sizing: border-box;
 }
 
-.change_patient_text{
-    margin-top: 40px;
-    margin-right: 850px;
-    font-size: 30px;
-    font-weight: 600;
-    color: #333333;
+.change_patient_page{
+    width: 400px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.change_patient_boxes{
-    width: 1340px;
-    height: 430px;
-    margin-left: 450px;
-    margin-top: 30px;
-    background-color: #f3f6f9;
-    border-radius: 10px;
-    border: 1px solid #f3f6f9;
-    font-size: 25px;
+.change_patient_box{
+    width: 400px;
+    height: 550px;
+    margin: 25px 0;
+}
+
+.change_patient_text{
+    height: 50px;
+    width: 400px;
+    text-align: left;
+    margin: 20px 0;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    color: #002455;
+}
+
+.change_patient_id input, .change_patient_name input, .change_patient_age input, .change_patient_sex select,
+.change_patient_phone_num input, .change_patient_email input, .change_patient_managerid input,
+.change_patient_emergency_num input, .change_patient_address input{
+    height: 50px;
+    width: 400px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-
-.change_patient_id input, .change_patient_name input, .change_patient_age input, .change_patient_sex input,
-.change_patient_phone_num input, .change_patient_email input, .change_patient_managerid input,
-.change_patient_emergency_num input, .change_patient_address input{
-    width: 200px;
-    height: 50px;
-    color: #333333;
+.change_patient_id input:hover, .change_patient_name input:hover, .change_patient_age input:hover, .change_patient_sex select:hover,
+.change_patient_phone_num input:hover, .change_patient_email input:hover, .change_patient_managerid input:hover,
+.change_patient_emergency_num input:hover, .change_patient_address input:hover{
+    border: 3px solid #002455;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.change_patient_yesbtn button{
+.change_patient_yesbtn button {
     background-color: white;
     width: 130px;
     height: 40px;
     color: #6D8FE4;
-    margin-left: 1200px;
-    margin-top: 10px;
+    margin: 0 10px;
     text-align: center;
     border: 3px solid #6D8FE4;
     border-radius: 10px;
     font-size: 22px;
 }
 
-.change_patient_nobtn button{
+.change_patient_nobtn button {
     background-color: white;
     width: 130px;
     height: 40px;
     color: #ababab;
-    margin-left: 1200px;
-    margin-top: 10px;
+    margin: 0 10px;
     text-align: center;
     border: 3px solid #ababab;
     border-radius: 10px;
     font-size: 22px;
 }
 
-.change_patient_button:hover{
+.change_patient_button {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 40px;
+}
+
+.change_patient_button button:hover{
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
