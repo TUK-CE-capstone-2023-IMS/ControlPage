@@ -23,7 +23,7 @@ const RoomCard = ({ roomInfo }) => {
 
             if (response && response.data) {
                 setPatientDetails(response.data);
-                navigate('/dashboard', { state: { logs: response.data ,name:roomInfo.name,address:roomInfo.address} });
+                navigate('/dashboard', { state: { logs: response.data ,name:roomInfo.name,address:roomInfo.address,patientid:roomInfo.patientid} });
             } else {
                 console.error('서버 응답에 데이터가 없음');
             }

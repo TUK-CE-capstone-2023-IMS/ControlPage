@@ -1,4 +1,3 @@
-
 import './Sidebar.css';
 import { MdAccountCircle } from "react-icons/md";
 import { GoHome } from "react-icons/go";
@@ -7,18 +6,18 @@ import { IoSettingsOutline, IoPersonOutline } from "react-icons/io5";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+
 const Sidebar = () => {
     const navigate = useNavigate();
     const [managerInfo, setManagerInfo] = useState('');
+    const [showLoginAlert, setShowLoginAlert] = useState(false); // 로그인 알림 상태 추가
     const managerId = localStorage.getItem('managerId');
+
     useEffect(() => {
-
-        const fetchData =async ()=>{
-
+        const fetchData = async () => {
             if (managerId) {
                 try {
                     const response = await axios.get(`http://localhost:8080/manager/info?managerId=${managerId}`);
-
                     if (response && response.data) {
                         setManagerInfo(response.data);
                     } else {
@@ -28,14 +27,16 @@ const Sidebar = () => {
                     console.error('데이터를 불러오는 중 오류 발생:', error.response ? error.response.data : error.message);
                 }
             }
-
-        }
-        fetchData()
-
+        };
+        fetchData();
     }, []);
+
     const handleMyPageClick = () => {
-        // '/mypage'로 이동하고 state를 함께 전달
-        navigate('/mypage', { state: { managerId: managerInfo.id } });
+        if (managerInfo) {
+            navigate('/mypage', { state: { managerId: managerInfo.id } });
+        } else {
+            setShowLoginAlert(true); // 로그인 알림 표시
+        }
     };
 
     const handleLogout = () => {
@@ -43,9 +44,6 @@ const Sidebar = () => {
         navigate('/login');
     };
 
-    const addPatient = () => {
-        navigate("/AddPatient");
-    };
 
     return (
         <div className="sidebar-container">
@@ -54,7 +52,7 @@ const Sidebar = () => {
                     <div>
                         <div className="mainhome_sidebar">
                             <div className="homeIcon">
-                                <GoHome size={45}/>
+                                <GoHome size={45} />
                             </div>
                             <div className="sidebar_mainhome_text">
                                 <Link to="/">메인 홈</Link>
@@ -62,26 +60,26 @@ const Sidebar = () => {
                         </div>
                         <div className="dashboard_sidebar">
                             <div className="dashboardIcon">
-                                <LuLayoutDashboard size={45}/>
+                                <LuLayoutDashboard size={45} />
                             </div>
                             <div className="sidebar_dashboard_text">
-                                <Link to="/rooms">대시 보드</Link>
+                                <Link to={managerInfo ? "/rooms" : "/login"}>대시 보드</Link>
                             </div>
                         </div>
                         <div className="patientlist_sidebar">
                             <div className="patientlistIcon">
-                                <IoPersonOutline size={45}/>
+                                <IoPersonOutline size={45} />
                             </div>
                             <div className="sidebar_patientlist_text">
-                                <Link to="/patients">환자 목록</Link>
+                                <Link to={managerInfo ? "/patients" : "/login"}>환자 목록</Link>
                             </div>
                         </div>
                         <div className="setting_sidebar">
                             <div className="settingIcon">
-                                <IoSettingsOutline size={45}/>
+                                <IoSettingsOutline size={45} />
                             </div>
                             <div className="sidebar_setting_text">
-                                <Link to="#">환경 설정</Link>
+                                <Link to={managerInfo ? "#" : "/login"}>환경 설정</Link>
                             </div>
                         </div>
                     </div>

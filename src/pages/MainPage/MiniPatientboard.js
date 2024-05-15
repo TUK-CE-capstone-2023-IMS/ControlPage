@@ -7,6 +7,8 @@ const MiniPatientBoard = () => {
 
     const [patients, setPatients] = useState([]);
     const navigate = useNavigate()
+    const managerId = localStorage.getItem('managerId');
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -27,6 +29,16 @@ const MiniPatientBoard = () => {
     const handledInfoClick = async (patientid) => {
         navigate('/patientInfo', {state: {patientid: patientid}});
     };
+
+    if(!managerId){
+        return (
+            <div className="minipatientboard_box">
+                <div className="minipatientboard_title">환자목록</div>
+                <div className="minipatientboard_list">
+                </div>
+            </div>
+        )
+    }
     return (
         <div className="minipatientboard_box">
             <div className="minipatientboard_title">환자목록</div>
