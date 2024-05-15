@@ -33,7 +33,6 @@ const LoginPage = () => {
 
     return (
         <div className="login_page">
-
             <div className="login_hello_box">
                 <div className="login_hello_text">
                     <div className="login_first_hello_box">
@@ -53,44 +52,41 @@ const LoginPage = () => {
                 <p className="login_title">Login</p>
 
                 <form onSubmit={handleSubmit}>
-                    <div className="login_id">
-                        <div className="login_id_text">
-                            <label htmlFor="managerId">아이디</label>
+
+                    <div className="login_input_box">
+                        <div className="login_id">
+                            <div className="login_id_text">
+                                <label htmlFor="managerId">아이디</label>
+                            </div>
+
+                            <div className="login_idbox">
+                                <input
+                                    type="text"
+                                    id="managerid"
+                                    value={managerid}
+                                    onChange={(e) => setManagerid(e.target.value)}
+                                    required />
+                            </div>
                         </div>
 
-                        <div className="login_idbox">
-                            <input
-                                type="text"
-                                id="managerid"
-                                value={managerid}
-                                onChange={(e) => setManagerid(e.target.value)}
-                                required />
+                        <div className= "login_password">
+                            <div className= "login_password_text">
+                                <label htmlFor="password">비밀번호</label>
+                            </div>
+
+                            <div className="login_passwordbox">
+                                <input
+                                    type="password"
+                                    id="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required />
+                            </div>
                         </div>
                     </div>
 
-                    <div class= "login_password">
-                        <div class= "login_password_text">
-                            <label htmlFor="password">비밀번호</label>
-                        </div>
-
-                        <div className="login_passwordbox">
-                            <input
-                                type="password"
-                                id="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required />
-                        </div>
-                    </div>
-
-                    <div className="login_total_button">
-                        <div className="login_button">
-                            <button type="submit">로그인</button>
-                        </div>
-
-                        {/*<div className="signin_button">*/}
-                        {/*    <Link to="/signup"><button>회원가입</button></Link>*/}
-                        {/*</div>*/}
+                    <div className="login_button">
+                        <button type="submit">로그인</button>
                     </div>
                 </form>
             </div>
