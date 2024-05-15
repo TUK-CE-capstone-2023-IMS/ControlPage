@@ -54,14 +54,6 @@
     margin-left: 80px;
 }
 
-.patientform_total_btn{
-    display: flex;
-    justify-content: left;
-    width: 85px;
-    height: 40px;
-    margin-top: 10px;
-}
-
 .patientform_first_info{
     display: flex;
     margin-top: 60px;
@@ -113,34 +105,64 @@
     display: flex;
 }
 
-.patientform_edit-menu-btn {
-    width: 36px;
-    height: 36px;
-    background-image: url('./free-icon-edit.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    top: 0px;
-    z-index: 100;
-    background-color: transparent;
+.patientform_total_btn{
+    display: flex;
+    justify-content: left;
+    width: 210px;
+    height: 40px;
+    margin-left: 420px;
+    margin-top: 50px;
 }
 
-.patientform_delete-menu-btn {
-    width: 32px;
-    height: 32px;
-    background-image: url('./free-icon-recycle-bin-outline-symbol-inside-a-circle.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
+.patientform_edit_menu_btn {
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    margin-right: 5px;
+    border: 3px solid #6D8FE4;
+    border-radius: 10px;
+}
+
+.patientform_delete_menu_btn {
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    margin-left: 5px;
+    border: 3px solid #ababab;
+    border-radius: 10px;
+}
+
+.patientform_edit_btn_text{
+    width: 80px;
+    line-height: 36px;
+    color: #6D8FE4;
+    text-align: center;
+    font-size: 15px;
+}
+
+.patientform_delete_btn_text{
+    width: 80px;
+    line-height: 36px;
+    color: #ababab;
+    text-align: center;
+    font-size: 15px;
+}
+
+.patientform_edit_btn img, .patientform_delete_btn img {
+    width: 20px;
+    height: 20px;
+    margin: 8px 5px;
+}
+
+.patientform_edit_btn_input, .patientform_delete_btn_input{
+    display: flex;
+    justify-content: left;
+}
+
+.patientform_edit_menu_btn:hover, .patientform_delete_menu_btn:hover{
     cursor: pointer;
-    position: relative;
-    top: 0px;
-    z-index: 100;
-    background-color: transparent;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .patientform_add_patient_button{
@@ -163,7 +185,6 @@
     z-index: 100;
     background-color: transparent;
 }
-
 
 .modal {
     display: none;
