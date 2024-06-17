@@ -5,14 +5,15 @@
 }
 
 .log-form {
-    background-image: url("/src/image/tukorea.png");
+    /*background-image: url("/src/image/tukorea.png");*/
     background-size: 1350px 850px ;
+    background-color: #F3F6F9;
     width: 1350px;
     height: 850px;
     margin-left: 450px;
     margin-top: 50px;
     overflow: auto;
-    border-radius: 16px;
+    border-radius: 20px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 ::-webkit-scrollbar {
@@ -29,7 +30,7 @@
     font-size: 45px;
     text-align: left;
     width: 1350px;
-    color: #F3F3F3;
+    color: #333333;
     font-weight: 600;
 }
 
@@ -39,10 +40,8 @@
     margin-left: 40px;
     text-align: left;
     font-size: 30px;
-    color: #F3F3F3;
+    color: #333333;
 }
-
-
 
 .log-card {
     width: 400px;
@@ -72,13 +71,14 @@
     margin-top: 10px;
     color: #b3b3b3;
 }
+
 .log-img{
     margin-left: 20px;
     width: 96px;
     height: 96px;
 }
-.log-card.normal {
 
+.log-card.normal {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -97,15 +97,17 @@
     align-items: center;
     animation: blink 1s infinite;
 }
-.log-info{
 
+.log-info{
     display: flex;
 }
+
 .log-info-box{
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 }
+
 .log-reload-btn {
     background-image: url("/src/image/free-icon-reload-page-11348616.png");
     background-size: 50px 50px;
@@ -127,62 +129,81 @@
     display: flex;
 }
 
-
 .log-card-layout-title{
     margin-top: 20px;
+    margin-left: 150px;
     display: flex;
-    width: 1180px;
-    height: 20px;
-
+    width: 950px;
+    height: 50px;
 }
 
 .log-card-date{
-    margin-left: 240px;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 600;
+    width: 100px;
+    height: 50px;
 }
+
 .log-card-type{
-    margin-left: 340px;
-    font-size: 20px;
+    margin-left: 325px;
+    font-size: 28px;
     font-weight: 600;
+    width: 100px;
+    height: 50px;
 }
+
 .log-card-status{
-    margin-left: 350px;
-    font-size: 20px;
+    margin-left: 325px;
+    font-size: 28px;
     font-weight: 600;
+    width: 100px;
+    height: 50px;
 }
+
 .log-list {
     border-radius: 20px;
-    width: 1280px;
+    width: 1250px;
     height: 200000px;
     margin-left: 35px;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    background-color: #F3F3F3;
+    /*gap: 20px;*/
+    background-color: #ffffff;
 }
+
 .log-card-layout-contents{
     display: flex;
-    width: 1180px;
-    height: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 300px;
+    width: 950px;
+    height: 50px;
+    margin-left: 150px;
+    /*grid-template-columns: repeat(3, 1fr);*/
+    /*gap: 300px;*/
     align-items: center;
     justify-content: start;
+    line-height: 50px;
 }
 
 .log-card-content-type{
     font-size: 20px;
     font-weight: 600;
+    width: 100px;
+    height: 50px;
+    margin-left: 325px;
 }
+
 .log-card-content-date{
-    margin-left: 220px;
     font-size: 20px;
     font-weight: 600;
+    width: 100px;
+    height: 50px;
 }
+
 .log-card-content-status{
     font-size: 20px;
     font-weight: 600;
+    width: 100px;
+    height: 50px;
+    margin-left: 325px;
 }

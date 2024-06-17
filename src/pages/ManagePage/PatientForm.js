@@ -50,17 +50,23 @@ const PatientFormPage = () => {
             <h1 className="patientform_text">환자 정보</h1>
             {patients.map((patient) => (
                 <div className="patientform_page" key={patient.patientid}>
+
                     <div className="patientform_total_box">
+
                         <div className="patientform_profile_box">
                             <div className="patientform_profile"></div>
                         </div>
+
                         <div className="patientform_total_info_box">
+
                             <div className="patientform_info_box_1">
+
                                 <div className="patientform_first_info">
                                     <div className="patientform_name_box">
                                         <p>{patient.name}</p>
                                     </div>
                                 </div>
+
                                 <div className="patientform_second_info">
                                     <div className="patientform_home_box">
                                         <span>{patient.home}</span>
@@ -145,11 +151,10 @@ const PatientFormPage = () => {
 
             <div className={`modal ${isModalOpen ? 'open' : ''}`}>
                 <div className="patientform_modal_popup">
-                    <h3>환자 삭제</h3>
-                    <p>환자를 삭제하시겠습니까?</p>
+                    <p>해당 환자의 정보를 삭제하시겠습니까?</p>
                     <div className="patientform_modal_buttons">
                         <div className="patientform_modal_delete_btn">
-                            <button onClick={handleDelete}>삭제</button>
+                            <button onClick={handleDelete}>확인</button>
                         </div>
                         <div className="patientform_modal_cancel_btn">
                             <button onClick={closeModal}>취소</button>

@@ -170,11 +170,10 @@ const AdminMyPage = () => {
 
             <div className={`modal ${isModalOpen ? 'open' : ''}`}>
                 <div className="mypage_modal_popup">
-                    <h3>회원 탈퇴</h3>
                     <p>회원을 탈퇴하시겠습니까?</p>
                     <div className="mypage_modal_buttons">
                         <div className="mypage_modal_delete_btn">
-                            <button onClick={handleDelete}>탈퇴</button>
+                            <button onClick={handleDelete}>확인</button>
                         </div>
                         <div className="mypage_modal_cancel_btn">
                             <button onClick={closeModal}>취소</button>
