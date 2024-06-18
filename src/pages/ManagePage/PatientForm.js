@@ -3,6 +3,7 @@ import Sidebar from "../MainPage/Sidebar";
 import './PatientForm.css';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
+import {API} from "../../apis/config";
 
 const PatientFormPage = () => {
 
@@ -14,7 +15,7 @@ const PatientFormPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/patient/read');
+                const response = await axios.get(API.PATIENTS_READ);
 
                 if (response && response.data) {
                     setPatients(response.data);
@@ -84,7 +85,7 @@ const PatientFormPage = () => {
                                         <label>연락처 </label>
                                     </div>
                                     <div className="patientform_phone_num">
-                                        <span>{patient.phoneNumber}</span>
+                                        <span>{patient.phone}</span>
                                     </div>
                                 </div>
 
@@ -102,7 +103,7 @@ const PatientFormPage = () => {
                                         <label>비상 연락망 </label>
                                     </div>
                                     <div className="patientform_emergency_num">
-                                        <span>{patient.emergencyNumber}</span>
+                                        <span>{patient.emergencycall}</span>
                                     </div>
                                 </div>
 
@@ -111,7 +112,7 @@ const PatientFormPage = () => {
                                         <label>성별 </label>
                                     </div>
                                     <div className="patientform_gender">
-                                        <span>{patient.gender}</span>
+                                        <span>{patient.sex}</span>
                                     </div>
                                 </div>
                             </div>
