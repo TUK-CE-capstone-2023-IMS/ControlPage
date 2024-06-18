@@ -155,7 +155,7 @@ const AddPatientFormPage = () => {
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
-                                            placeholder="이메일 채니공주"
+                                            placeholder="이메일"
                                             required
                                         />
                                     </div>

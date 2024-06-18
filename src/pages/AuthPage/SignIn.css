@@ -5,16 +5,16 @@
 }
 
 .signup_page{
-    height: 120vh;
+    height: 1080px;
+    width: 1920px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
 }
 
 .signup_box{
     width: 400px;
-    height: 700px;
-    margin: 0 310px;
+    height: 670px;
+    margin: 190px 360px;
 }
 
 .signup_title{
@@ -55,12 +55,12 @@
 .signup_phone_number input:hover,
 .signup_age input:hover,
 .signup_address input:hover{
-    border: 3px solid #002455;
+    border: 2px solid #002455;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .signup_button button {
-    height: 70px;
+    height: 50px;
     width: 400px;
     font-size: 20px;
     font-weight: 400;
@@ -79,49 +79,61 @@
 }
 
 .signup_hello_box{
-    width: 900px;
+    width: 800px;
     height: 1080px;
     background-color: #002455;
     border-radius: 100px;
 }
 
+.signup_hello_text{
+    width: 550px;
+    height: 560px;
+    margin-top: 250px;
+    margin-left: 100px;
+}
+
+.signup_first_hello_box{
+    width: 550px;
+    height: 160px;
+}
+
+.signup_second_hello_box{
+    width: 550px;
+    height: 100px;
+    margin-top: 300px;
+}
+
 .signup_hello_text_1{
     color: white;
-    font-size: 80px;
-    margin-left: 100px;
-    margin-top: 250px;
+    font-size: 60px;
     text-align: left;
-    width: 700px;
-    height: 100px;
+    width: 550px;
+    height: 80px;
 }
 
 .signup_hello_text_2{
-    width: 700px;
-    height: 100px;
+    width: 550px;
+    height: 80px;
     color: white;
-    font-size: 40px;
-    margin-left: 100px;
+    font-size: 30px;
     text-align: left;
 }
 
 .signup_hello_text_3{
-    width: 700px;
+    width: 550px;
     height: 50px;
     color: white;
-    font-size: 40px;
-    margin-top: 225px;
-    margin-left: 100px;
+    font-size: 30px;
     text-align: left;
 }
 
 .signup_hello_text_4 a{
-    width: 700px;
-    height: 50px;
     color: white;
     font-size: 22px;
 }
 
 .signup_hello_text_4{
-    margin-left: 100px;
+    width: 550px;
+    height: 50px;
     text-align: left;
 }

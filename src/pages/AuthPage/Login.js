@@ -50,7 +50,7 @@ const LoginPage = () => {
 
             <div className="login_box">
                 <p className="login_title">Login</p>
-
+`
                 <form onSubmit={handleSubmit}>
 
                     <div className="login_input_box">
