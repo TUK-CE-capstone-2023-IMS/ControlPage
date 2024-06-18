@@ -5,87 +5,147 @@
 }
 
 .add_patient_page{
-    width: 400px;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-
+    width: 1000px;
+    height: 500px;
+    margin-left: 500px;
+    margin-top: 30px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.15);
 }
 
 .add_patient_box{
-    width: 400px;
-    height: 550px;
-    margin: 25px 0;
+    width: 440px;
+    height: 340px;
+    margin-left: 100px;
 }
 
 .add_patient_text{
+    width: 250px;
     height: 50px;
-    width: 400px;
-    text-align: left;
-    margin: 20px 0;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-left: 500px;
     font-size: 30px;
     font-weight: 600;
-    color: #002455;
+    color: #333333;
+    text-align: left;
 }
 
-.add_patient_id input, .add_patient_name input, .add_patient_age input, .add_patient_sex select,
-.add_patient_phone_num input, .add_patient_email input, .add_patient_managerid input,
-.add_patient_emergency_num input, .add_patient_address input{
-    height: 50px;
-    width: 400px;
-    padding-left: 5px;
+.add_patient_total_box{
+    width: 1000px;
+    height: 500px;
+}
+
+.add_patient_info_box{
+    display: flex;
+    width: 860px;
+    height: 340px;
+    padding-top: 80px;
+    padding-left: 40px;
+}
+
+.add_patient_profile_box{
+    float: left;
+}
+
+.add_patient_profile{
+    width: 320px;
+    height: 320px;
+    background-image: url("/src/image/default_profile.png");
+    background-size: 320px 320px;
+    float: left;
+}
+
+.add_patient_name_box, .add_patient_address_box, .add_patient_phone_num_box,
+.add_patient_age_box, .add_patient_email_box, .add_patient_sex_box,
+.add_patient_emergency_num_box{
+    display: flex;
+}
+
+.add_patient_name_title, .add_patient_address_title, .add_patient_phone_num_title,
+.add_patient_age_title, .add_patient_email_title, .add_patient_sex_title{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
     margin-bottom: 10px;
+    color: #B4B4B6;
+    line-height: 40px;
+}
+
+.add_patient_emergency_num_title{
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #B4B4B6;
+    line-height: 40px;
+}
+
+.add_patient_name input, .add_patient_age input, .add_patient_sex select,
+.add_patient_phone_num input, .add_patient_email input, .add_patient_address input{
+    height: 40px;
+    width: 280px;
+    padding-left: 10px;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 20px;
+    margin-left: 60px;
+    color: #767A83;
     border: 1px solid white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.add_patient_id input:hover, .add_patient_name input:hover, .add_patient_age input:hover, .add_patient_sex select:hover,
-.add_patient_phone_num input:hover, .add_patient_email input:hover, .add_patient_managerid input:hover,
+.add_patient_emergency_num input{
+    height: 40px;
+    width: 280px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #767A83;
+    border: 1px solid white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.add_patient_name input:hover, .add_patient_age input:hover, .add_patient_sex select:hover,
+.add_patient_phone_num input:hover, .add_patient_email input:hover,
 .add_patient_emergency_num input:hover, .add_patient_address input:hover{
-    border: 3px solid #002455;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .add_patient_yesbtn button {
-    background-color: white;
-    width: 130px;
+    width: 100px;
     height: 40px;
+    background-color: white;
     color: #6D8FE4;
-    margin: 0 10px;
     text-align: center;
     border: 3px solid #6D8FE4;
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 15px;
 }
 
 .add_patient_nobtn button {
-    background-color: white;
-    width: 130px;
+    width: 100px;
     height: 40px;
+    background-color: white;
     color: #ababab;
-    margin: 0 10px;
     text-align: center;
     border: 3px solid #ababab;
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 15px;
+    margin-left: 10px;
 }
 
-.add_patient_button {
+.add_patient_total_button {
     display: flex;
     justify-content: center;
-    width: 400px;
+    width: 210px;
     height: 40px;
+    margin-left: 780px;
+    margin-top: 110px;
 }
 
-.add_patient_button button:hover{
+.add_patient_total_button button:hover{
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

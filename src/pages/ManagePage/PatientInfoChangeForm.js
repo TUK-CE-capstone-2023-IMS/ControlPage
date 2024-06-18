@@ -68,6 +68,7 @@ const PatientInfoChangeFormPage = () => {
                 <div className="change_patient_total_box">
 
                     <div className="change_patient_info_box">
+
                         <div className="change_patient_profile_box">
                             <div className="change_patient_profile"></div>
                         </div>
@@ -228,7 +229,6 @@ const PatientInfoChangeFormPage = () => {
                     </div>
 
                 </div>
-
 
             </div>
         </form>
