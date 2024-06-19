@@ -4,6 +4,7 @@ import axios from "axios";
 import Sidebar from "../MainPage/Sidebar";
 import LogCard from "./LogCard";
 import './LogForm.css';
+import {API} from "../../apis/config";
 
 const LogForm = () => {
     const { state } = useLocation();
@@ -11,7 +12,7 @@ const LogForm = () => {
 
     const reloadLog = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/log/log/all?patientId=${state.patientid}`);
+            const response = await axios.get(`${API.LOG_LOAD}=${state.patientid}`);
             if (response && response.data) {
                 const newLogs = Array.isArray(response.data) ? response.data : [];
                 setLogs(newLogs); // 상태 업데이트

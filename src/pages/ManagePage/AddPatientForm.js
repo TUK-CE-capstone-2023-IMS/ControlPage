@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './AddPatientForm.css';
 import {Link, useNavigate, useLocation} from "react-router-dom";
 import axios from "axios";
+import {API} from "../../apis/config";
 import Sidebar from "../MainPage/Sidebar";
 
 const AddPatientFormPage = () => {
@@ -36,7 +37,7 @@ const AddPatientFormPage = () => {
         e.preventDefault();
         try {
             // 수정된 환자 정보를 서버로 전송하여 업데이트하는 요청
-            const response = await axios.post('http://localhost:8080/patient/info', formData);
+            const response = await axios.post(API.PATIENT_UPDATE, formData);
             if (response.data.success) {
                 navigate("");
             }
@@ -217,9 +218,7 @@ const AddPatientFormPage = () => {
                                 <button onClick={cancel}>취소</button>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
         </form>
     );
