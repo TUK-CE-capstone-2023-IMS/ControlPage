@@ -3,6 +3,7 @@ import './PatientInfoChangeForm.css';
 import {Link, useNavigate, useLocation} from "react-router-dom";
 import axios from "axios";
 import Sidebar from "../MainPage/Sidebar";
+import {API} from "../../apis/config";
 
 const PatientInfoChangeFormPage = () => {
     const location = useLocation();
@@ -20,18 +21,14 @@ const PatientInfoChangeFormPage = () => {
     });
 
     useEffect(() => {
-        // 페이지가 시작될 때 환자 정보를 받아오는 함수
         const fetchPatientInfo = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/patient/info?patientId=${location.state.patientid}`);
-                // 받아온 환자 정보를 formData에 설정
+                const response = await axios.get(`${API.PATIENT_READ}=${location.state.patientid}`);
                 setFormData(response.data);
             } catch (error) {
                 console.error('환자 정보를 받아오는데 실패했습니다:', error);
             }
         };
-
-        // 환자 정보를 받아오기 위한 함수 호출
         fetchPatientInfo();
     }, []);
 
@@ -49,7 +46,7 @@ const PatientInfoChangeFormPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put('http://localhost:8080/patient/info', formData);
+            const response = await axios.put(API.PATIENT_UPDATE, formData);
             if (response.data.success) {
                 navigate("/patients", {state: {patientid: location.state.patientid}});
             }

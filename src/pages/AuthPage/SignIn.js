@@ -3,6 +3,7 @@ import './SignIn.css';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import lock from "../../image/lock.png"
+import {API} from "../../apis/config";
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ const SignupPage = () => {
     const navigate  = useNavigate();
     const handleSignIn = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/manager/signin', formData);
+            const response = await axios.post(API.SIGN_IN, formData);
             console.log('회원가입 요청 성공:', response.data);
             if (response.data.success) {
                 navigate("/login");
