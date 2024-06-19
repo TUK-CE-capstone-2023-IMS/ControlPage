@@ -3,6 +3,7 @@ import './PatientInfoForm.css';
 import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import axios from "axios";
 import Sidebar from "../MainPage/Sidebar";
+import {API} from "../../apis/config";
 
 const PatientFormPage = () => {
     const location = useLocation();
@@ -15,7 +16,7 @@ const PatientFormPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/patient/info?patientId=${location.state.patientid}`);
+                const response = await axios.get(`${API.PATIENTS_READ}=${location.state.patientid}`);
 
                 if (response && response.data) {
                     setPatientInfo(response.data);
@@ -32,7 +33,7 @@ const PatientFormPage = () => {
 
     const handleDelete = async () => {
         try {
-            const response = await axios.delete(`http://localhost:8080/patient/info?patientid=${patientid}`);
+            const response = await axios.delete(`${API.PATIENT_READ}=${patientid}`);
             console.log('환자 탈퇴 요청 성공:', response.data);
             if (response.data.success) {
                 navigate('/rooms');

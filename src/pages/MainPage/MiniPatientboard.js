@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './MiniPatientboard.css';
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import {API} from "../../apis/config";
 
 const MiniPatientBoard = () => {
 
@@ -12,7 +13,7 @@ const MiniPatientBoard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/patient/read');
+                const response = await axios.get(API.PATIENT_LOAD);
 
                 if (response && response.data) {
                     setPatients(response.data);

@@ -3,6 +3,7 @@ import Sidebar from "../MainPage/Sidebar";
 import RoomCard from './RoomCard';
 import './RoomForm.css'
 import axios from "axios";
+import {API} from "../../apis/config";
 
 const RoomForm = () => {
 
@@ -11,7 +12,7 @@ const RoomForm = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/patient/read');
+                const response = await axios.get(API.PATIENTS_READ);
 
                 if (response && response.data) {
                     setPatients(response.data);

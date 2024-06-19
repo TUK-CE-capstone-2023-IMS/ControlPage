@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './RoomCard.css';
+import {API} from "../../apis/config";
 
 const RoomCard = ({ roomInfo }) => {
     const navigate = useNavigate();
@@ -19,7 +20,7 @@ const RoomCard = ({ roomInfo }) => {
 
     const handleDetailClick = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/log/log/all?patientId=${roomInfo.patientid}`);
+            const response = await axios.get(`${API.LOG_LOAD}=${roomInfo.patientid}`);
 
             if (response && response.data) {
                 setPatientDetails(response.data);

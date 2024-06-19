@@ -6,6 +6,7 @@ import { IoSettingsOutline, IoPersonOutline } from "react-icons/io5";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import {API} from "../../apis/config";
 
 const Sidebar = () => {
     const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Sidebar = () => {
         const fetchData = async () => {
             if (managerId) {
                 try {
-                    const response = await axios.get(`http://localhost:8080/manager/info?managerId=${managerId}`);
+                    const response = await axios.get(`${API.MY_PAGE}=${managerId}`);
                     if (response && response.data) {
                         setManagerInfo(response.data);
                     } else {

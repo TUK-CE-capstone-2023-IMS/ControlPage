@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './MiniDashboard.css';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {API} from "../../apis/config";
 
 const MiniDashBoard = () => {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ const MiniDashBoard = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/patient/read');
+            const response = await axios.get(API.PATIENT_LOAD);
 
             if (response && response.data) {
                 setPatients(response.data);
@@ -30,7 +31,7 @@ const MiniDashBoard = () => {
 
     const handleDetailClick = async (patient, name, address) => {
         try {
-            const response = await axios.get(`http://localhost:8080/log/log/all?patientId=${patient}`);
+            const response = await axios.get(`${API.LOG_LOAD}=${patient}`);
 
             if (response && response.data) {
                 navigate('/dashboard', { state: { logs: response.data, name: name, address: address } });

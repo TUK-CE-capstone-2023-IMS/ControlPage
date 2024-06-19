@@ -3,6 +3,7 @@ import Sidebar from "../MainPage/Sidebar";
 import './MyPage.css';
 import axios from 'axios';
 import { Link, useNavigate } from "react-router-dom";
+import {API} from "../../apis/config";
 
 const AdminMyPage = () => {
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ const AdminMyPage = () => {
         if (managerId) {
             const fetchData = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:8080/manager/info?managerId=${managerId}`);
+                    const response = await axios.get(`${API.MY_PAGE}=${managerId}`);
                     console.log('관리자 정보 요청 성공:', response.data);
                     if (response.data.success) {
                         setAdminInfo(response.data)
@@ -41,7 +42,7 @@ const AdminMyPage = () => {
     const handleDelete = async () => {
         try {
             const managerId = localStorage.getItem('managerId');
-            const response = await axios.post('http://localhost:8080/manager/signout', {
+            const response = await axios.post(API.SIGN_OUT, {
                 managerId: managerId
             });
             console.log('회원 탈퇴 요청 성공:', response.data);
