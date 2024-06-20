@@ -4,18 +4,26 @@
     box-sizing: border-box;
 }
 
-.login_page{
-    height: 1080px;
-    width: 1920px;
+.login_wrap{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right,#ffffff 50%, #002455 50%);
+}
+
+.login_page{
+    height: 100vh;
+    width: 1920px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .login_hello_box{
-    width: 800px;
+    width: 960px;
     height: 1080px;
     background-color: #002455;
-    border-radius: 100px;
+    border-radius: 100px 0 0 100px;
 }
 
 .login_hello_text_1{
@@ -71,20 +79,32 @@
     margin-top: 300px;
 }
 
+.login_wrap_box{
+    width: 50%;
+    height: 1080px;
+    background-color: #ffffff;
+    border-radius: 0 100px 100px 0;
+}
+
 .login_box{
     width:500px;
     height:700px;
-    margin: 190px 310px;
+    margin: 190px 230px;
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.login_total_box{
+    width: 350px;
+    height: 550px;
+    padding-top: 80px;
+    padding-left: 75px;
+}
+
 .login_title {
     text-align: left;
     font-size: 40px;
-    margin-top: 80px;
-    margin-left: 75px;
     width: 350px;
     height: 50px;
     color: #002455;
@@ -95,7 +115,6 @@
     width: 350px;
     height: 230px;
     margin-top: 50px;
-    margin-left: 75px;
 }
 
 .login_id_text{
@@ -141,7 +160,7 @@
 
 .login_idbox input:hover ,
 .login_passwordbox input:hover{
-    border: 2px solid #002445;
+    border: 2px solid #002455;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -162,6 +181,9 @@
 .login_button button:hover {
     font-weight: 600;
     cursor: pointer;
+    background-color: #003a6c;
+    color: #ffffff;
+    border: 1px solid #003a6c;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
