@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&display=swap');
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face {
+    font-family: "Dots All For Now JL";
+    src: url("/assets/fonts/Dotsalfn.eot") format("eot"),
+    url("/assets/fonts/Dotsalfn.woff") format("woff"),
+    url("/assets/fonts/Dotsalfn.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root {
+    --text-color: #030303;
+    --primary-color: #D0FF71;
+    --Secondary-Color: #FF3D18;
+    --gary700-color: #999999;
+    --gary300-color: #EEEEEE;
+    --white-color: #FFFFFF;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    list-style: none;
+    text-decoration: none;
+    background-color: var(--gary300-color);
+    font-family: 'SUIT Variable', sans-serif;
+    color: var(--text-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 32px;
+}
+
+/* 네비게이션 */
+nav {
+    width: 1000px;
+    height: 82px;
+    margin: 0 auto;
+    padding: 0 54px 0 54px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    font-size: 16px;
+}
+.main-logo {
+    height: 32px;
+    display: flex;
+    justify-content: center;
+}
+.nav-tabs {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0px;
+}
+.nav-tabs li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.nav-tabs{
+    gap: 60px;
+}
+.my-page{
+    width: 240px;
+    gap: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.my-page-darkmode .my-page-darkmode-btn{
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 네비게이션 내 my-page-home-btn*/
+.material-symbols-outlined {
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 300,
+            'GRAD' 0,
+            'opsz' 24;
+}
+.my-page-home {
+    position: relative;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.my-page-home-btn {
+    position: absolute;
+    font-size: 16px;
+    z-index: 10;
+    color: var(--text-color);
+    padding: 0 20px;
+    text-decoration: none;
+    font-family: ui-monospace;
+    font-weight: 400;
+}
+.main-blurred {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 50px;
+    border-radius: 30px;
+    filter: url(#goo);
+}
+.main-blurred::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    transition: .3s;
+}
+.blurred::after {
+    content: 'arrow_outward'; /* Add the icon */
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 95%; /* Position the circle */
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    font-size: 20px; /* icon size */
+    color: var(--text-color); /* Icon color */
+    font-family: 'Material Symbols Outlined', sans-serif;
+}
+/* Hover effects */
+.my-page-home:hover .blurred::before {
+    width: 160px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+}
+.my-page-home:hover .blurred::after {
+    width: 50px;
+    height: 50px;
+    left: 108%;
+    transform: rotate(45deg);
+}
+
+/*모니터링*/
+.monitoring-con{
+    width: 1700px;
+    height: 700px;
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+}
+
+.monitoring-con-left{
+    width: 330px;
+}
+
+.monitoring-title .monitoring-date{
+    text-align: left;
+    font-size: 32px;
+    margin: 0;
+}
+.monitoring-title .monitoring-week{
+    text-align: left;
+    font-size: 60px;
+    margin: 0;
+}
+.monitoring-title .monitoring-arrow{
+    margin-top: 16px;
+    display: flex;
+    gap: 15px;
+}
+.monitoring-title .arrow-back,
+.monitoring-title .arrow-forward {
+    width: 28px;
+    cursor: pointer;
+}
+
+/* 로그데이터 */
+.main-log{
+    margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-log-title {
+    font-size: 18px;
+    color: var(--gary700-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-log .main-log-title .main-log-list-replay{
+    cursor: pointer;
+}
+
+.main-log-list {
+    height: 360px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    gap: 16px;
+}
+
+.main-log-list .log-card {
+    transition: filter 0.3s ease; /* 블러 처리 전환 */
+}
+
+.main-log-list .log-card.blur {
+    filter: blur(5px); /* 블러 처리 */
+}
+
+.main-log-list .log-card.selected {
+    filter: none; /* 선택된 카드만 블러 제거 */
+}
+
+.main-log-list .log-card {
+    filter: none; /* 기본적으로 모든 카드가 선명 */
+}
+
+
+
+
+
+.log-card-layout-title1, .log-card-layout-title2 {
+    width: 280px;
+    height: 66px;
+    background-color: #ffffff;
+    border-radius: 30px;
+
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+/* 모니터링 데이터 버전1,2 기본데이터 (상태, 타입, 날짜) */
+.log-card-status{
+    width: 70px;
+}
+.log-card-layout-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* 모니터링 데이터 버전2 중 장시간 시간 데이터 */
+.log-card-layout-time {
+    width: 80px;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+.log-card-hour {
+    font-size: 36px;
+    gap: 6px;
+    display: flex;
+    align-items: baseline;
+    font-family: "Dots All For Now JL";
+}
+.log-card-hour span {
+    font-size: 16px;
+    font-family: 'SUIT Variable', sans-serif;
+}
+
+
+/* log-analyze-btn 분석보기*/
+.log-analyze {
+    margin-top: 36px;
+}
+
+.log-analyze {
+    position: relative;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.log-analyze-btn {
+    position: absolute;
+    font-size: 18px;
+    z-index: 10;
+    color: #ffffff;
+    padding: 0 20px;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+.blurred2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    filter: url(#goo);
+}
+.blurred2::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: var(--text-color);
+    border-radius: 30px;
+    transition: .3s;
+}
+.blurred2::after {
+    content: 'arrow_outward'; /* Add the icon */
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 95%; /* Position the circle */
+    background-color: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    font-size: 20px; /* icon size */
+    color: #ffffff; /* Icon color */
+    font-family: 'Material Symbols Outlined', sans-serif;
+    font-weight: 300;
+}
+/* Hover effects */
+.log-analyze:hover .blurred2::before {
+    width: 120px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+}
+.log-analyze:hover .blurred2::after {
+    width: 50px;
+    height: 50px;
+    left: 110%;
+    transform: rotate(45deg);
+}
+.monitoring-con-right .status-lie-click-con{
+    position: absolute;
+    top: 80%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.area {
+    position: absolute;
+    width: 634px;
+    height: 373px;
+    transition: background-color 0.3s ease;
+}
+
+.area-1 {
+    top: 0;
+    left: 0;
+
+}
+
+.area-2 {
+    top: 0;
+    right: 0;
+
+}
+
+.area-3 {
+    bottom: 0;
+    left: 0;
+
+}
+
+.area-4 {
+    bottom: 0;
+    right: 0;
+
+}
+
+.area:hover {
+
+}
+
+.area-1:hover {
+
+}
+
+.area-2:hover {
+
+}
+
+.area-3:hover {
+
+}
+
+.area-4:hover {
+
+}
+
+
+.log-icon-status{
+    width: 70px;
+}
+
+.log-icon {
+    position: absolute; /* Absolute positioning for the log icon */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the icon to truly center it */
+}
+
+.log-icon-status {
+    width: 80px;
+    height: 80px;
+    background-color:transparent;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.log-icon-timestamp{
+    width: 80px;
+    height: 36px;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-top: 4px;
+}
