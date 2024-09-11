@@ -6,9 +6,7 @@ import {API} from "../../apis/config";
 import LogCardForm from "./LogCardForm";
 import LogIcon from "./LogIcon.css";
 import Sidebar from "../MainPage/Sidebar";
-import LogCard from "./LogCard";
-
-const LogForm = () => {
+const LogMain = () => {
     const [selectedLog, setSelectedLog] = useState('');
     const [currentDate, setCurrentDate] = useState('');
     const [currentDay, setCurrentDay] = useState('');
@@ -408,6 +406,6 @@ const LogForm = () => {
         </div>
 
     );
-}
+};
 
-export default LogForm;
+export default LogMain;

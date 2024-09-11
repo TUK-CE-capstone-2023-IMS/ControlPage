@@ -13,6 +13,9 @@ import EmergencyAlert from './pages/NoticePage/EmergencyAlert';
 import PatientInfoChangeForm from "./pages/ManagePage/PatientInfoChangeForm";
 import AddPatientForm from "./pages/ManagePage/AddPatientForm";
 import PatientForm from "./pages/ManagePage/PatientForm";
+import LogMain from "./pages/LogPage/LogMain";
+import LogCardForm from "./pages/LogPage/LogCardForm";
+import LogIcon from "./pages/LogPage/LogIcon";
 
 function App() {
     const [alertMessage, setAlertMessage] = useState('');
@@ -69,6 +72,9 @@ function App() {
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/rooms" element={<RoomForm />} />
                     <Route path="patientInfo"element={<PatientInfoForm/>}/>
+                    <Route path="/logmain" element={<LogMain/>}/>
+                    <Route path="/logcardform" element={<LogCardForm/>}/>
+                    <Route path="/logicon" element={<LogIcon/>}/>
                     {/* <Route path="/forgotpassword" element={<ForgotPasswordPage />} /> */}
 
                 </Routes>

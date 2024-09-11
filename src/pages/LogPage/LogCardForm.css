@@ -1,0 +1,15 @@
+.main-log-list .log-card {
+    transition: filter 0.3s ease; /* 블러 처리 전환 */
+}
+
+.main-log-list .log-card.blur {
+    filter: blur(5px); /* 블러 처리 */
+}
+
+.main-log-list .log-card.selected {
+    filter: none; /* 선택된 카드만 블러 제거 */
+}
+
+.main-log-list .log-card {
+    filter: none; /* 기본적으로 모든 카드가 선명 */
+}

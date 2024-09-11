@@ -1,4 +1,4 @@
-const BASE_URL = "http://ec2-3-37-125-1.ap-northeast-2.compute.amazonaws.com:8080"
+const BASE_URL = "http://localhost:8080"
 
 export const API = {
     LOGIN : `${BASE_URL}/manager/login`,

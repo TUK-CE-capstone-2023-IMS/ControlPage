@@ -17,7 +17,11 @@ const MiniDashBoard = () => {
 
     const fetchData = async () => {
         try {
+
             const response = await axios.get(API.PATIENT_LOAD);
+
+            // const response = await axios.get(API.PATIENTS_READ);
+
 
             if (response && response.data) {
                 setPatients(response.data);
